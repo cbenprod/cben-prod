@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidéaste à Dunkerque | Vidéos réseaux sociaux – CBEN PROD</title>
+
+  <!-- SEO LOCAL -->
+  <meta name="description" content="Vidéaste à Dunkerque spécialisé en vidéos courtes, modernes et professionnelles pour artisans, indépendants et entreprises locales.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0a0a0f;
+      --bg-soft:#0f141c;
+      --card:#151b23;
+      --accent:#00bfff;
+      --text:#ffffff;
+      --text-soft:#cfcfcf;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif}
+    body{background:var(--bg);color:var(--text);overflow-x:hidden}
+
+    header{
+      position:fixed;top:0;left:0;width:100%;padding:18px 60px;
+      display:flex;justify-content:space-between;align-items:center;
+      background:rgba(10,10,15,.85);backdrop-filter:blur(10px);z-index:1000
+    }
+    header h1{font-size:1.3rem;font-weight:700;letter-spacing:1px}
+    nav a{color:#fff;text-decoration:none;margin-left:28px;font-weight:500;opacity:.9}
+    nav a:hover{color:var(--accent)}
+
+    section{padding:120px 10%}
+    h2{text-align:center;font-size:2.3rem;margin-bottom:30px}
+    p{color:var(--text-soft);line-height:1.7;font-size:1rem}
+
+    /* HERO */
+    .hero{
+      position:relative;height:100vh;display:flex;align-items:center;justify-content:center;
+      text-align:center;overflow:hidden
+    }
+    .hero-video{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+    }
+    .hero::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(to bottom,rgba(10,10,15,.25),rgba(10,10,15,.9));z-index:-1
+    }
+    .hero-content{max-width:900px;z-index:1}
+    .hero h1{font-size:3.4rem;margin-bottom:20px}
+    .hero .accent{color:var(--accent)}
+    .hero p{font-size:1.25rem}
+
+    .cta-group{margin-top:35px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+    .btn{padding:15px 36px;border-radius:10px;font-size:1rem;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:#009fcc}
+    .btn-secondary{border:1px solid var(--accent);color:var(--accent)}
+
+    /* PROBLEM */
+    .problem{background:var(--bg-soft)}
+    .problem-grid{max-width:900px;margin:0 auto;display:grid;gap:20px}
+    .problem-card{background:var(--card);padding:28px;border-radius:16px}
+
+    /* VALUES */
+    .values{display:grid;gap:30px;margin-top:60px}
+    @media(min-width:900px){.values{grid-template-columns:repeat(3,1fr)}}
+    .value-box{
+      background:linear-gradient(180deg,#151b23,#10151c);
+      padding:40px;border-radius:20px;text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,.35)
+    }
+    .value-box h3{margin-bottom:12px;color:var(--accent)}
+
+    /* OFFER */
+    .offer{
+      background:url('https://images.pexels.com/photos/3379932/pexels-photo-3379932.jpeg') center/cover no-repeat;
+      border-radius:24px;overflow:hidden
+    }
+    .offer-overlay{
+      background:rgba(10,10,15,.85);padding:80px;text-align:center
+    }
+
+    /* PORTFOLIO */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:24px;margin-top:40px}
+    .video-embed{aspect-ratio:9/16;background:#000;border-radius:18px;overflow:hidden}
+    .video-embed iframe{width:100%;height:100%;border:0}
+
+    /* ABOUT */
+    .about{background:var(--bg-soft)}
+    .about-inner{max-width:900px;margin:0 auto;text-align:center}
+
+    /* CONTACT */
+    .contact{text-align:center}
+    .contact-links{margin-top:25px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+    .contact a{color:var(--accent);font-weight:600;text-decoration:none}
+
+    footer{background:#08080c;text-align:center;padding:30px;color:#888;font-size:.9rem}
+
+    .whatsapp{
+      position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;
+      font-size:24px;padding:14px 18px;border-radius:50%;text-decoration:none;z-index:999
+    }
+
+    /* Responsive design for mobile */
+    @media (max-width: 768px) {
+      header {
+        padding: 18px 20px;
+      }
+      header h1 {
+        font-size: 1.1rem;
+      }
+      nav a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+      }
+      section {
+        padding: 100px 5%;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .cta-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .problem-grid {
+        grid-template-columns: 1fr;
+      }
+      .values {
+        grid-template-columns: 1fr;
+      }
+      .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      .contact-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-links a {
+        margin-bottom: 10px;
+      }
+      .whatsapp {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 16px;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 0.9rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CBEN PROD</h1>
+  <nav>
+    <a href="#offer">Offre</a>
+    <a href="#portfolio">Réalisations</a>
+    <a href="#about">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <!-- Vidéo HD en fond -->
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+    <source src="assets/4211321-hd_1920_1080_24fps.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo HTML5.
+  </video>
+  <div class="hero-content">
+    <h1>Des vidéos pour être <span class="accent">vu</span>, <span class="accent">compris</span> et <span class="accent">choisi</span></h1>
+    <p>Artisans, indépendants et entreprises locales à Dunkerque et des Hauts-de-France<br>qui veulent une image pro sans prise de tête.</p>
+    <div class="cta-group">
+      <a href="https://calendly.com/cbenprod/30min" class="btn btn-primary">Prendre rendez-vous</a>
+      <a href="#portfolio" class="btn btn-secondary">Voir des exemples</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <h2>Le problème n’est pas votre travail</h2>
+  <div class="problem-grid">
+    <div class="problem-card">Vous faites du bon travail, mais il ne se voit pas.</div>
+    <div class="problem-card">Vos réseaux sont irréguliers ou peu professionnels.</div>
+    <div class="problem-card">Vous n’avez ni le temps ni l’envie de créer du contenu.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Une approche simple et efficace</h2>
+  <div class="values">
+    <div class="value-box">
+      <h3>Simplicité</h3>
+      <p>Je gère le tournage et le montage. Vous restez concentré sur votre activité.</p>
+    </div>
+    <div class="value-box">
+      <h3>Crédibilité</h3>
+      <p>Des vidéos naturelles, modernes et professionnelles.</p>
+    </div>
+    <div class="value-box">
+      <h3>Utilité</h3>
+      <p>Des formats courts pensés pour être postés efficacement.</p>
+    </div>
+  </div>
+</section>
+
+<section id="offer" class="offer">
+  <div class="offer-overlay">
+    <h2>Une première vidéo pour poser les bases</h2>
+    <p>On démarre avec une vidéo courte, tournée sur le terrain, montée de façon dynamique.
+    Si le feeling est là, on peut ensuite travailler sur du contenu régulier.</p>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Réalisations</h2>
+  <div class="portfolio-grid">
+    <div class="video-embed"><iframe src="https://www.youtube.com/embed/0VgNx8eXhGw" loading="lazy" allowfullscreen></iframe></div>
+    <div class="video-embed"><iframe src="https://www.youtube.com/embed/6-k0XejomR0" loading="lazy" allowfullscreen></iframe></div>
+  </div>
+</section>
+
+<!-- À PROPOS (complété) -->
+<section id="about" class="about">
+  <div class="about-inner">
+    <h2>À propos</h2>
+    <p>
+       <strong>CBEN PROD</strong>, vidéaste et monteur certifié basé à Dunkerque.
+      J’aide les professionnels du Nord à améliorer leur image avec des vidéos modernes,
+      simples et efficaces.
+    </p>
+    <p>
+      Mon approche est directe : je gère le tournage, le montage et l’optimisation pour les réseaux sociaux.
+      Vous restez concentré sur votre activité, je m’occupe du reste.
+    </p>
+    <div class="cta-group" style="margin-top:30px;">
+      <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary">📅 Réserver un appel découverte</a>
+      <a href="mailto:cbenprod@gmail.com" class="btn btn-secondary">✉️ Me contacter par email</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT (complété) -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Premier échange sans engagement — choisissez le canal qui vous convient :</p>
+  <div class="contact-links">
+    <a href="mailto:cbenprod@gmail.com">✉️ Email : cbenprod@gmail.com</a>
+    <a href="tel:+33652889685">📞 Téléphone : +33 6 52 88 96 85</a>
+    <a href="https://wa.me/33652889685" target="_blank">💬 WhatsApp</a>
+    <a href="https://calendly.com/cbenprod/new-meeting" target="_blank">📅 Agenda</a>
+  </div>
+</section>
+
+<a href="https://wa.me/33652889685" class="whatsapp">💬</a>
+
+<footer>
+  © 2025 CBEN PROD – Vidéaste à Dunkerque – Nord / Pas-de-Calais
+</footer>
+
+</body>
+</html>
