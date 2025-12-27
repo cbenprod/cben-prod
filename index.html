@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vidéaste à Dunkerque | Vidéos réseaux sociaux – CBEN PROD</title>
-
-  <!-- SEO LOCAL -->
-  <meta name="description" content="Vidéaste à Dunkerque spécialisé en vidéos courtes, modernes et professionnelles pour artisans, indépendants et entreprises locales.">
-  <meta name="robots" content="index,follow">
+  <meta name="description" content="Vidéaste à Dunkerque spécialisé en vidéos courtes, modernes et professionnelles pour artisans, indépendants et entreprises locales." />
+  <meta name="robots" content="index,follow" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Plyr CSS -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 
   <style>
     :root{
@@ -23,276 +24,384 @@
     }
 
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif}
-    body{background:var(--bg);color:var(--text);overflow-x:hidden}
+    html,body{height:100%}
+    body{background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 
+    /* Header */
     header{
       position:fixed;top:0;left:0;width:100%;padding:18px 60px;
       display:flex;justify-content:space-between;align-items:center;
-      background:rgba(10,10,15,.85);backdrop-filter:blur(10px);z-index:1000
+      background:rgba(10,10,15,.85);backdrop-filter:blur(10px);z-index:1000;
     }
     header h1{font-size:1.3rem;font-weight:700;letter-spacing:1px}
-    nav a{color:#fff;text-decoration:none;margin-left:28px;font-weight:500;opacity:.9}
+    nav a{color:#fff;text-decoration:none;margin-left:28px;font-weight:500;opacity:.95}
     nav a:hover{color:var(--accent)}
 
-    section{padding:120px 10%}
+    /* ensure content not hidden behind fixed header */
+    main{padding-top:86px} /* adjust if header height changes */
+
+    section{padding:80px 10%}
     h2{text-align:center;font-size:2.3rem;margin-bottom:30px}
     p{color:var(--text-soft);line-height:1.7;font-size:1rem}
 
     /* HERO */
     .hero{
-      position:relative;height:100vh;display:flex;align-items:center;justify-content:center;
-      text-align:center;overflow:hidden
+      position:relative;height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.02)
     }
-    .hero-video{
-      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
-    }
-    .hero::after{
-      content:"";position:absolute;inset:0;
-      background:linear-gradient(to bottom,rgba(10,10,15,.25),rgba(10,10,15,.9));z-index:-1
-    }
-    .hero-content{max-width:900px;z-index:1}
-    .hero h1{font-size:3.4rem;margin-bottom:20px}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.25),rgba(10,10,15,.95));z-index:-1}
+    .hero-content{max-width:900px;z-index:1;padding:0 20px}
+    .hero h1{font-size:3rem;margin-bottom:18px}
     .hero .accent{color:var(--accent)}
-    .hero p{font-size:1.25rem}
+    .hero p{font-size:1.1rem;color:var(--text-soft)}
 
-    .cta-group{margin-top:35px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
-    .btn{padding:15px 36px;border-radius:10px;font-size:1rem;text-decoration:none;font-weight:600}
+    .cta-group{margin-top:24px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn{padding:12px 28px;border-radius:10px;font-size:0.98rem;text-decoration:none;font-weight:600}
     .btn-primary{background:var(--accent);color:#fff}
     .btn-primary:hover{background:#009fcc}
-    .btn-secondary{border:1px solid var(--accent);color:var(--accent)}
+    .btn-secondary{border:1px solid var(--accent);color:var(--accent);background:transparent}
 
     /* PROBLEM */
     .problem{background:var(--bg-soft)}
     .problem-grid{max-width:900px;margin:0 auto;display:grid;gap:20px}
-    .problem-card{background:var(--card);padding:28px;border-radius:16px}
+    .problem-card{background:var(--card);padding:20px;border-radius:12px}
 
     /* VALUES */
-    .values{display:grid;gap:30px;margin-top:60px}
+    .values{display:grid;gap:20px;margin-top:40px}
     @media(min-width:900px){.values{grid-template-columns:repeat(3,1fr)}}
-    .value-box{
-      background:linear-gradient(180deg,#151b23,#10151c);
-      padding:40px;border-radius:20px;text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,.35)
-    }
-    .value-box h3{margin-bottom:12px;color:var(--accent)}
+    .value-box{background:linear-gradient(180deg,#151b23,#10151c);padding:28px;border-radius:14px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+    .value-box h3{margin-bottom:10px;color:var(--accent)}
 
     /* OFFER */
-    .offer{
-      background:url('https://images.pexels.com/photos/3379932/pexels-photo-3379932.jpeg') center/cover no-repeat;
-      border-radius:24px;overflow:hidden
-    }
-    .offer-overlay{
-      background:rgba(10,10,15,.85);padding:80px;text-align:center
+    .offer{background:url('https://images.pexels.com/photos/3379932/pexels-photo-3379932.jpeg') center/cover no-repeat;border-radius:16px;overflow:hidden}
+    .offer-overlay{background:rgba(10,10,15,.85);padding:48px;text-align:center}
+
+    /* PORTFOLIO - vertical-friendly, simplified (no filters) */
+    #portfolio{padding:60px 10%}
+    .portfolio-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:28px;
+      margin-top:22px;
+      align-items:start;
+      justify-items:center;
     }
 
-    /* PORTFOLIO */
-    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:24px;margin-top:40px}
-    .video-embed{aspect-ratio:9/16;background:#000;border-radius:18px;overflow:hidden}
-    .video-embed iframe{width:100%;height:100%;border:0}
+    .portfolio-item{width:100%;max-width:360px;position:relative;outline:none}
+    .media-btn{display:block;border:0;background:transparent;padding:0;width:100%;cursor:pointer}
+    .thumb{width:100%;height:100%;object-fit:cover;display:block;border-radius:14px}
+    .play-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+
+    .video-stats{position:absolute;left:12px;bottom:12px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.55);padding:8px 10px;border-radius:12px;color:#fff;font-weight:600;backdrop-filter:blur(6px)}
+    .video-stats .insta{opacity:0.95}
+    .video-stats .stat-text{font-size:0.9rem}
+    .video-stats .dot{opacity:0.6;margin:0 6px}
+
+    /* Modal */
+    .media-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:2000}
+    .media-modal[aria-hidden="false"]{display:flex}
+    .modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.7)}
+    .modal-content{position:relative;z-index:2;width:min(1100px,95%);max-height:90vh;background:transparent;padding:18px;display:flex;flex-direction:column;gap:12px;align-items:center}
+    .modal-player{width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}
+    .modal-close{position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.6);color:#fff;border:0;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:1rem}
+    .modal-meta{color:var(--text-soft);font-size:0.95rem;display:flex;gap:12px;align-items:center}
+
+    /* Hover preview (optional) */
+    .portfolio-item:hover .thumb{transform:scale(1.02);transition:transform .35s ease}
+    .media-btn:focus{box-shadow:0 6px 20px rgba(0,0,0,0.45);border-radius:12px}
 
     /* ABOUT */
     .about{background:var(--bg-soft)}
-    .about-inner{max-width:900px;margin:0 auto;text-align:center}
+    .about-inner{max-width:900px;margin:0 auto;text-align:center;padding:40px 20px;border-radius:12px}
 
     /* CONTACT */
     .contact{text-align:center}
-    .contact-links{margin-top:25px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+    .contact-links{margin-top:18px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
     .contact a{color:var(--accent);font-weight:600;text-decoration:none}
 
-    footer{background:#08080c;text-align:center;padding:30px;color:#888;font-size:.9rem}
+    footer{background:#08080c;text-align:center;padding:28px;color:#888;font-size:.9rem;margin-top:40px}
 
-    .whatsapp{
-      position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;
-      font-size:24px;padding:14px 18px;border-radius:50%;text-decoration:none;z-index:999
+    .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;font-size:20px;padding:12px 14px;border-radius:50%;text-decoration:none;z-index:999;display:inline-flex;align-items:center;justify-content:center}
+
+    /* Responsive tweaks */
+    @media (max-width: 900px){
+      header{padding:14px 20px}
+      header h1{font-size:1.05rem}
+      nav a{margin-left:14px;font-size:0.95rem}
+      .hero h1{font-size:2.2rem}
+      .hero{height:70vh}
+      section{padding:60px 6%}
+      .portfolio-grid{gap:20px}
     }
 
-    /* Responsive design for mobile */
-    @media (max-width: 768px) {
-      header {
-        padding: 18px 20px;
-      }
-      header h1 {
-        font-size: 1.1rem;
-      }
-      nav a {
-        margin-left: 15px;
-        font-size: 0.9rem;
-      }
-      section {
-        padding: 100px 5%;
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .cta-group {
-        flex-direction: column;
-        align-items: center;
-      }
-      .btn {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-      .problem-grid {
-        grid-template-columns: 1fr;
-      }
-      .values {
-        grid-template-columns: 1fr;
-      }
-      .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-      .contact-links {
-        flex-direction: column;
-        align-items: center;
-      }
-      .contact-links a {
-        margin-bottom: 10px;
-      }
-      .whatsapp {
-        bottom: 15px;
-        right: 15px;
-        padding: 12px 16px;
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .hero p {
-        font-size: 0.9rem;
-      }
-      h2 {
-        font-size: 1.8rem;
-      }
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width:480px){
+      .hero h1{font-size:1.8rem}
+      .hero p{font-size:0.95rem}
+      .portfolio-grid{grid-template-columns:1fr}
+      main{padding-top:76px}
     }
   </style>
 </head>
-
 <body>
+  <header>
+    <h1>CBEN PROD</h1>
+    <nav aria-label="Navigation principale">
+      <a href="#offer">Offre</a>
+      <a href="#portfolio">Réalisations</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>CBEN PROD</h1>
-  <nav>
-    <a href="#offer">Offre</a>
-    <a href="#portfolio">Réalisations</a>
-    <a href="#about">À propos</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+        <source src="assets/4211321-hd_1920_1080_24fps.mp4" type="video/mp4">
+      </video>
 
-<section class="hero">
-  <!-- Vidéo HD en fond -->
-  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
-    <source src="assets/4211321-hd_1920_1080_24fps.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la vidéo HTML5.
-  </video>
-  <div class="hero-content">
-    <h1>Des vidéos pour être <span class="accent">vu</span>, <span class="accent">compris</span> et <span class="accent">choisi</span></h1>
-    <p>Artisans, indépendants et entreprises locales à Dunkerque et des Hauts-de-France<br>qui veulent une image pro sans prise de tête.</p>
-    <div class="cta-group">
-      <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary">Prendre rendez-vous</a>
-      <a href="#portfolio" class="btn btn-secondary">Voir des exemples</a>
-    </div>
-  </div>
-</section>
+      <div class="hero-content">
+        <h1>Des vidéos pour être <span class="accent">vu</span>, <span class="accent">compris</span> et <span class="accent">choisi</span></h1>
+        <p>Artisans, indépendants et entreprises locales à Dunkerque et des Hauts-de-France qui veulent une image pro sans prise de tête.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="https://calendly.com/cbenprod/30min" target="_blank" rel="noopener">Prendre rendez-vous</a>
+          <a class="btn btn-secondary" href="#portfolio">Voir des exemples</a>
+        </div>
+      </div>
+    </section>
 
-<section class="problem">
-  <h2>Le problème n’est pas votre travail</h2>
-  <div class="problem-grid">
-    <div class="problem-card">Vous faites du bon travail, mais il ne se voit pas.</div>
-    <div class="problem-card">Vos réseaux sont irréguliers ou peu professionnels.</div>
-    <div class="problem-card">Vous n’avez ni le temps ni l’envie de créer du contenu.</div>
-  </div>
-</section>
+    <!-- PROBLEM -->
+    <section class="problem" aria-labelledby="problem-title">
+      <h2 id="problem-title">Le problème n’est pas votre travail</h2>
+      <div class="problem-grid">
+        <div class="problem-card">Vous faites du bon travail, mais il ne se voit pas.</div>
+        <div class="problem-card">Vos réseaux sont irréguliers ou peu professionnels.</div>
+        <div class="problem-card">Vous n’avez ni le temps ni l’envie de créer du contenu.</div>
+      </div>
+    </section>
 
-<section>
-  <h2>Une approche simple et efficace</h2>
-  <div class="values">
-    <div class="value-box">
-      <h3>Simplicité</h3>
-      <p>Je gère le tournage et le montage. Vous restez concentré sur votre activité.</p>
-    </div>
-    <div class="value-box">
-      <h3>Crédibilité</h3>
-      <p>Des vidéos naturelles, modernes et professionnelles.</p>
-    </div>
-    <div class="value-box">
-      <h3>Utilité</h3>
-      <p>Des formats courts pensés pour être postés efficacement.</p>
-    </div>
-  </div>
-</section>
+    <!-- VALUES -->
+    <section aria-labelledby="values-title">
+      <h2 id="values-title">Une approche simple et efficace</h2>
+      <div class="values">
+        <div class="value-box">
+          <h3>Simplicité</h3>
+          <p>Je gère le tournage et le montage. Vous restez concentré sur votre activité.</p>
+        </div>
+        <div class="value-box">
+          <h3>Crédibilité</h3>
+          <p>Des vidéos naturelles, modernes et professionnelles.</p>
+        </div>
+        <div class="value-box">
+          <h3>Utilité</h3>
+          <p>Des formats courts pensés pour être postés efficacement.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="offer" class="offer">
-  <div class="offer-overlay">
-    <h2>Une première vidéo pour poser les bases</h2>
-    <p>On démarre avec une vidéo courte, tournée sur le terrain, montée de façon dynamique.
-    Si le feeling est là, on peut ensuite travailler sur du contenu régulier.</p>
-  </div>
-</section>
+    <!-- OFFER -->
+    <section id="offer" class="offer" aria-labelledby="offer-title">
+      <div class="offer-overlay">
+        <h2 id="offer-title">Une première vidéo pour poser les bases</h2>
+        <p>On démarre avec une vidéo courte, tournée sur le terrain, montée de façon dynamique. Si le feeling est là, on peut ensuite travailler sur du contenu régulier.</p>
+      </div>
+    </section>
 
-<section id="portfolio">
-  <h2>Réalisations</h2>
-  <div class="portfolio-grid">
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/E36itvozcFs" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/6-k0XejomR0" loading="lazy" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
+    <!-- ===== RÉALISATIONS SIMPLIFIÉES (TOUTES LES VIDÉOS) ===== -->
+    <section id="portfolio" aria-labelledby="portfolio-title">
+      <h2 id="portfolio-title">Réalisations</h2>
 
-<!-- À PROPOS (complété) -->
-<section id="about" class="about">
-  <div class="about-inner">
-    <h2>À propos</h2>
-    <p>
-       <strong>CBEN PROD</strong>, vidéaste et monteur certifié basé à Dunkerque.
-      J’aide les professionnels du Nord à améliorer leur image avec des vidéos modernes,
-      simples et efficaces.
-    </p>
-    <p>
-      Mon approche est directe : je gère le tournage, le montage et l’optimisation pour les réseaux sociaux.
-      Vous restez concentré sur votre activité, je m’occupe du reste.
-    </p>
-    <div class="cta-group" style="margin-top:30px;">
-      <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary">📅 Réserver un appel découverte</a>
-      <a href="mailto:cbenprod@gmail.com" class="btn btn-secondary">✉️ Me contacter par email</a>
-    </div>
-  </div>
-</section>
+      <!-- Grid (all videos only) -->
+      <div class="portfolio-grid" id="portfolioGrid">
 
-<!-- CONTACT (complété) -->
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Premier échange sans engagement — choisissez le canal qui vous convient :</p>
-  <div class="contact-links">
-    <a href="mailto:cbenprod@gmail.com">✉️ Email : cbenprod@gmail.com</a>
-    <a href="tel:+33652889685">📞 Téléphone : +33 6 52 88 96 85</a>
-    <a href="https://wa.me/33652889685" target="_blank">💬 WhatsApp</a>
-    <a href="https://calendly.com/cbenprod/new-meeting" target="_blank">📅 Agenda</a>
-  </div>
-</section>
+        <!-- Item 1 -->
+        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 1 - +7700 vues 50 likes">
+          <button class="media-btn" data-video-id="E36itvozcFs" data-thumb="https://i.ytimg.com/vi/E36itvozcFs/hqdefault.jpg" aria-label="Ouvrir la vidéo 1">
+            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/E36itvozcFs/hqdefault.jpg" alt="Aperçu vidéo 1" />
+            <div class="play-badge" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
+            </div>
+          </button>
 
-<a href="https://wa.me/33652889685" class="whatsapp">💬</a>
+          <div class="video-stats" aria-hidden="true">
+            <svg class="insta" viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="3.2" stroke="#fff" stroke-width="1.2"/>
+              <circle cx="17.5" cy="6.5" r="0.6" fill="#fff"/>
+            </svg>
+            <span class="stat-text">+7700 vues</span>
+            <span class="dot">•</span>
+            <span class="stat-text">50 likes</span>
+          </div>
+        </article>
 
-<footer>
-  © 2025 CBEN PROD – Vidéaste à Dunkerque – Nord / Pas-de-Calais
-</footer>
+        <!-- Item 2 -->
+        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 2 - +5000 vues 90 likes">
+          <button class="media-btn" data-video-id="6-k0XejomR0" data-thumb="https://i.ytimg.com/vi/6-k0XejomR0/hqdefault.jpg" aria-label="Ouvrir la vidéo 2">
+            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/6-k0XejomR0/hqdefault.jpg" alt="Aperçu vidéo 2" />
+            <div class="play-badge" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
+            </div>
+          </button>
 
+          <div class="video-stats" aria-hidden="true">
+            <svg class="insta" viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="3.2" stroke="#fff" stroke-width="1.2"/>
+              <circle cx="17.5" cy="6.5" r="0.6" fill="#fff"/>
+            </svg>
+            <span class="stat-text">+5000 vues</span>
+            <span class="dot">•</span>
+            <span class="stat-text">90 likes</span>
+          </div>
+        </article>
+
+        <!-- Add more items here following the same structure if needed -->
+
+      </div>
+
+      <!-- Modal / Lightbox (hidden by default) -->
+      <div id="mediaModal" class="media-modal" aria-hidden="true" role="dialog" aria-label="Lecteur vidéo">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-content" role="document">
+          <button class="modal-close" aria-label="Fermer la fenêtre">✕</button>
+          <div class="modal-player" id="modalPlayerContainer" data-plyr-provider="youtube" data-plyr-embed-id=""></div>
+          <div class="modal-meta">
+            <div class="modal-stats" id="modalStats"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="about-inner">
+        <h2 id="about-title">À propos</h2>
+        <p><strong>CBEN PROD</strong>, vidéaste et monteur certifié basé à Dunkerque. J’aide les professionnels du Nord à améliorer leur image avec des vidéos modernes, simples et efficaces.</p>
+        <p>Mon approche est directe : je gère le tournage, le montage et l’optimisation pour les réseaux sociaux. Vous restez concentré sur votre activité, je m’occupe du reste.</p>
+
+        <div class="cta-group" style="margin-top:20px">
+          <a class="btn btn-primary" href="https://calendly.com/cbenprod/new-meeting" target="_blank" rel="noopener">📅 Réserver un appel découverte</a>
+          <a class="btn btn-secondary" href="mailto:cbenprod@gmail.com">✉️ Me contacter par email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>Premier échange sans engagement — choisissez le canal qui vous convient :</p>
+      <div class="contact-links">
+        <a href="mailto:cbenprod@gmail.com">✉️ Email : cbenprod@gmail.com</a>
+        <a href="tel:+33652889685">📞 Téléphone : +33 6 52 88 96 85</a>
+        <a href="https://wa.me/33652889685" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="https://calendly.com/cbenprod/new-meeting" target="_blank" rel="noopener">📅 Agenda</a>
+      </div>
+    </section>
+
+  </main>
+
+  <a class="whatsapp" href="https://wa.me/33652889685" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+  <footer>
+    © 2025 CBEN PROD – Vidéaste à Dunkerque – Nord / Pas-de-Calais
+  </footer>
+
+  <!-- Plyr JS (init after DOM ready) -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    (function () {
+      // Lazy load images (simple)
+      document.addEventListener('DOMContentLoaded', function () {
+        const lazyImgs = document.querySelectorAll('.lazy');
+        const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries, obs) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              const img = e.target;
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              obs.unobserve(img);
+            }
+          });
+        }, {rootMargin: '200px'}) : null;
+
+        lazyImgs.forEach(img => io ? io.observe(img) : img.src = img.dataset.src);
+
+        // Modal + Plyr init
+        const modal = document.getElementById('mediaModal');
+        const modalPlayerContainer = document.getElementById('modalPlayerContainer');
+        const modalStats = document.getElementById('modalStats');
+        let plyrInstance = null;
+
+        function openModal(videoId, statsHtml) {
+          modal.setAttribute('aria-hidden', 'false');
+          modalPlayerContainer.innerHTML = ''; // reset
+          // create iframe container for Plyr
+          const iframe = document.createElement('iframe');
+          iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&iv_load_policy=3&modestbranding=1&rel=0');
+          iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('title', 'Lecteur vidéo');
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          modalPlayerContainer.appendChild(iframe);
+
+          // init Plyr on the iframe element
+          try {
+            plyrInstance = new Plyr(iframe, {
+              controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+              clickToPlay: true
+            });
+          } catch (e) {
+            console.warn('Plyr init error', e);
+          }
+
+          modalStats.innerHTML = statsHtml || '';
+          document.body.style.overflow = 'hidden';
+          const closeBtn = modal.querySelector('.modal-close');
+          if (closeBtn) closeBtn.focus();
+        }
+
+        function closeModal() {
+          modal.setAttribute('aria-hidden', 'true');
+          try { if (plyrInstance && plyrInstance.destroy) plyrInstance.destroy(); } catch(e){}
+          plyrInstance = null;
+          modalPlayerContainer.innerHTML = '';
+          modalStats.innerHTML = '';
+          document.body.style.overflow = '';
+        }
+
+        // open on click
+        document.querySelectorAll('.media-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const id = btn.dataset.videoId;
+            const parent = btn.closest('.portfolio-item');
+            const stats = parent.querySelector('.video-stats').innerHTML;
+            openModal(id, stats);
+          });
+          // keyboard open
+          btn.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Enter' || ev.key === ' ') {
+              ev.preventDefault();
+              btn.click();
+            }
+          });
+        });
+
+        // modal close handlers
+        modal.querySelectorAll('[data-close], .modal-close').forEach(el => el.addEventListener('click', closeModal));
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+        });
+      });
+    })();
+  </script>
 </body>
-
 </html>
+
 
 
 
