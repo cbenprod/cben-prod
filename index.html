@@ -30,11 +30,11 @@
 
     /* Header */
     header{
-      position:fixed;top:0;left:0;width:100%;padding:18px 60px;
+      position:fixed;top:0;left:0;width:100%;height:86px;padding:0 60px;
       display:flex;justify-content:space-between;align-items:center;
       background:rgba(10,10,15,.85);backdrop-filter:blur(10px);z-index:1000;
     }
-    header h1{font-size:1.3rem;font-weight:700;letter-spacing:1px}
+    header h1 img { height: 100%; width: auto; max-width: 300px; }
     nav a{color:#fff;text-decoration:none;margin-left:28px;font-weight:500;opacity:.95}
     nav a:hover{color:var(--accent)}
 
@@ -126,8 +126,8 @@
 
     /* Responsive tweaks */
     @media (max-width: 900px){
-      header{padding:14px 20px}
-      header h1{font-size:1.05rem}
+      header{padding:0 20px; height:76px;}
+      header h1 img { height: 100%; max-width: 200px; }
       nav a{margin-left:14px;font-size:0.95rem}
       .hero h1{font-size:2.2rem}
       .hero{height:70vh}
@@ -140,37 +140,14 @@
       .hero p{font-size:0.95rem}
       .portfolio-grid{grid-template-columns:1fr}
       main{padding-top:76px}
-      .modal-content{
-        width: 100vw;
-        height: 100vh;
-        max-height: 100vh;
-        padding: 0;
-      }
-      .modal-player{
-        width: 100%;
-        height: 100%;
-        aspect-ratio: unset;
-      }
-      .modal-meta{
-        display: none;
-      }
-      .modal-close{
-        top: 20px;
-        right: 20px;
-        background: rgba(0,0,0,0.8);
-        color: #fff;
-        border: 0;
-        padding: 10px 12px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 1.2rem;
-      }
+      header{height:76px; padding:0 20px;}
+      header h1 img { height: 100%; max-width: 150px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>CBEN PROD</h1>
+    <h1></h1>
     <nav aria-label="Navigation principale">
       <a href="#offer">Offre</a>
       <a href="#portfolio">Réalisations</a>
@@ -178,11 +155,11 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
+  <img id="fixed-logo" src="assets/Logo CBEN PROD noir - videaste dunkerque - google.png" alt="CBEN PROD" style="position:fixed; top:15px; left:15px; height:70px; width:auto; z-index:1001;">
   <main>
     <!-- HERO -->
     <section class="hero" aria-label="Hero">
-      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/cover.jpg" aria-hidden="true">
         <source src="assets/4211321-hd_1920_1080_24fps.mp4" type="video/mp4">
       </video>
 
@@ -190,7 +167,7 @@
         <h1>Des vidéos pour être <span class="accent">vu</span>, <span class="accent">compris</span> et <span class="accent">choisi</span></h1>
         <p>Artisans, indépendants et entreprises locales à Dunkerque et des Hauts-de-France qui veulent une image pro sans prise de tête.</p>
         <div class="cta-group">
-          <a class="btn btn-primary" href="https://calendly.com/cbenprod/new-meeting" target="_blank" rel="noopener">Prendre rendez-vous</a>
+          <a class="btn btn-primary" href="https://calendly.com/cbenprod/30min" target="_blank" rel="noopener">Prendre rendez-vous</a>
           <a class="btn btn-secondary" href="#portfolio">Voir des exemples</a>
         </div>
       </div>
@@ -418,6 +395,7 @@
 </body>
 </html>
 ```
+
 
 
 
