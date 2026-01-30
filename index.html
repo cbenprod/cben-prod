@@ -118,6 +118,8 @@
     .video-stats{position:absolute;left:12px;bottom:12px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.55);padding:8px 10px;border-radius:12px;color:#fff;font-weight:600;backdrop-filter:blur(6px)}
     .video-stats .stat-text{font-size:0.9rem}
     .video-stats .dot{opacity:0.6;margin:0 6px}
+    .video-stats .social-icon{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;margin-left:6px;opacity:0.95}
+    .video-stats .social-icon svg{width:100%;height:100%;fill:var(--accent)}
 
     /* Modal */
     .media-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:2000;padding:10px}
@@ -145,6 +147,20 @@
     .testimonials{padding:80px 10%;background:var(--bg-soft);overflow:hidden}
     .testimonials h2{margin-bottom:50px}
     .testimonials-grid{display:flex;gap:30px;animation:scroll 80s linear infinite;min-width:calc(300px * 6 + 30px * 5)} /* 6 items for seamless */
+    /* Mobile & tablet: enable horizontal scroll with snapping and drag-to-scroll */
+    @media (max-width:768px){
+      .testimonials-grid{
+        display:flex;
+        gap:20px;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        scroll-snap-type:x mandatory;
+        padding-bottom:8px;
+        animation:none;
+        min-width:unset;
+      }
+      .testimonial-card{flex:0 0 auto;width:280px;scroll-snap-align:start;min-height:240px}
+    }
     .testimonial-card{background:var(--card);padding:32px;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.6);transition:transform 0.3s ease;position:relative;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;width:300px;flex-shrink:0}
     .testimonial-card:hover{transform:translateY(-5px)}
     .testimonial-quote{font-size:1.1rem;color:var(--text-soft);line-height:1.6;margin-bottom:20px;font-style:italic;flex-grow:1}
@@ -161,8 +177,7 @@
 
     footer{background:#000;text-align:center;padding:32px;color:#888;font-size:.9rem;margin-top:40px;border-top:1px solid rgba(255,255,255,0.1)}
 
-    .whatsapp{position:fixed;bottom:24px;right:24px;background:linear-gradient(45deg, var(--accent), var(--accent-secondary));color:#fff;font-size:22px;padding:14px 16px;border-radius:50%;text-decoration:none;z-index:999;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 6px 25px rgba(243,156,18,0.5);transition:transform 0.3s ease}
-    .whatsapp:hover{transform:scale(1.1)}
+
 
     /* Responsive tweaks */
     @media (max-width: 1200px){
@@ -188,6 +203,7 @@
       .about-inner{padding:32px}
       .hamburger{display:block}
       nav{position:absolute;top:76px;left:0;width:100%;background:rgba(10,10,15,.95);flex-direction:column;padding:20px 0;display:none;z-index:999}
+      nav.open{display:flex}
       nav a{margin:10px 0;padding:10px 20px}
     }
 
@@ -201,8 +217,8 @@
       .values{grid-template-columns:1fr}
       .portfolio-grid{grid-template-columns:1fr}
       .contact-links{flex-direction:column;gap:12px}
-      .testimonials-grid{min-width:calc(280px * 6 + 30px * 5)}
-      .testimonial-card{flex-shrink:0;width:280px;padding:20px;min-height:240px}
+      .testimonials-grid{min-width:unset}
+      .testimonial-card{flex-shrink:0;width:280px;padding:20px;min-height:240px} 
       .testimonial-quote{font-size:1rem}
       .modal-content{width:calc(100% - 20px);padding:12px;border-radius:12px}
       .modal-player{aspect-ratio:16/9}
@@ -224,7 +240,7 @@
       .stat-text{font-size:1rem}
       .value-box{padding:20px}
       .about-inner{padding:24px}
-      .whatsapp{bottom:16px;right:16px;padding:12px 14px;font-size:18px}
+
       .testimonials h2{font-size:1.8rem;margin-bottom:30px}
       .testimonial-card{padding:20px;min-height:220px}
       .testimonial-quote{font-size:0.95rem}
@@ -240,7 +256,7 @@
       <a href="#about">À propos</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="hamburger" aria-label="Menu">☰</button>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
   </header>
 
   <main>
@@ -295,6 +311,115 @@
       </div>
     </section>
 
+    <!-- ===== RÉALISATIONS SIMPLIFIÉES (TOUTES LES VIDÉOS, SANS LOGO) ===== -->
+    <section id="portfolio" aria-labelledby="portfolio-title">
+      <h2 id="portfolio-title">Réalisations</h2>
+
+      <!-- Grid (all videos only) -->
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- Item 1 -->
+        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 1 - +8000 vues 50 likes">
+          <button class="media-btn" data-video-id="E36itvozcFs" data-thumb="https://i.ytimg.com/vi/E36itvozcFs/hqdefault.jpg" aria-label="Ouvrir la vidéo 1">
+            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/E36itvozcFs/hqdefault.jpg" alt="Aperçu vidéo 1" />
+            <div class="play-badge" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
+            </div>
+          </button>
+
+          <div class="video-stats" aria-hidden="true">
+            <span class="stat-text">+8000 vues</span>
+            <span class="dot">•</span>
+            <span class="stat-text">50 likes</span>
+            <span class="social-icon" title="Facebook" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.8v-6.9h-2v-2.9h2V9.9c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.2l-.4 2.9h-1.8V21.8A10 10 0 0022 12z"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 2 - +6000 vues 119 partages">
+          <button class="media-btn" data-video-id="OS9jbYF8NcQ" data-thumb="https://i.ytimg.com/vi/OS9jbYF8NcQ/hqdefault.jpg" aria-label="Ouvrir la vidéo 2">
+            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/OS9jbYF8NcQ/hqdefault.jpg" alt="Aperçu vidéo 2" />
+            <div class="play-badge" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
+            </div>
+          </button>
+
+          <div class="video-stats" aria-hidden="true">
+            <span class="stat-text">+6000 vues</span>
+            <span class="dot">•</span>
+            <span class="stat-text">🔗 119 partages</span>
+            <span class="social-icon" title="Facebook" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.8v-6.9h-2v-2.9h2V9.9c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.2l-.4 2.9h-1.8V21.8A10 10 0 0022 12z"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 3 - +9100 vues 142 likes">
+          <button class="media-btn" data-video-id="6-k0XejomR0" data-thumb="https://i.ytimg.com/vi/6-k0XejomR0/hqdefault.jpg" aria-label="Ouvrir la vidéo 3">
+            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/6-k0XejomR0/hqdefault.jpg" alt="Aperçu vidéo 3" />
+            <div class="play-badge" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
+            </div>
+          </button>
+
+          <div class="video-stats" aria-hidden="true">
+            <span class="stat-text">+9100 vues</span>
+            <span class="dot">•</span>
+            <span class="stat-text">142 likes</span>
+            <span class="social-icon" title="Facebook" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.8v-6.9h-2v-2.9h2V9.9c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.2l-.4 2.9h-1.8V21.8A10 10 0 0022 12z"/></svg>
+            </span>
+            <span class="social-icon" title="Instagram" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.2A3.2 3.2 0 1015.2 11 3.2 3.2 0 0012 8.2zM18.4 6.1a1.1 1.1 0 11-1.1-1.1 1.1 1.1 0 011.1 1.1z"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 4 - +32k vues 1530 likes">
+          <button class="media-btn" data-video-id="cd8cqtL67b8" data-thumb="https://i.ytimg.com/vi/cd8cqtL67b8/hqdefault.jpg" aria-label="Ouvrir la vidéo 4">
+            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/cd8cqtL67b8/hqdefault.jpg" alt="Aperçu vidéo 4" />
+            <div class="play-badge" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
+            </div>
+          </button>
+
+          <div class="video-stats" aria-hidden="true">
+            <span class="stat-text">+32k vues</span>
+            <span class="dot">•</span>
+            <span class="stat-text">1530 likes</span>
+            <span class="social-icon" title="Facebook" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.8v-6.9h-2v-2.9h2V9.9c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.2l-.4 2.9h-1.8V21.8A10 10 0 0022 12z"/></svg>
+            </span>
+            <span class="social-icon" title="Instagram" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.2A3.2 3.2 0 1015.2 11 3.2 3.2 0 0012 8.2zM18.4 6.1a1.1 1.1 0 11-1.1-1.1 1.1 1.1 0 011.1 1.1z"/></svg>
+            </span>
+            <span class="social-icon" title="TikTok" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h-1.1a4.9 4.9 0 01-4.4-2.5v8.5a4 4 0 11-4-4V14a6 6 0 106 6V8.5c1 .6 2.2 1 3.5 1 .3 0 .6 0 .9-.1V3z"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Add more items here following the same structure if needed -->
+
+      </div>
+
+      <!-- Modal / Lightbox (hidden by default) -->
+      <div id="mediaModal" class="media-modal" aria-hidden="true" role="dialog" aria-label="Lecteur vidéo">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-content" role="document">
+          <button class="modal-close" aria-label="Fermer la fenêtre">✕</button>
+          <div class="modal-player" id="modalPlayerContainer" data-plyr-provider="youtube" data-plyr-embed-id=""></div>
+          <div class="modal-meta">
+            <div class="modal-stats" id="modalStats"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- VALUES -->
     <section aria-labelledby="values-title">
       <h2 id="values-title">Une approche simple et efficace</h2>
@@ -325,94 +450,6 @@
       </div>
     </section>
 
-    <!-- ===== RÉALISATIONS SIMPLIFIÉES (TOUTES LES VIDÉOS, SANS LOGO) ===== -->
-    <section id="portfolio" aria-labelledby="portfolio-title">
-      <h2 id="portfolio-title">Réalisations</h2>
-
-      <!-- Grid (all videos only) -->
-      <div class="portfolio-grid" id="portfolioGrid">
-
-        <!-- Item 1 -->
-        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 1 - +8000 vues 50 likes">
-          <button class="media-btn" data-video-id="E36itvozcFs" data-thumb="https://i.ytimg.com/vi/E36itvozcFs/hqdefault.jpg" aria-label="Ouvrir la vidéo 1">
-            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/E36itvozcFs/hqdefault.jpg" alt="Aperçu vidéo 1" />
-            <div class="play-badge" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
-            </div>
-          </button>
-
-          <div class="video-stats" aria-hidden="true">
-            <span class="stat-text">+8000 vues</span>
-            <span class="dot">•</span>
-            <span class="stat-text">50 likes</span>
-          </div>
-        </article>
-
-        <!-- Item 2 -->
-        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 2 - +5200 vues 119 partages">
-          <button class="media-btn" data-video-id="OS9jbYF8NcQ" data-thumb="https://i.ytimg.com/vi/OS9jbYF8NcQ/hqdefault.jpg" aria-label="Ouvrir la vidéo 2">
-            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/OS9jbYF8NcQ/hqdefault.jpg" alt="Aperçu vidéo 2" />
-            <div class="play-badge" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
-            </div>
-          </button>
-
-          <div class="video-stats" aria-hidden="true">
-            <span class="stat-text">+5200 vues</span>
-            <span class="dot">•</span>
-            <span class="stat-text">🔗 119 partages</span>
-          </div>
-        </article>
-
-        <!-- Item 3 -->
-        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 3 - +5300 vues 90 likes">
-          <button class="media-btn" data-video-id="6-k0XejomR0" data-thumb="https://i.ytimg.com/vi/6-k0XejomR0/hqdefault.jpg" aria-label="Ouvrir la vidéo 3">
-            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/6-k0XejomR0/hqdefault.jpg" alt="Aperçu vidéo 3" />
-            <div class="play-badge" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
-            </div>
-          </button>
-
-          <div class="video-stats" aria-hidden="true">
-            <span class="stat-text">+5300 vues</span>
-            <span class="dot">•</span>
-            <span class="stat-text">90 likes</span>
-          </div>
-        </article>
-
-        <!-- Item 4 -->
-        <article class="portfolio-item" tabindex="0" aria-label="Vidéo 4 - +5000 vues 100 likes">
-          <button class="media-btn" data-video-id="cd8cqtL67b8" data-thumb="https://i.ytimg.com/vi/cd8cqtL67b8/hqdefault.jpg" aria-label="Ouvrir la vidéo 4">
-            <img class="thumb lazy" data-src="https://i.ytimg.com/vi/cd8cqtL67b8/hqdefault.jpg" alt="Aperçu vidéo 4" />
-            <div class="play-badge" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.45)"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
-            </div>
-          </button>
-
-          <div class="video-stats" aria-hidden="true">
-            <span class="stat-text">+5000 vues</span>
-            <span class="dot">•</span>
-            <span class="stat-text">100 likes</span>
-          </div>
-        </article>
-
-        <!-- Add more items here following the same structure if needed -->
-
-      </div>
-
-      <!-- Modal / Lightbox (hidden by default) -->
-      <div id="mediaModal" class="media-modal" aria-hidden="true" role="dialog" aria-label="Lecteur vidéo">
-        <div class="modal-backdrop" data-close></div>
-        <div class="modal-content" role="document">
-          <button class="modal-close" aria-label="Fermer la fenêtre">✕</button>
-          <div class="modal-player" id="modalPlayerContainer" data-plyr-provider="youtube" data-plyr-embed-id=""></div>
-          <div class="modal-meta">
-            <div class="modal-stats" id="modalStats"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ABOUT -->
     <section id="about" class="about" aria-labelledby="about-title">
       <div class="about-inner">
@@ -434,7 +471,7 @@
       <div class="contact-links">
         <a href="mailto:cbenprod@gmail.com">✉️ Email : cbenprod@gmail.com</a>
         <a href="tel:+33652889685">📞 Téléphone : +33 6 52 88 96 85</a>
-        <a href="https://wa.me/33652889685" target="_blank" rel="noopener">💬 WhatsApp</a>
+
         <a href="https://calendly.com/cbenprod/new-meeting" target="_blank" rel="noopener">📅 Agenda</a>
       </div>
     </section>
@@ -515,7 +552,7 @@
     </div>
   </section>
 
-  <a class="whatsapp" href="https://wa.me/33652889685" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
 
   <footer>
     © 2025 CBEN PROD – Vidéaste à Dunkerque – Nord / Pas-de-Calais
@@ -641,20 +678,94 @@
           if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
         });
 
-        // Pause testimonials scroll on click
+        // Testimonials: desktop marquee pause on click + mobile drag-to-scroll with snapping
         const testimonialsGrid = document.querySelector('.testimonials-grid');
         if (testimonialsGrid) {
-          testimonialsGrid.addEventListener('click', function() {
-            this.style.animationPlayState = this.style.animationPlayState === 'paused' ? 'running' : 'paused';
-          });
+          // Desktop: click to pause/resume marquee animation
+          function toggleMarquee() {
+            if (window.matchMedia('(min-width: 769px)').matches) {
+              testimonialsGrid.style.animationPlayState = testimonialsGrid.style.animationPlayState === 'paused' ? 'running' : 'paused';
+            }
+          }
+          testimonialsGrid.addEventListener('click', toggleMarquee);
+
+          // Mobile/Touch: pointer drag-to-scroll with snap on small screens (handlers active only when viewport is small)
+          let isDown = false, startX = 0, startScroll = 0, pointerId = null;
+          testimonialsGrid.style.cursor = 'default';
+
+          function pointerDownHandler(e) {
+            if (!window.matchMedia('(max-width: 768px)').matches) return;
+            isDown = true;
+            pointerId = e.pointerId;
+            try { testimonialsGrid.setPointerCapture(pointerId); } catch (err) {}
+            testimonialsGrid.style.cursor = 'grabbing';
+            startX = e.clientX;
+            startScroll = testimonialsGrid.scrollLeft;
+          }
+
+          function pointerMoveHandler(e) {
+            if (!isDown) return;
+            const dx = e.clientX - startX;
+            testimonialsGrid.scrollLeft = startScroll - dx;
+          }
+
+          function endDrag(e) {
+            if (!isDown) return;
+            isDown = false;
+            testimonialsGrid.style.cursor = 'grab';
+            try { testimonialsGrid.releasePointerCapture(pointerId); } catch (err) {}
+
+            // If browser supports CSS scroll-snap, let it handle snapping; otherwise, do a manual snap
+            if (CSS && CSS.supports && CSS.supports('scroll-snap-type', 'x mandatory')) return;
+
+            const cards = testimonialsGrid.querySelectorAll('.testimonial-card');
+            if (!cards.length) return;
+            const gridRect = testimonialsGrid.getBoundingClientRect();
+            let closest = null, closestDist = Infinity;
+            cards.forEach(card => {
+              const rect = card.getBoundingClientRect();
+              const distance = Math.abs(rect.left - gridRect.left);
+              if (distance < closestDist) { closestDist = distance; closest = card; }
+            });
+            if (closest) {
+              const offset = closest.getBoundingClientRect().left - gridRect.left;
+              testimonialsGrid.scrollTo({ left: testimonialsGrid.scrollLeft + offset, behavior: 'smooth' });
+            }
+          }
+
+          testimonialsGrid.addEventListener('pointerdown', pointerDownHandler);
+          testimonialsGrid.addEventListener('pointermove', pointerMoveHandler);
+          testimonialsGrid.addEventListener('pointerup', endDrag);
+          testimonialsGrid.addEventListener('pointercancel', endDrag);
+          testimonialsGrid.addEventListener('pointerleave', endDrag);
+
+          // Support horizontal scrolling with wheel (trackpad or shift+wheel) only on small screens
+          testimonialsGrid.addEventListener('wheel', (e) => {
+            if (!window.matchMedia('(max-width: 768px)').matches) return;
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey) {
+              e.preventDefault();
+              testimonialsGrid.scrollLeft += e.deltaY || e.deltaX;
+            }
+          }, { passive: false });
         }
 
-        // Hamburger menu toggle
+        // Hamburger menu toggle (use class + ARIA for robust behavior)
         const hamburger = document.querySelector('.hamburger');
         const nav = document.querySelector('nav');
         if (hamburger && nav) {
           hamburger.addEventListener('click', () => {
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            const isOpen = nav.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            hamburger.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Menu');
+          });
+
+          // Ensure menu is closed when resizing to desktop to avoid stale state
+          window.addEventListener('resize', () => {
+            if (window.matchMedia('(min-width: 901px)').matches && nav.classList.contains('open')) {
+              nav.classList.remove('open');
+              hamburger.setAttribute('aria-expanded', 'false');
+              hamburger.setAttribute('aria-label', 'Menu');
+            }
           });
         }
       });
@@ -663,7 +774,6 @@
 </body>
 </html>
 ```
-
 
 
 
