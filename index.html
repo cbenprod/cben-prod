@@ -83,7 +83,7 @@
 
     /* FIX ACCESSIBILITÉ : curseur standard par défaut, custom seulement sur pointer précis */
     @media (pointer: fine) {
-      body { cursor: none; }
+      body { cursor: auto; }
     }
 
     ::selection { background: var(--orange); color: #fff; }
@@ -549,6 +549,7 @@
       display: flex; gap: 1.4rem; padding: 0 3rem 1.5rem;
       overflow-x: auto; scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch; scrollbar-width: none;
+      touch-action: pan-x; -webkit-user-select: none; user-select: none;
     }
     .port-track::-webkit-scrollbar { display: none; }
     @media (pointer: fine) { .port-track { cursor: none; } }
@@ -860,12 +861,12 @@
       .hero-h1 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
       .hero-sub-row { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
       .hero-actions { flex-direction: column; width: 100%; gap: .8rem; }
-      .btn-mag, .btn-outline { justify-content: center; width: 100%; min-height: 48px; }
+      .btn-mag, .btn-outline { justify-content: center; width: 100%; min-height: 48px; max-width: 280px; }
       .pcard { flex: 0 0 58vw; }
       .about-layout { gap: 2rem; margin-top: 2.5rem; }
       .about-text { gap: 1rem; }
       .about-ctas { flex-direction: column; gap: .6rem; }
-      .about-ctas .btn-mag, .about-ctas .btn-outline { width: 100%; }
+      .about-ctas .btn-mag, .about-ctas .btn-outline { width: 100%; max-width: 280px; }
       .pricing-grid { gap: 1.5rem; }
       .pbox { padding: 2rem 1.5rem; }
       .pbox-features { margin: 1.5rem 0; }
