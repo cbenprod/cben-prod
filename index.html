@@ -5,9 +5,9 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vidéaste à Dunkerque | CBEN PROD – Vidéos qui font vendre</title>
-  <meta name="description" content="CBEN PROD, vidéaste professionnel à Dunkerque. Vidéos courtes pour artisans, restaurants et entreprises des Hauts-de-France. Tournage, montage, réseaux sociaux.">
-  <meta name="keywords" content="vidéaste Dunkerque, vidéo entreprise Nord, vidéo réseaux sociaux Dunkerque, monteur vidéo Hauts-de-France, vidéo artisan Dunkerque, vidéaste Nord-Pas-de-Calais">
+  <title>CBENPROD – Vidéaste à Dunkerque | Vidéos sur mesure</title>
+  <meta name="description" content="CBENPROD, vidéaste professionnel à Dunkerque. Vidéos courtes pour artisans, restaurants et entreprises des Hauts-de-France. Tournage, montage, réseaux sociaux.">
+  <meta name="keywords" content="cbenprod, vidéaste Dunkerque, vidéo entreprise Nord, vidéo réseaux sociaux Dunkerque, monteur vidéo Hauts-de-France, vidéo artisan Dunkerque, vidéaste Nord-Pas-de-Calais">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.cbenprod.fr/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -833,6 +833,69 @@
     .rev.in { opacity: 1; transform: translateY(0); }
     .d1{transition-delay:.10s} .d2{transition-delay:.20s} .d3{transition-delay:.30s}
 
+    /* ══ HERO VIDÉO DROITE ══ */
+    .hero-video-wrap {
+      position: absolute;
+      top: 0; right: 0;
+      width: 38%; height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .hero-video-wrap iframe {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 100%; height: 180%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      border: none;
+    }
+    .hero-video-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--bg) 0%, transparent 35%),
+                  linear-gradient(to top, var(--bg) 0%, transparent 25%);
+      z-index: 2;
+    }
+    .hero-video-mobile {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .hero-video-wrap { display: none; }
+      .hero-video-mobile {
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 1;
+        overflow: hidden;
+      }
+      .hero-video-mobile iframe {
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 300%; height: 100%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border: none;
+      }
+      .hero-video-mobile .hero-video-overlay {
+        position: absolute; inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(6,6,6,.75) 0%,
+          rgba(6,6,6,.55) 50%,
+          rgba(6,6,6,.80) 100%
+        );
+        z-index: 2;
+      }
+      .hero-main {
+        position: relative;
+        z-index: 3;
+      }
+      .hero-footer {
+        position: relative;
+        z-index: 3;
+      }
+    }
+
     /* ══════════════════════════════════════ RESPONSIVE */
     @media (max-width: 1024px) {
       nav { padding: 1.4rem 2rem; }
@@ -989,6 +1052,43 @@
 <section id="hero">
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-glow" aria-hidden="true"></div>
+
+  <!-- VIDÉO MOBILE -->
+  <div class="hero-video-mobile" aria-hidden="true">
+    <iframe
+      src="https://youtu.be/F-izEbG_GY8?autoplay=1&mute=1&loop=1&playlist=5eqZdqu-ybc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      title="Vidéo de présentation CBEN PROD mobile"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+    <div class="hero-video-overlay"></div>
+  </div>
+
+  <!-- VIDÉO DROITE -->
+  <!-- VIDÉO MOBILE -->
+  <div class="hero-video-mobile" aria-hidden="true">
+    <iframe
+      src="https://www.youtube.com/embed/lZMus4cCmOI?autoplay=1&mute=1&loop=1&playlist=lZMus4cCmOI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      title="Vidéo de présentation CBEN PROD mobile"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+    <div class="hero-video-overlay"></div>
+  </div>
+
+  <!-- VIDÉO DROITE PC -->
+  <div class="hero-video-wrap" aria-hidden="true">
+    <iframe
+      src="https://www.youtube.com/embed/F-izEbG_GY8?autoplay=1&mute=1&loop=1&playlist=F-izEbG_GY8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      title="Vidéo de présentation CBEN PROD"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+    <div class="hero-video-overlay"></div>
+  </div>
 
   <div class="hero-main">
     <div class="hero-eyebrow" aria-hidden="true">
