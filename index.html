@@ -1055,20 +1055,19 @@
 
   <!-- VIDÉO MOBILE -->
   <div class="hero-video-mobile" aria-hidden="true">
-    <iframe
-      src="https://www.youtube.com/embed/lZMus4cCmOI?autoplay=1&mute=1&loop=1&playlist=lZMus4cCmOI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-      title="Vidéo de présentation CBEN PROD mobile"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
+      <iframe id="heroVideoMobile"
+        src="https://www.youtube.com/embed/lZMus4cCmOI?autoplay=1&mute=1&loop=1&playlist=lZMus4cCmOI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+        title="Vidéo de présentation CBEN PROD mobile"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
     <div class="hero-video-overlay"></div>
   </div>
 
   <!-- VIDÉO DROITE PC -->
   <div class="hero-video-wrap" aria-hidden="true">
     <iframe
-      src="https://www.youtube.com/embed/5eqZdqu-ybc?autoplay=1&mute=1&loop=1&playlist=5eqZdqu-ybc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      src="https://www.youtube.com/embed/F-izEbG_GY8?autoplay=1&mute=1&loop=1&playlist=F-izEbG_GY8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
       title="Vidéo de présentation CBEN PROD"
       allow="autoplay; encrypted-media"
       allowfullscreen
@@ -1092,7 +1091,7 @@
 
     <div class="hero-sub-row">
       <p class="hero-sub">
-        Artisans, restaurants et entreprises des Hauts-de-France. Je transforme votre savoir-faire en vidéos qui font vendre — sans prise de tête.
+        Artisans, restaurants et entreprises des Hauts-de-France. Je transforme votre savoir-faire en vidéos qui font vendre.
       </p>
       <div class="hero-actions">
         <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Réserver →" aria-label="Réserver un appel découverte sur Calendly">
@@ -1495,6 +1494,7 @@
   </div>
 </div>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
 /* ══════════════ PRELOADER — durée liée au load event
    FIX PERF : min 700ms, max 1600ms, puis exit */
@@ -1778,6 +1778,18 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     btn.disabled = false;
   });
 });
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('heroVideoMobile', {
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+}
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
 </script>
 </body>
 </html>
