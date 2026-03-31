@@ -1056,7 +1056,7 @@
   <!-- VIDÉO MOBILE -->
   <div class="hero-video-mobile" aria-hidden="true">
       <iframe id="heroVideoMobile"
-        src="https://www.youtube.com/embed/lZMus4cCmOI?autoplay=1&mute=1&loop=1&playlist=lZMus4cCmOI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+        src="https://www.youtube.com/embed/lZMus4cCmOI?autoplay=1&mute=1&loop=1&playlist=lZMus4cCmOI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
         title="Vidéo de présentation CBEN PROD mobile"
         allow="autoplay; encrypted-media"
         allowfullscreen>
@@ -1781,15 +1781,43 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
 var player;
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('heroVideoMobile', {
-    events: {
-      'onReady': onPlayerReady
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    player = new YT.Player('heroVideoMobile', {
+      events: {
+        'onReady': function(event) {
+          event.target.mute();
+          event.target.playVideo();
+        }
+      }
+    });
+  }
+}
+
+/* Fallback iOS : déclenche la lecture au premier toucher */
+var mobilePlayed = false;
+function tryPlayMobile() {
+  if (mobilePlayed) return;
+  if (!window.matchMedia('(max-width: 768px)').matches) return;
+  mobilePlayed = true;
+  if (player && typeof player.playVideo === 'function') {
+    player.mute();
+    player.playVideo();
+  } else {
+    var iframe = document.getElementById('heroVideoMobile');
+    if (iframe) {
+      var src = iframe.src;
+      if (src.indexOf('autoplay=1') === -1) {
+        iframe.src = src + '&autoplay=1';
+      } else {
+        iframe.src = iframe.src;
+      }
     }
-  });
+  }
+  document.removeEventListener('touchstart', tryPlayMobile);
+  document.removeEventListener('scroll', tryPlayMobile);
 }
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
+document.addEventListener('touchstart', tryPlayMobile, { passive: true });
+document.addEventListener('scroll', tryPlayMobile, { passive: true });
 </script>
 </body>
 </html>
