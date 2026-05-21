@@ -2,1045 +2,622 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CBENPROD – Vidéaste à Dunkerque | Vidéos sur mesure</title>
-  <meta name="description" content="CBENPROD, vidéaste professionnel à Dunkerque. Vidéos courtes pour artisans, restaurants et entreprises des Hauts-de-France. Tournage, montage, réseaux sociaux.">
-  <meta name="keywords" content="cbenprod, vidéaste Dunkerque, vidéo entreprise Nord, vidéo réseaux sociaux Dunkerque, monteur vidéo Hauts-de-France, vidéo artisan Dunkerque, vidéaste Nord-Pas-de-Calais">
+  <title>CBENPROD – Vidéaste à Dunkerque | Vidéo Mariage, Corporate, Événement</title>
+  <meta name="description" content="CBENPROD, vidéaste professionnel à Dunkerque. Vidéo de mariage, corporate, événement, drone et réseaux sociaux dans les Hauts-de-France. Devis gratuit.">
+  <meta name="keywords" content="cbenprod, vidéaste Dunkerque, vidéo mariage Dunkerque, vidéaste mariage Nord, vidéo corporate PME, vidéo entreprise Hauts-de-France, vidéaste freelance Dunkerque, vidéo promotionnelle Dunkerque, vidéo événement professionnel, drone vidéaste professionnel, vidéo réseaux sociaux entreprise, montage vidéo professionnel, vidéo immobilière Dunkerque, vidéaste séminaire inauguration, reportage entreprise Nord, vidéaste baptême anniversaire, vidéo corporate Nord-Pas-de-Calais, production vidéo B2B Dunkerque">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.cbenprod.fr/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  <meta property="og:title" content="CBEN PROD – Vidéaste à Dunkerque">
-  <meta property="og:description" content="Artisans, restaurants et entreprises du Nord : des vidéos modernes qui font vendre.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CBENPROD – Vidéaste Dunkerque | Mariage · Corporate · Événement">
+  <meta property="og:description" content="Vidéo de mariage, corporate, drone et réseaux sociaux à Dunkerque et dans le Nord. CBENPROD, vidéaste freelance Hauts-de-France. Réponse sous 24h.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.cbenprod.fr/">
   <meta property="og:image" content="https://www.cbenprod.fr/assets/og-image.jpg">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CBEN PROD – Vidéaste à Dunkerque">
-  <meta name="twitter:description" content="Vidéos professionnelles pour artisans, restaurants et entreprises des Hauts-de-France.">
+  <meta name="twitter:title" content="CBENPROD – Vidéaste Dunkerque">
+  <meta name="twitter:description" content="Vidéo mariage, corporate, événement et drone dans les Hauts-de-France.">
 
-  <!-- FIX PERF : font-display=swap + preconnect uniquement, pas de preload bloquant -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts essentielles (bloquantes) : Cabinet Grotesk + DM Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <!-- Cormorant + Montserrat chargées en différé (intro uniquement) via JS -->
 
-  <!-- JSON-LD : LocalBusiness + Reviews complet -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "CBEN PROD",
-    "description": "Vidéaste et monteur professionnel basé à Dunkerque. Vidéos courtes pour réseaux sociaux, entreprises, artisans et restaurants des Hauts-de-France.",
-    "url": "https://www.cbenprod.fr",
-    "telephone": "+33652889685",
-    "email": "cbenprod@gmail.com",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Dunkerque",
-      "addressRegion": "Hauts-de-France",
-      "addressCountry": "FR"
-    },
-    "geo": { "@type": "GeoCoordinates", "latitude": 51.0343, "longitude": 2.3770 },
-    "openingHours": "Mo-Fr 09:00-19:00",
-    "sameAs": ["https://www.facebook.com/profile.php?id=61572382226421","https://www.instagram.com/cben_prod","https://share.google/xuyZupJtCsWxomXu1","https://www.youtube.com/@cbenprod"],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "3" },
-    "review": [
-      { "@type": "Review", "author": {"@type": "Organization", "name": "Thibdog'Educ"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Très disponible, à l'écoute et très professionnel. Les ajustements ont été faits rapidement. Je recommande vivement !" },
-      { "@type": "Review", "author": {"@type": "Organization", "name": "La Latina Restaurant"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Un rendu très professionnel qui nous a permis de faire connaître notre établissement." },
-      { "@type": "Review", "author": {"@type": "Organization", "name": "LTF Coaching"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Très pro merci beaucoup !" }
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.cbenprod.fr/#business",
+        "name": "CBEN PROD",
+        "description": "Vidéaste professionnel freelance à Dunkerque. Vidéo de mariage, corporate, événement professionnel, drone et réseaux sociaux dans les Hauts-de-France.",
+        "url": "https://www.cbenprod.fr",
+        "telephone": "+33652889685",
+        "email": "cbenprod@gmail.com",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dunkerque",
+          "addressRegion": "Hauts-de-France",
+          "addressCountry": "FR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 51.0343, "longitude": 2.3770 },
+        "openingHours": "Mo-Fr 09:00-19:00",
+        "areaServed": ["Dunkerque","Calais","Boulogne-sur-Mer","Lille","Hauts-de-France","Nord-Pas-de-Calais"],
+        "sameAs": ["https://www.facebook.com/profile.php?id=61572382226421","https://www.instagram.com/cben_prod","https://www.youtube.com/@cbenprod"],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "3" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services vidéo CBEN PROD",
+          "itemListElement": [
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vidéo de mariage Dunkerque","description":"Film de mariage professionnel dans le Nord-Pas-de-Calais. Reportage complet du jour J."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vidéo corporate et entreprise","description":"Vidéo d'entreprise, interview dirigeant, reportage corporate pour PME et artisans."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vidéo promotionnelle Dunkerque","description":"Vidéo publicitaire et promotionnelle pour entreprises locales des Hauts-de-France."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vidéo réseaux sociaux","description":"Création de contenu vidéo court pour Instagram Reels, TikTok et LinkedIn."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vidéo événement professionnel","description":"Couverture vidéo de séminaires, inaugurations, salons professionnels dans le Nord."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vidéo immobilière Dunkerque","description":"Visite filmée et reportage immobilier pour agences et promoteurs."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Montage vidéo professionnel","description":"Service de montage vidéo professionnel avec color grading et sound design."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vidéaste événement familial","description":"Vidéo de baptême, anniversaire, communion et célébrations familiales."}}
+          ]
+        },
+        "review": [
+          {"@type":"Review","author":{"@type":"Organization","name":"Thibdog'Educ"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Très disponible, à l'écoute et très professionnel. Les ajustements ont été faits rapidement. Je recommande vivement !"},
+          {"@type":"Review","author":{"@type":"Organization","name":"La Latina Restaurant"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Un rendu très professionnel qui nous a permis de faire connaître notre établissement."},
+          {"@type":"Review","author":{"@type":"Organization","name":"LTF Coaching"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Très pro merci beaucoup !"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"Quel est le tarif d'un vidéaste à Dunkerque ?","acceptedAnswer":{"@type":"Answer","text":"Les tarifs CBEN PROD démarrent à 220€ HT pour une vidéo courte d'entrée, 390€ HT pour un pack réseaux sociaux, et 750€ HT pour un pack vitrine pro complet. Les projets corporate et complexes font l'objet d'un devis personnalisé gratuit après un appel de 15 minutes. TVA non applicable, art. 293 B du CGI."}},
+          {"@type":"Question","name":"Intervenez-vous pour les mariages dans tout le Nord ?","acceptedAnswer":{"@type":"Answer","text":"Oui, CBEN PROD intervient pour les vidéos de mariage dans tout le Nord-Pas-de-Calais et les Hauts-de-France : Dunkerque, Calais, Boulogne, Lille, Valenciennes et alentours. Les déplacements jusqu'à 50 km sont inclus."}},
+          {"@type":"Question","name":"Quel est le délai de livraison d'une vidéo ?","acceptedAnswer":{"@type":"Answer","text":"CBEN PROD livre les vidéos sous 4 à 7 jours ouvrés selon la formule choisie. C'est l'un des délais les plus rapides du marché dans la région."}},
+          {"@type":"Question","name":"Faites-vous de la vidéo drone ?","acceptedAnswer":{"@type":"Answer","text":"Oui, CBEN PROD propose des prises de vue aériennes par drone pour les projets immobiliers, événementiels et corporate dans les Hauts-de-France."}},
+          {"@type":"Question","name":"Proposez-vous des vidéos pour les réseaux sociaux ?","acceptedAnswer":{"@type":"Answer","text":"Oui, CBEN PROD est spécialisé dans la création de contenus vidéo courts pour Instagram Reels, TikTok et LinkedIn, optimisés pour l'algorithme et livrés en formats vertical, carré et horizontal."}}
+        ]
+      }
     ]
   }
   </script>
 
   <style>
-    /* ══════════════════════════════════════ RESET */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     :root {
-      --bg:      #060606;
-      --ink:     #EDEAE3;
-      --muted:   rgba(237,234,227,.38);
-      --muted2:  rgba(237,234,227,.62);
-      --orange:  #FF4500;
-      --odim:    rgba(255,69,0,.10);
-      --border:  rgba(237,234,227,.07);
-      --borderh: rgba(237,234,227,.15);
-      --ff-d:    'Cabinet Grotesk', sans-serif;
-      --ff-b:    'DM Sans', sans-serif;
-      --ease:    cubic-bezier(.22,1,.36,1);
-      --ease2:   cubic-bezier(.76,0,.24,1);
+      --bg: #060606; --ink: #EDEAE3;
+      --muted: rgba(237,234,227,.38); --muted2: rgba(237,234,227,.62);
+      --orange: #FF4500; --odim: rgba(255,69,0,.10);
+      --border: rgba(237,234,227,.07); --borderh: rgba(237,234,227,.15);
+      --ff-d: 'Cabinet Grotesk', sans-serif; --ff-b: 'DM Sans', sans-serif;
+      --ease: cubic-bezier(.22,1,.36,1); --ease2: cubic-bezier(.76,0,.24,1);
+    }
+    body { background:var(--bg); color:var(--ink); font-family:var(--ff-b); font-weight:400; line-height:1.65; overflow-x:hidden; padding-bottom:56px; }
+    @media (max-width:640px) { body { padding-bottom:70px; } }
+    @media (pointer:fine) { body { cursor:auto; } }
+    ::selection { background:var(--orange); color:#fff; }
+    :focus { outline:none; }
+    :focus-visible { outline:2px solid var(--orange); outline-offset:3px; border-radius:3px; }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+      html { scroll-behavior:auto; }
     }
 
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--ff-b);
-      font-weight: 400;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
+    /* BG FX */
+    .bg-fx { position:fixed; inset:0; pointer-events:none; z-index:-1; overflow:hidden; }
+    .bg-fx span { position:absolute; border-radius:50%; filter:blur(110px); will-change:transform; }
+    .bg-fx span:nth-child(1) { width:700px; height:500px; bottom:-200px; left:-120px; background:radial-gradient(ellipse,rgba(100,20,180,.55) 0%,rgba(80,10,150,.2) 50%,transparent 70%); animation:bgD1 20s ease-in-out infinite; }
+    .bg-fx span:nth-child(2) { width:600px; height:420px; bottom:-180px; left:30%; background:radial-gradient(ellipse,rgba(20,80,220,.45) 0%,rgba(10,50,180,.15) 50%,transparent 70%); animation:bgD2 26s ease-in-out infinite; }
+    .bg-fx span:nth-child(3) { width:550px; height:400px; bottom:-160px; right:-80px; background:radial-gradient(ellipse,rgba(255,69,0,.35) 0%,rgba(200,50,0,.12) 50%,transparent 70%); animation:bgD3 22s ease-in-out infinite; }
+    .bg-fx span:nth-child(4) { width:400px; height:300px; top:-100px; right:-80px; background:radial-gradient(ellipse,rgba(160,20,120,.18) 0%,transparent 65%); animation:bgD4 30s ease-in-out infinite; }
+    @keyframes bgD1 { 0%,100%{transform:translate(0,0) scale(1)} 40%{transform:translate(30px,-20px) scale(1.05)} 70%{transform:translate(-20px,15px) scale(.97)} }
+    @keyframes bgD2 { 0%,100%{transform:translate(0,0) scale(1)} 35%{transform:translate(-25px,-18px) scale(1.04)} 65%{transform:translate(18px,12px) scale(.98)} }
+    @keyframes bgD3 { 0%,100%{transform:translate(0,0) scale(1)} 45%{transform:translate(-20px,-22px) scale(1.06)} 75%{transform:translate(14px,16px) scale(.96)} }
+    @keyframes bgD4 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-16px,20px) scale(1.03)} }
+    @media (prefers-reduced-motion:reduce) { .bg-fx span { animation:none !important; } }
 
-    /* FIX ACCESSIBILITÉ : curseur standard par défaut, custom seulement sur pointer précis */
-    @media (pointer: fine) {
-      body { cursor: auto; }
-    }
+    /* CURSOR */
+    @media (pointer:fine) { #cursor-dot,#cursor-ring { display:block; } }
+    #cursor-dot,#cursor-ring { display:none; }
+    #cursor-dot { position:fixed; width:6px; height:6px; background:var(--orange); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .15s,height .15s; }
+    #cursor-ring { position:fixed; width:34px; height:34px; border:1px solid rgba(255,69,0,.5); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); }
+    body.chover #cursor-dot { width:10px; height:10px; }
+    body.chover #cursor-ring { width:54px; height:54px; border-color:var(--orange); }
 
-    ::selection { background: var(--orange); color: #fff; }
+    /* INTRO STAGE */
+    .stage { position:fixed; inset:0; z-index:9000; display:flex; align-items:center; justify-content:center; overflow:hidden; background:#0a0a0a; }
+    .stage.done { animation:plOut .7s var(--ease2) forwards; }
+    @keyframes plOut { to { transform:translateY(-100%); } }
+    @keyframes revUp { to { transform:translateY(0); } }
+    .bg-flash { position:absolute; inset:0; background:#fff; opacity:0; animation:bgFlash .18s ease-out 1.6s forwards; z-index:1; }
+    @keyframes bgFlash { 0%{opacity:0} 40%{opacity:1} 100%{opacity:0} }
+    .bg-final { position:absolute; inset:0; background:#fff; opacity:0; animation:bgFinalIn .35s ease-out 1.72s forwards; z-index:2; }
+    @keyframes bgFinalIn { to { opacity:1; } }
+    .scan-intro { position:absolute; top:0; left:-100%; width:60px; height:100%; background:linear-gradient(90deg,transparent,rgba(232,57,26,.7),transparent); animation:scanIntro .55s cubic-bezier(.4,0,.2,1) .3s forwards; z-index:3; }
+    .scan-intro2 { position:absolute; top:0; left:-100%; width:30px; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent); animation:scanIntro .4s cubic-bezier(.4,0,.2,1) .55s forwards; z-index:3; }
+    @keyframes scanIntro { to { left:110%; } }
+    .logo-stage { position:relative; z-index:10; display:flex; flex-direction:column; align-items:center; }
+    .cben-row { display:flex; align-items:flex-start; position:relative; line-height:1; }
+    .letter { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(72px,14vw,130px); line-height:1; display:inline-block; color:#fff; opacity:0; }
+    .letter.c { animation:lSlam .45s cubic-bezier(.22,1,.36,1) .7s forwards,lColor .2s ease 1.75s forwards; transform:translateX(-60px) scaleX(1.4); }
+    .letter.b { animation:lSlamUp .45s cubic-bezier(.22,1,.36,1) .82s forwards,lColor .2s ease 1.75s forwards; transform:translateY(-50px) scale(1.3); }
+    .letter.e { animation:lSlamDown .45s cubic-bezier(.22,1,.36,1) .94s forwards,lColor .2s ease 1.75s forwards; transform:translateY(50px) scale(1.3); }
+    .letter.n { animation:lSlamR .45s cubic-bezier(.22,1,.36,1) 1.06s forwards,lColor .2s ease 1.75s forwards; transform:translateX(60px) scaleX(1.4); }
+    @keyframes lSlam { to { opacity:1; transform:translateX(0) scaleX(1); } }
+    @keyframes lSlamUp { to { opacity:1; transform:translateY(0) scale(1); } }
+    @keyframes lSlamDown { to { opacity:1; transform:translateY(0) scale(1); } }
+    @keyframes lSlamR { to { opacity:1; transform:translateX(0) scaleX(1); } }
+    @keyframes lColor { to { color:#0a0a0a; } }
+    .dot-wrap { position:absolute; top:clamp(4px,.8vw,10px); right:clamp(-28px,-4vw,-22px); }
+    .dot { width:clamp(16px,2.5vw,26px); height:clamp(16px,2.5vw,26px); background:#E8391A; border-radius:50%; opacity:0; transform:scale(0) rotate(180deg); animation:dotExplode .55s cubic-bezier(.34,1.56,.64,1) 1.22s forwards; }
+    @keyframes dotExplode { 0%{opacity:0;transform:scale(0) rotate(180deg)} 60%{opacity:1;transform:scale(1.4) rotate(20deg)} 100%{opacity:1;transform:scale(1) rotate(0)} }
+    .dot-ring { position:absolute; top:50%; left:50%; width:clamp(16px,2.5vw,26px); height:clamp(16px,2.5vw,26px); border:2px solid #E8391A; border-radius:50%; transform:translate(-50%,-50%) scale(0); opacity:0; animation:ringExpand .6s ease-out 1.22s forwards; }
+    @keyframes ringExpand { 0%{transform:translate(-50%,-50%) scale(0);opacity:.8} 100%{transform:translate(-50%,-50%) scale(3);opacity:0} }
+    .separator { width:0; height:1px; background:#ccc; margin:4px 0 8px; align-self:stretch; opacity:0; animation:sepGrow .5s cubic-bezier(.22,1,.36,1) 1.42s forwards; }
+    @keyframes sepGrow { 0%{width:0;opacity:0} 10%{opacity:1} 100%{width:100%;opacity:1} }
+    .prod { font-family:'Montserrat',sans-serif; font-weight:400; font-size:clamp(14px,2.2vw,22px); letter-spacing:.52em; color:#0a0a0a; opacity:0; transform:translateY(12px); align-self:flex-end; margin-right:-4px; animation:prodIn .55s cubic-bezier(.22,1,.36,1) 1.55s forwards; }
+    @keyframes prodIn { to { opacity:1; transform:translateY(0); } }
+    .particles { position:absolute; inset:0; pointer-events:none; z-index:5; }
+    .p { position:absolute; width:3px; height:3px; background:#E8391A; border-radius:50%; opacity:0; top:50%; left:50%; }
+    .p1{animation:pShoot .7s ease-out 1.22s forwards;--tx:-80px;--ty:-60px}
+    .p2{animation:pShoot .7s ease-out 1.25s forwards;--tx:90px;--ty:-40px}
+    .p3{animation:pShoot .7s ease-out 1.28s forwards;--tx:-50px;--ty:70px}
+    .p4{animation:pShoot .7s ease-out 1.31s forwards;--tx:70px;--ty:55px}
+    .p5{animation:pShoot .6s ease-out 1.23s forwards;--tx:-100px;--ty:20px}
+    .p6{animation:pShoot .6s ease-out 1.27s forwards;--tx:110px;--ty:-15px}
+    @keyframes pShoot { 0%{opacity:1;transform:translate(0,0) scale(1)} 100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)} }
+    .stage-hint { position:absolute; bottom:24px; left:28px; font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.12em; color:rgba(0,0,0,.3); z-index:20; opacity:0; animation:replayIn .3s ease 2.3s forwards; }
+    @keyframes replayIn { to { opacity:1; } }
 
-    /* ══════════════════════════════════════ FOND CINEMATIQUE
-       Halos colorés fixes — style light-leak cinéma
-       z-index:-1 = toujours derrière le contenu et les vidéos */
-    .bg-fx {
-      position: fixed; inset: 0;
-      pointer-events: none; z-index: -1;
-      overflow: hidden;
-    }
-    .bg-fx span {
-      position: absolute; border-radius: 50%;
-      filter: blur(110px); will-change: transform;
-    }
-    .bg-fx span:nth-child(1) {
-      width: 700px; height: 500px;
-      bottom: -200px; left: -120px;
-      background: radial-gradient(ellipse, rgba(100,20,180,.55) 0%, rgba(80,10,150,.2) 50%, transparent 70%);
-      animation: bgD1 20s ease-in-out infinite;
-    }
-    .bg-fx span:nth-child(2) {
-      width: 600px; height: 420px;
-      bottom: -180px; left: 30%;
-      background: radial-gradient(ellipse, rgba(20,80,220,.45) 0%, rgba(10,50,180,.15) 50%, transparent 70%);
-      animation: bgD2 26s ease-in-out infinite;
-    }
-    .bg-fx span:nth-child(3) {
-      width: 550px; height: 400px;
-      bottom: -160px; right: -80px;
-      background: radial-gradient(ellipse, rgba(255,69,0,.35) 0%, rgba(200,50,0,.12) 50%, transparent 70%);
-      animation: bgD3 22s ease-in-out infinite;
-    }
-    .bg-fx span:nth-child(4) {
-      width: 400px; height: 300px;
-      top: -100px; right: -80px;
-      background: radial-gradient(ellipse, rgba(160,20,120,.18) 0%, transparent 65%);
-      animation: bgD4 30s ease-in-out infinite;
-    }
-    @keyframes bgD1 {
-      0%,100%{ transform:translate(0,0) scale(1); }
-      40%    { transform:translate(30px,-20px) scale(1.05); }
-      70%    { transform:translate(-20px,15px) scale(.97); }
-    }
-    @keyframes bgD2 {
-      0%,100%{ transform:translate(0,0) scale(1); }
-      35%    { transform:translate(-25px,-18px) scale(1.04); }
-      65%    { transform:translate(18px,12px) scale(.98); }
-    }
-    @keyframes bgD3 {
-      0%,100%{ transform:translate(0,0) scale(1); }
-      45%    { transform:translate(-20px,-22px) scale(1.06); }
-      75%    { transform:translate(14px,16px) scale(.96); }
-    }
-    @keyframes bgD4 {
-      0%,100%{ transform:translate(0,0) scale(1); }
-      50%    { transform:translate(-16px,20px) scale(1.03); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .bg-fx span { animation: none !important; }
-    }
+    /* NAV */
+    nav { position:fixed; top:0; left:0; right:0; z-index:500; display:flex; align-items:center; justify-content:space-between; padding:1.8rem 3rem; mix-blend-mode:difference; transition:padding .4s var(--ease); }
+    nav.scrolled { mix-blend-mode:normal; padding:1.1rem 3rem; }
+    nav.scrolled::before { content:''; position:absolute; inset:0; background:rgba(6,6,6,.9); backdrop-filter:blur(18px); border-bottom:1px solid var(--border); z-index:-1; }
+    #nav { z-index:10000; }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo img { display:block; height:2rem; width:auto; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { font-size:.72rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); text-decoration:none; opacity:.55; transition:opacity .2s; position:relative; }
+    .nav-links a::after { content:''; position:absolute; left:0; bottom:-2px; width:0; height:1px; background:var(--orange); transition:width .3s var(--ease); }
+    .nav-links a:hover { opacity:1; }
+    .nav-links a:hover::after { width:100%; }
+    .btn-mag { display:inline-flex; align-items:center; gap:.45rem; padding:.62rem 1.45rem; background:var(--orange); color:#fff; font-family:var(--ff-b); font-size:.75rem; font-weight:500; letter-spacing:.07em; text-transform:uppercase; text-decoration:none; border:none; position:relative; overflow:hidden; transition:background .2s; }
+    @media (pointer:fine) { .btn-mag { cursor:none; } }
+    .btn-mag-inner { position:relative; top:0; transition:top .3s var(--ease); display:block; }
+    .btn-mag::before { content:attr(data-text); position:absolute; left:50%; top:150%; transform:translateX(-50%); white-space:nowrap; transition:top .3s var(--ease); }
+    .btn-mag:hover .btn-mag-inner { top:-150%; }
+    .btn-mag:hover::before { top:50%; transform:translate(-50%,-50%); }
+    .btn-mag:hover { background:#e03d00; }
+    .btn-outline { display:inline-flex; align-items:center; gap:.45rem; padding:.62rem 1.45rem; border:1px solid var(--borderh); color:var(--ink); font-size:.75rem; font-weight:500; letter-spacing:.07em; text-transform:uppercase; text-decoration:none; transition:border-color .2s,background .2s; }
+    @media (pointer:fine) { .btn-outline { cursor:none; } }
+    .btn-outline:hover { border-color:rgba(237,234,227,.4); background:rgba(237,234,227,.04); }
+    .hamburger { display:none; flex-direction:column; gap:6px; background:none; border:none; padding:4px; }
+    @media (pointer:coarse) { .hamburger { cursor:pointer; } }
+    .hamburger span { display:block; width:26px; height:1.5px; background:var(--ink); transition:.3s; }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity:0; }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+    .mob-nav { position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.95); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.4rem; height:100vh; width:100%; clip-path:circle(0% at calc(100% - 52px) 52px); transition:clip-path .45s var(--ease),background .3s; padding:0; text-align:center; overflow:hidden; mix-blend-mode:normal; }
+    .mob-nav.open { clip-path:circle(150% at calc(100% - 52px) 52px); }
+    .mob-nav::before { display:none; }
+    .mob-nav a { font-family:var(--ff-d); font-size:clamp(1.8rem,6vw,3rem); color:#fff; text-decoration:none; font-weight:900; opacity:0; transform:translateX(-5px); transition:opacity .35s,transform .35s,color .2s; text-shadow:0 1px 10px rgba(0,0,0,.9); padding:20px 0; width:100%; background:transparent; }
+    .mob-nav.open a { opacity:1; transform:translateX(0); }
+    .mob-nav.open a:nth-child(1){transition-delay:.08s}.mob-nav.open a:nth-child(2){transition-delay:.12s}.mob-nav.open a:nth-child(3){transition-delay:.16s}.mob-nav.open a:nth-child(4){transition-delay:.20s}.mob-nav.open a:nth-child(5){transition-delay:.24s}.mob-nav.open a:nth-child(6){transition-delay:.28s}
+    .mob-nav a:hover { background:rgba(255,255,255,.08); transform:scale(1.02); }
 
-    /* ══════════════════════════════════════ FIX ACCESSIBILITÉ : FOCUS RING
-       Visible pour navigation clavier, invisible à la souris */
-    :focus { outline: none; }
-    :focus-visible {
-      outline: 2px solid var(--orange);
-      outline-offset: 3px;
-      border-radius: 3px;
-    }
+    /* HERO */
+    #hero { min-height:100svh; display:grid; grid-template-rows:1fr auto; padding:0 3rem; position:relative; overflow:hidden; }
+    .hero-grid { position:absolute; inset:0; background-image:linear-gradient(to right,rgba(237,234,227,.028) 1px,transparent 1px),linear-gradient(to bottom,rgba(237,234,227,.028) 1px,transparent 1px); background-size:80px 80px; mask-image:radial-gradient(ellipse 75% 75% at 55% 50%,black,transparent); }
+    .hero-glow { position:absolute; width:650px; height:650px; background:radial-gradient(circle,rgba(255,69,0,.13) 0%,transparent 70%); top:50%; left:58%; transform:translate(-50%,-50%); pointer-events:none; will-change:transform; animation:glowPulse 7s ease-in-out infinite; }
+    @keyframes glowPulse { 0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(1)} 50%{opacity:1;transform:translate(-50%,-50%) scale(1.08)} }
+    .hero-video-wrap { position:absolute; top:0; right:0; width:38%; height:100%; z-index:1; overflow:hidden; }
+    .hero-video-wrap iframe { position:absolute; top:50%; left:50%; width:100%; height:180%; transform:translate(-50%,-50%); pointer-events:none; border:none; }
+    .hero-video-overlay { position:absolute; inset:0; background:linear-gradient(to right,var(--bg) 0%,transparent 35%),linear-gradient(to top,var(--bg) 0%,transparent 25%); z-index:2; }
+    .hero-video-mobile { display:none; }
+    .hero-main { display:flex; flex-direction:column; justify-content:center; padding-top:8rem; position:relative; z-index:2; max-width:1000px; }
+    .hero-eyebrow { display:flex; align-items:center; gap:1rem; font-size:.67rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--orange); margin-bottom:1.8rem; overflow:hidden; }
+    .hero-eyebrow-line { width:0; height:1px; background:var(--orange); animation:lineGrow .55s var(--ease) 1.1s forwards; }
+    @keyframes lineGrow { to { width:38px; } }
+    .hero-eyebrow-inner { transform:translateY(100%); animation:revUp .65s var(--ease) .95s forwards; }
+    h1.hero-h1 { font-family:var(--ff-d); font-size:clamp(4.5rem,12.5vw,10.5rem); line-height:.92; letter-spacing:.01em; font-weight:900; }
+    .h1-line { display:block; overflow:hidden; }
+    .h1-inner { display:block; transform:translateY(106%); animation:revUp .85s var(--ease) forwards; }
+    .h1-line:nth-child(1) .h1-inner{animation-delay:.72s}.h1-line:nth-child(2) .h1-inner{animation-delay:.82s}.h1-line:nth-child(3) .h1-inner{animation-delay:.92s}.h1-line:nth-child(4) .h1-inner{animation-delay:1.02s}
+    .hero-h1 em { font-style:normal; color:var(--orange); }
+    .hero-sub-row { display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; margin-top:2.8rem; opacity:0; transform:translateY(14px); animation:fadeUp .75s var(--ease) 1.2s forwards; }
+    @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+    .hero-sub { font-size:clamp(.85rem,1.5vw,1rem); color:var(--muted2); max-width:420px; font-weight:300; line-height:1.8; }
+    .hero-actions { display:flex; gap:.9rem; flex-shrink:0; flex-wrap:wrap; }
+    .hero-footer { display:flex; align-items:center; justify-content:space-between; padding:1.5rem 0 2rem; position:relative; z-index:2; opacity:0; animation:fadeUp .6s var(--ease) 1.5s forwards; }
+    .scroll-label { font-size:.65rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:.8rem; }
+    .scroll-line { width:38px; height:1px; background:var(--muted); position:relative; overflow:hidden; }
+    .scroll-line::after { content:''; position:absolute; left:-100%; top:0; width:100%; height:100%; background:var(--orange); animation:scanHero 2.2s ease-in-out infinite; }
+    @keyframes scanHero { 0%{left:-100%} 50%,100%{left:100%} }
+    .hero-loc { font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
 
-    /* ══════════════════════════════════════ PREFERS-REDUCED-MOTION
-       FIX ACCESSIBILITÉ : désactive TOUTES les animations si l'utilisateur le demande */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-      html { scroll-behavior: auto; }
-      .hero-h1-inner,
-      .hero-eyebrow-inner,
-      .hero-eyebrow-line,
-      .hero-sub-row,
-      .hero-footer { opacity: 1 !important; transform: none !important; }
-    }
-
-    /* ══════════════════════════════════════ CURSEUR CUSTOM
-       FIX : conditionnel pointer:fine seulement */
-    @media (pointer: fine) {
-      #cursor-dot, #cursor-ring { display: block; }
-    }
-
-    #cursor-dot, #cursor-ring { display: none; }
-
-    #cursor-dot {
-      position: fixed; width: 6px; height: 6px;
-      background: var(--orange); border-radius: 50%;
-      pointer-events: none; z-index: 9999;
-      transform: translate(-50%,-50%);
-      transition: width .15s, height .15s;
-    }
-    #cursor-ring {
-      position: fixed; width: 34px; height: 34px;
-      border: 1px solid rgba(255,69,0,.5); border-radius: 50%;
-      pointer-events: none; z-index: 9998;
-      transform: translate(-50%,-50%);
-    }
-    body.chover #cursor-dot { width: 10px; height: 10px; }
-    body.chover #cursor-ring { width: 54px; height: 54px; border-color: var(--orange); }
-
-    /* ══════════════════════════════════════ PRELOADER */
-    #preloader {
-      position: fixed; inset: 0; z-index: 8000;
-      background: var(--bg);
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 2rem;
-    }
-    #preloader.done {
-      animation: plOut .7s var(--ease2) forwards;
-    }
-    @keyframes plOut { to { transform: translateY(-100%); } }
-
-    .pl-logo {
-      font-family: var(--ff-d); font-size: clamp(3rem,10vw,6.5rem);
-      letter-spacing: .03em; display: flex; overflow: hidden;
-    }
-    .pl-logo span {
-      display: inline-block;
-      transform: translateY(110%);
-      animation: revUp .75s var(--ease) forwards;
-    }
-    .pl-logo span:nth-child(1){animation-delay:.05s}
-    .pl-logo span:nth-child(2){animation-delay:.10s}
-    .pl-logo span:nth-child(3){animation-delay:.14s}
-    .pl-logo span:nth-child(4){animation-delay:.18s; color:var(--orange)}
-    .pl-logo span:nth-child(5){animation-delay:.22s}
-    .pl-logo span:nth-child(6){animation-delay:.26s}
-    .pl-logo span:nth-child(7){animation-delay:.30s}
-    .pl-logo span:nth-child(8){animation-delay:.34s}
-    .pl-logo span:nth-child(9){animation-delay:.38s}
-
-    .pl-track { width: 180px; height: 1px; background: var(--border); overflow: hidden; }
-    .pl-bar   { height: 1px; background: var(--orange); width: 0; }
-
-    @keyframes revUp { to { transform: translateY(0); } }
-
-    /* ══════════════════════════════════════ NAV
-       FIX : mix-blend-mode désactivé dès que scrolled */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.8rem 3rem;
-      mix-blend-mode: difference;
-      transition: padding .4s var(--ease);
-    }
-    nav.scrolled {
-      mix-blend-mode: normal;
-      padding: 1.1rem 3rem;
-    }
-    nav.scrolled::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: rgba(6,6,6,.9);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-      z-index: -1;
-    }
-
-    #nav { z-index: 10000; }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .nav-logo img {
-      display: block;
-      height: 2rem;
-      width: auto;
-    }
-
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-    .nav-links a {
-      font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--ink); text-decoration: none; opacity: .55; transition: opacity .2s;
-      position: relative;
-    }
-    .nav-links a::after {
-      content: ''; position: absolute; left: 0; bottom: -2px;
-      width: 0; height: 1px; background: var(--orange);
-      transition: width .3s var(--ease);
-    }
-    .nav-links a:hover { opacity: 1; }
-    .nav-links a:hover::after { width: 100%; }
-
-    /* Bouton magnétique */
-    .btn-mag {
-      display: inline-flex; align-items: center; gap: .45rem;
-      padding: .62rem 1.45rem;
-      background: var(--orange); color: #fff;
-      font-family: var(--ff-b); font-size: .75rem; font-weight: 500;
-      letter-spacing: .07em; text-transform: uppercase;
-      text-decoration: none; border: none;
-      position: relative; overflow: hidden;
-      transition: background .2s;
-    }
-    @media (pointer: fine) { .btn-mag { cursor: none; } }
-    .btn-mag-inner { position: relative; top: 0; transition: top .3s var(--ease); display: block; }
-    .btn-mag::before {
-      content: attr(data-text); position: absolute;
-      left: 50%; top: 150%; transform: translateX(-50%);
-      white-space: nowrap; transition: top .3s var(--ease);
-    }
-    .btn-mag:hover .btn-mag-inner { top: -150%; }
-    .btn-mag:hover::before { top: 50%; transform: translate(-50%,-50%); }
-    .btn-mag:hover { background: #e03d00; }
-
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: .45rem;
-      padding: .62rem 1.45rem;
-      border: 1px solid var(--borderh); color: var(--ink);
-      font-size: .75rem; font-weight: 500; letter-spacing: .07em; text-transform: uppercase;
-      text-decoration: none; transition: border-color .2s, background .2s;
-    }
-    @media (pointer: fine) { .btn-outline { cursor: none; } }
-    .btn-outline:hover { border-color: rgba(237,234,227,.4); background: rgba(237,234,227,.04); }
-
-    /* Hamburger */
-    .hamburger {
-      display: none; flex-direction: column; gap: 6px;
-      background: none; border: none; padding: 4px;
-    }
-    @media (pointer: fine) { .hamburger { cursor: none; } }
-    @media (pointer: coarse) { .hamburger { cursor: pointer; } }
-    .hamburger span { display: block; width: 26px; height: 1.5px; background: var(--ink); transition: .3s; }
-    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
-
-    /* Mobile nav */
-    .mob-nav {
-      position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,.95);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.4rem;
-      height: 100vh; width: 100%;
-      clip-path: circle(0% at calc(100% - 52px) 52px);
-      transition: clip-path .45s var(--ease), background .3s;
-      padding: 0;
-      text-align: center;
-      overflow: hidden;
-      mix-blend-mode: normal;
-    }
-    .mob-nav.open { clip-path: circle(150% at calc(100% - 52px) 52px); }
-    .mob-nav::before { display: none; }
-    .mob-nav a {
-      font-family: var(--ff-d); font-size: clamp(1.8rem, 6vw, 3rem);
-      color: #ffffff; text-decoration: none; font-weight: 900;
-      opacity: 0; transform: translateX(-5px);
-      transition: opacity .35s, transform .35s, color .2s;
-      text-shadow: 0 1px 10px rgba(0,0,0,.9);
-      padding: 20px 0;
-      border-radius: 0;
-      width: 100%;
-      max-width: 100%;
-      background: transparent;
-    }
-    .mob-nav.open a { opacity: 1; transform: translateX(0); }
-    .mob-nav.open a:nth-child(1){transition-delay:.08s}
-    .mob-nav.open a:nth-child(2){transition-delay:.12s}
-    .mob-nav.open a:nth-child(3){transition-delay:.16s}
-    .mob-nav.open a:nth-child(4){transition-delay:.20s}
-    .mob-nav.open a:nth-child(5){transition-delay:.24s}
-    .mob-nav a:hover {
-      color: #fff;
-      text-shadow: 0 2px 18px rgba(255,255,255,.2);
-      background: rgba(255,255,255,.08);
-      transform: scale(1.02);
-    }
-
-    /* ══════════════════════════════════════ HERO */
-    #hero {
-      min-height: 100svh; display: grid; grid-template-rows: 1fr auto;
-      padding: 0 3rem; position: relative; overflow: hidden;
-    }
-    .hero-grid {
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(to right, rgba(237,234,227,.028) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(237,234,227,.028) 1px, transparent 1px);
-      background-size: 80px 80px;
-      mask-image: radial-gradient(ellipse 75% 75% at 55% 50%, black, transparent);
-    }
-    .hero-glow {
-      position: absolute; width: 650px; height: 650px;
-      background: radial-gradient(circle, rgba(255,69,0,.13) 0%, transparent 70%);
-      top: 50%; left: 58%; transform: translate(-50%,-50%);
-      pointer-events: none; will-change: transform;
-      animation: glowPulse 7s ease-in-out infinite;
-    }
-    @keyframes glowPulse {
-      0%,100%{ opacity:.7; transform:translate(-50%,-50%) scale(1); }
-      50%{ opacity:1; transform:translate(-50%,-50%) scale(1.08); }
-    }
-
-    .hero-main {
-      display: flex; flex-direction: column; justify-content: center;
-      padding-top: 8rem; position: relative; z-index: 2; max-width: 1000px;
-    }
-    .hero-eyebrow {
-      display: flex; align-items: center; gap: 1rem;
-      font-size: .67rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
-      color: var(--orange); margin-bottom: 1.8rem; overflow: hidden;
-    }
-    .hero-eyebrow-line {
-      width: 0; height: 1px; background: var(--orange);
-      animation: lineGrow .55s var(--ease) 1.1s forwards;
-    }
-    @keyframes lineGrow { to { width: 38px; } }
-    .hero-eyebrow-inner {
-      transform: translateY(100%);
-      animation: revUp .65s var(--ease) .95s forwards;
-    }
-
-    h1.hero-h1 {
-      font-family: var(--ff-d);
-      font-size: clamp(4.5rem, 12.5vw, 10.5rem);
-      line-height: .92; letter-spacing: .01em; font-weight: 900;
-    }
-    .h1-line { display: block; overflow: hidden; }
-    .h1-inner {
-      display: block; transform: translateY(106%);
-      animation: revUp .85s var(--ease) forwards;
-    }
-    .h1-line:nth-child(1) .h1-inner{animation-delay:.72s}
-    .h1-line:nth-child(2) .h1-inner{animation-delay:.82s}
-    .h1-line:nth-child(3) .h1-inner{animation-delay:.92s}
-    .h1-line:nth-child(4) .h1-inner{animation-delay:1.02s}
-    .hero-h1 em { font-style: normal; color: var(--orange); }
-
-    .hero-sub-row {
-      display: flex; align-items: flex-end; justify-content: space-between;
-      gap: 2rem; margin-top: 2.8rem;
-      opacity: 0; transform: translateY(14px);
-      animation: fadeUp .75s var(--ease) 1.2s forwards;
-    }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-
-    .hero-sub {
-      font-size: clamp(.85rem,1.5vw,1rem); color: var(--muted2);
-      max-width: 400px; font-weight: 300; line-height: 1.8;
-    }
-    .hero-actions { display: flex; gap: .9rem; flex-shrink: 0; flex-wrap: wrap; }
-
-    .hero-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.5rem 0 2rem; position: relative; z-index: 2;
-      opacity: 0; animation: fadeUp .6s var(--ease) 1.5s forwards;
-    }
-    .scroll-label {
-      font-size: .65rem; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--muted); display: flex; align-items: center; gap: .8rem;
-    }
-    .scroll-line {
-      width: 38px; height: 1px; background: var(--muted); position: relative; overflow: hidden;
-    }
-    .scroll-line::after {
-      content: ''; position: absolute; left: -100%; top: 0;
-      width: 100%; height: 100%; background: var(--orange);
-      animation: scan 2.2s ease-in-out infinite;
-    }
-    @keyframes scan { 0%{left:-100%} 50%,100%{left:100%} }
-    .hero-loc { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-
-    /* ══════════════════════════════════════ TICKER */
-    .ticker { overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: .85rem 0; }
-    .ticker-track { display: flex; width: max-content; animation: tick 30s linear infinite; }
-    .ticker-item {
-      font-family: var(--ff-d); font-size: 1.05rem; letter-spacing: .05em;
-      padding: 0 2.2rem; color: var(--muted);
-      display: flex; align-items: center; gap: 2.2rem;
-    }
-    .ticker-item::after { content: '✦'; color: var(--orange); font-size: .65rem; }
+    /* TICKER */
+    .ticker { overflow:hidden; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:.85rem 0; }
+    .ticker-track { display:flex; width:max-content; animation:tick 35s linear infinite; }
+    .ticker-item { font-family:var(--ff-d); font-size:1.05rem; letter-spacing:.05em; padding:0 2.2rem; color:var(--muted); display:flex; align-items:center; gap:2.2rem; }
+    .ticker-item::after { content:'✦'; color:var(--orange); font-size:.65rem; }
     @keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-    /* ══════════════════════════════════════ STATS */
-    #stats {
-      padding: 7rem 3rem; max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3,1fr);
-    }
-    .stat-item {
-      padding: 2.8rem; border-right: 1px solid var(--border);
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num {
-      font-family: var(--ff-d); font-size: clamp(3rem,5.5vw,5rem);
-      line-height: 1; font-weight: 900; display: block; transition: color .3s;
-    }
-    .stat-item:hover .stat-num { color: var(--orange); }
-    .stat-label {
-      font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--ink); margin: .8rem 0 .35rem;
-    }
-    .stat-desc { font-size: .82rem; color: var(--muted); line-height: 1.6; }
-    .stat-src { font-size: .6rem; color: rgba(237,234,227,.18); margin-top: .4rem; }
-
-    /* ══════════════════════════════════════ SECTION BASE */
-    .section { padding: 8rem 3rem; }
-    .inner   { max-width: 1100px; margin: 0 auto; }
-
-    .label {
-      font-size: .64rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
-      color: var(--orange); display: flex; align-items: center; gap: .8rem; margin-bottom: 1.5rem;
-    }
+    /* SECTION BASE */
+    .section { padding:8rem 3rem; }
+    .inner { max-width:1100px; margin:0 auto; }
+    .label { font-size:.64rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--orange); display:flex; align-items:center; gap:.8rem; margin-bottom:1.5rem; }
     .label::before { content:''; width:26px; height:1px; background:var(--orange); flex-shrink:0; }
+    h2 { font-family:var(--ff-d); font-size:clamp(2.6rem,5.5vw,5rem); line-height:.95; letter-spacing:.01em; font-weight:900; }
 
-    h2 {
-      font-family: var(--ff-d); font-size: clamp(2.6rem,5.5vw,5rem);
-      line-height: .95; letter-spacing: .01em; font-weight: 900;
-    }
+    /* STATS */
+    #stats { padding:7rem 3rem; max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); }
+    .stat-item { padding:2.8rem; border-right:1px solid var(--border); }
+    .stat-item:last-child { border-right:none; }
+    .stat-num { font-family:var(--ff-d); font-size:clamp(3rem,5.5vw,5rem); line-height:1; font-weight:900; display:block; transition:color .3s; }
+    .stat-item:hover .stat-num { color:var(--orange); }
+    .stat-label { font-size:.7rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); margin:.8rem 0 .35rem; }
+    .stat-desc { font-size:.82rem; color:var(--muted); line-height:1.6; }
+    .stat-src { font-size:.6rem; color:rgba(237,234,227,.18); margin-top:.4rem; }
 
-    /* ══════════════════════════════════════ PROBLEM */
-    .problem-layout {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 5.5rem;
-      align-items: center; margin-top: 5rem;
-    }
-    .problem-items { display: flex; flex-direction: column; }
-    .problem-item {
-      display: grid; grid-template-columns: 2.8rem 1fr; gap: 1rem;
-      padding: 1.4rem 1.4rem 1.4rem 0;
-      border-bottom: 1px solid var(--border);
-      position: relative; overflow: hidden; transition: border-color .3s;
-    }
-    .problem-item::before {
-      content: ''; position: absolute; left: -100%; top: 0;
-      width: 100%; height: 100%; background: var(--odim);
-      transition: left .4s var(--ease);
-    }
-    .problem-item:hover::before { left: 0; }
-    .problem-item:hover { border-color: rgba(255,69,0,.2); }
-    .prob-num { font-family: var(--ff-d); font-size: .9rem; color: var(--orange); opacity: .5; padding-top: .2rem; }
-    .prob-txt { font-size: .93rem; color: var(--muted2); line-height: 1.7; position: relative; }
-    .prob-txt strong { color: var(--ink); font-weight: 500; }
-    .quote-big {
-      font-family: var(--ff-d); font-size: clamp(1.7rem,3.2vw,2.6rem);
-      line-height: 1.15; letter-spacing: .01em; font-weight: 900;
-    }
-    .quote-big em { font-style: normal; color: var(--orange); }
+    /* SERVICES */
+    #services { background:#09090a; }
+    .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:4rem; border:1px solid var(--border); }
+    .svc-card { padding:2.4rem; background:var(--bg); position:relative; overflow:hidden; transition:background .3s; }
+    .svc-card:hover { background:rgba(237,234,227,.02); }
+    .svc-card::before { content:''; position:absolute; left:-100%; top:0; width:100%; height:2px; background:var(--orange); transition:left .4s var(--ease); bottom:auto; }
+    .svc-card:hover::before { left:0; }
+    .svc-ico { font-size:1.6rem; margin-bottom:1rem; display:block; }
+    .svc-title { font-family:var(--ff-d); font-size:1.1rem; font-weight:900; letter-spacing:.02em; margin-bottom:.6rem; }
+    .svc-desc { font-size:.83rem; color:var(--muted2); line-height:1.75; }
+    .svc-tags { display:flex; flex-wrap:wrap; gap:.3rem; margin-top:.8rem; }
+    .svc-tag { font-size:.58rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:.2rem .6rem; border:1px solid rgba(255,69,0,.25); color:var(--orange); border-radius:2px; }
 
-    /* ══════════════════════════════════════ PORTFOLIO */
-    #portfolio { padding: 8rem 0; }
-    .port-header {
-      padding: 0 3rem; display: flex; align-items: flex-end; justify-content: space-between;
-      margin-bottom: 3rem;
-    }
-    .scroll-hint {
-      font-size: .67rem; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--muted); display: flex; align-items: center; gap: .6rem;
-    }
-    .scroll-hint svg { animation: nudge 1.5s ease-in-out infinite; }
+    /* PROBLEM */
+    .problem-layout { display:grid; grid-template-columns:1fr 1fr; gap:5.5rem; align-items:center; margin-top:5rem; }
+    .problem-items { display:flex; flex-direction:column; }
+    .problem-item { display:grid; grid-template-columns:2.8rem 1fr; gap:1rem; padding:1.4rem 1.4rem 1.4rem 0; border-bottom:1px solid var(--border); position:relative; overflow:hidden; transition:border-color .3s; }
+    .problem-item::before { content:''; position:absolute; left:-100%; top:0; width:100%; height:100%; background:var(--odim); transition:left .4s var(--ease); }
+    .problem-item:hover::before { left:0; }
+    .problem-item:hover { border-color:rgba(255,69,0,.2); }
+    .prob-num { font-family:var(--ff-d); font-size:.9rem; color:var(--orange); opacity:.5; padding-top:.2rem; }
+    .prob-txt { font-size:.93rem; color:var(--muted2); line-height:1.7; position:relative; }
+    .prob-txt strong { color:var(--ink); font-weight:500; }
+    .quote-big { font-family:var(--ff-d); font-size:clamp(1.7rem,3.2vw,2.6rem); line-height:1.15; letter-spacing:.01em; font-weight:900; }
+    .quote-big em { font-style:normal; color:var(--orange); }
+
+    /* PORTFOLIO */
+    #portfolio { padding:8rem 0; }
+    .port-header { padding:0 3rem; display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:3rem; }
+    .scroll-hint { font-size:.67rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:.6rem; }
+    .scroll-hint svg { animation:nudge 1.5s ease-in-out infinite; }
     @keyframes nudge { 0%,100%{transform:translateX(0)} 50%{transform:translateX(5px)} }
-    .port-track {
-      display: flex; gap: 1.4rem; padding: 0 3rem 1.5rem;
-      overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch; scrollbar-width: none;
-      touch-action: pan-x; -webkit-user-select: none; user-select: none;
-      scroll-padding: 3rem 0 0 3rem;
-    }
-    .port-track::-webkit-scrollbar { display: none; }
-    @media (pointer: fine) { .port-track { cursor: none; } }
+    .port-track { display:flex; gap:1.4rem; padding:0 3rem 1.5rem; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; -webkit-overflow-scrolling:touch; scrollbar-width:none; touch-action:pan-x; -webkit-user-select:none; user-select:none; }
+    .port-track::-webkit-scrollbar { display:none; }
+    .pcard { flex:0 0 clamp(200px,22vw,300px); aspect-ratio:9/16; position:relative; overflow:hidden; scroll-snap-align:start; scroll-snap-stop:always; border:1px solid var(--border); text-decoration:none; border-radius:12px; }
+    .pcard-bg { width:100%; height:100%; background:#111; display:flex; align-items:center; justify-content:center; transition:transform .65s var(--ease); }
+    .pcard:hover .pcard-bg { transform:scale(1.04); }
+    .pcard-bg img { width:100%; height:100%; object-fit:cover; object-position:center; }
+    .pcard-play { width:60px; height:60px; border:1px solid rgba(237,234,227,.15); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:transform .4s var(--ease),background .3s,border-color .3s; }
+    .pcard:hover .pcard-play { background:var(--orange); border-color:var(--orange); transform:scale(1.15); }
+    .pcard-play svg { fill:var(--ink); width:17px; margin-left:3px; }
+    .pcard-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(6,6,6,.9) 0%,rgba(6,6,6,.05) 50%,transparent 100%); }
+    .pcard-badge { position:absolute; top:.8rem; left:.8rem; z-index:3; background:var(--orange); color:#fff; font-size:.58rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.22rem .65rem; border-radius:3px; }
+    .pcard-info { position:absolute; bottom:0; left:0; right:0; padding:1.8rem; transform:translateY(7px); transition:transform .4s var(--ease); }
+    .pcard:hover .pcard-info { transform:translateY(0); }
+    .pcard-num { font-family:var(--ff-d); font-size:.72rem; letter-spacing:.14em; color:var(--orange); margin-bottom:.35rem; }
+    .pcard-client { font-family:var(--ff-d); font-size:clamp(1.3rem,2.8vw,1.9rem); letter-spacing:.03em; font-weight:900; line-height:1; }
+    .pcard-stats { display:flex; flex-direction:column; gap:.3rem; margin-top:.6rem; opacity:0; transform:translateY(5px); transition:opacity .35s .05s,transform .35s .05s var(--ease); }
+    .pcard:hover .pcard-stats { opacity:1; transform:translateY(0); }
+    .pcard-stat { font-size:.66rem; font-weight:500; color:var(--orange); background:rgba(255,69,0,.13); padding:.16rem .6rem; letter-spacing:.04em; display:inline-block; width:fit-content; }
 
-    .pcard {
-      flex: 0 0 clamp(200px, 22vw, 300px);
-      aspect-ratio: 9/16;
-      position: relative; overflow: hidden;
-      scroll-snap-align: start; scroll-snap-stop: always;
-      border: 1px solid var(--border); text-decoration: none;
-      border-radius: 12px;
-    }
-    @media (pointer: fine) { .pcard { cursor: none; } }
+    /* PROCESS */
+    #process { background:#09090a; }
+    .process-list { margin-top:5rem; }
+    .process-step { display:grid; grid-template-columns:3.5rem 1px 1fr 1fr; gap:0 2.5rem; padding:2.5rem 0; border-bottom:1px solid var(--border); align-items:center; position:relative; overflow:hidden; transition:border-color .2s; }
+    .process-step::before { content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--orange); transition:width .55s var(--ease); }
+    .process-step:hover::before { width:100%; }
+    .step-idx { font-family:var(--ff-d); font-size:1.8rem; font-weight:900; color:var(--muted); transition:color .3s; }
+    .process-step:hover .step-idx { color:var(--orange); }
+    .step-div { width:1px; height:100%; background:var(--border); }
+    .step-title { font-family:var(--ff-d); font-size:clamp(1.1rem,2.3vw,1.6rem); letter-spacing:.03em; font-weight:900; padding-left:2.5rem; }
+    .step-desc { font-size:.87rem; color:var(--muted2); line-height:1.78; }
 
-    .pcard-bg img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
-    }
+    /* PRICING */
+    .pricing-note { text-align:center; margin-top:1.8rem; font-size:.75rem; color:var(--muted); }
 
-    .pcard-stats {
-      display: flex; flex-direction: column; gap: .3rem; margin-top: .6rem;
-      opacity: 0; transform: translateY(5px);
-      transition: opacity .35s .05s, transform .35s .05s var(--ease);
-    }
-    .pcard:hover .pcard-stats { opacity: 1; transform: translateY(0); }
+    /* ABOUT */
+    #about { background:#09090a; }
+    .about-layout { display:grid; grid-template-columns:1fr 1.1fr; gap:6.5rem; align-items:center; margin-top:4.5rem; }
+    .about-img { aspect-ratio:3/4; background:#111; position:relative; overflow:hidden; border:1px solid var(--border); }
+    .about-img::after { content:''; position:absolute; top:-50%; right:-50%; width:200%; height:200%; background:linear-gradient(135deg,transparent 45%,rgba(255,69,0,.07) 45%,rgba(255,69,0,.07) 55%,transparent 55%); pointer-events:none; }
+    .about-text { display:flex; flex-direction:column; gap:1.4rem; }
+    .about-text p { font-size:.93rem; color:var(--muted2); line-height:1.85; }
+    .about-text strong { color:var(--ink); font-weight:500; }
+    .tags { display:flex; gap:.45rem; flex-wrap:wrap; margin-top:.3rem; }
+    .tag { font-size:.63rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; padding:.32rem .85rem; border:1px solid var(--border); color:var(--muted); transition:border-color .2s,color .2s; }
+    .tag:hover { border-color:rgba(237,234,227,.3); color:var(--ink); }
+    .about-ctas { display:flex; gap:.9rem; flex-wrap:wrap; margin-top:.3rem; }
 
-    .pcard-stat {
-      font-size: .66rem; font-weight: 500; color: var(--orange);
-      background: rgba(255,69,0,.13); padding: .16rem .6rem;
-      letter-spacing: .04em; display: inline-block; width: fit-content;
-    }
+    /* TESTIMONIALS */
+    .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:4rem; border:1px solid var(--border); }
+    .tcard { padding:2.4rem; background:var(--bg); display:flex; flex-direction:column; transition:background .3s; }
+    .tcard:hover { background:rgba(237,234,227,.02); }
+    .stars { display:flex; gap:3px; margin-bottom:1.4rem; }
+    .stars span { color:var(--orange); font-size:.82rem; }
+    .tquote { font-size:.88rem; color:var(--muted2); line-height:1.8; flex:1; font-style:italic; margin-bottom:1.8rem; }
+    .tauthor { display:flex; align-items:center; gap:.9rem; padding-top:1.4rem; border-top:1px solid var(--border); }
+    .tav { width:38px; height:38px; background:var(--odim); border:1px solid rgba(255,69,0,.25); display:flex; align-items:center; justify-content:center; font-family:var(--ff-d); font-size:1rem; font-weight:900; color:var(--orange); flex-shrink:0; }
+    .tname { font-size:.84rem; font-weight:500; }
+    .trole { font-size:.72rem; color:var(--muted); margin-top:.1rem; }
 
-    .pcard-badge {
-      position: absolute; top: .8rem; left: .8rem; z-index: 3;
-      background: var(--orange); color: #fff;
-      font-size: .58rem; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase; padding: .22rem .65rem; border-radius: 3px;
-    }
+    /* FAQ */
+    #faq { background:#09090a; }
+    .faq-list { margin-top:3rem; }
+    .faq-item { border-bottom:1px solid var(--border); }
+    .faq-q { width:100%; background:none; border:none; color:var(--ink); font-family:var(--ff-d); font-size:1.05rem; font-weight:700; padding:1.6rem 0; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:1rem; cursor:pointer; letter-spacing:.02em; transition:color .2s; }
+    .faq-q:hover { color:var(--orange); }
+    .faq-arrow { font-size:1.2rem; color:var(--orange); transition:transform .3s var(--ease); flex-shrink:0; }
+    .faq-item.open .faq-arrow { transform:rotate(45deg); }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .4s var(--ease); }
+    .faq-item.open .faq-a { max-height:300px; }
+    .faq-a p { font-size:.9rem; color:var(--muted2); line-height:1.85; padding-bottom:1.6rem; }
 
-    .pcard-bg {
-      width: 100%; height: 100%; background: #111;
-      display: flex; align-items: center; justify-content: center;
-      transition: transform .65s var(--ease);
-    }
-    .pcard:hover .pcard-bg { transform: scale(1.04); }
-    .pcard-play {
-      width: 60px; height: 60px; border: 1px solid rgba(237,234,227,.15); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      transition: transform .4s var(--ease), background .3s, border-color .3s;
-    }
-    .pcard:hover .pcard-play { background: var(--orange); border-color: var(--orange); transform: scale(1.15); }
-    .pcard-play svg { fill: var(--ink); width: 17px; margin-left: 3px; }
-    .pcard-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(6,6,6,.9) 0%, rgba(6,6,6,.05) 50%, transparent 100%);
-    }
-    .pcard-info {
-      position: absolute; bottom: 0; left: 0; right: 0; padding: 1.8rem;
-      transform: translateY(7px); transition: transform .4s var(--ease);
-    }
-    .pcard:hover .pcard-info { transform: translateY(0); }
-    .pcard-num { font-family: var(--ff-d); font-size: .72rem; letter-spacing: .14em; color: var(--orange); margin-bottom: .35rem; }
-    .pcard-client { font-family: var(--ff-d); font-size: clamp(1.3rem,2.8vw,1.9rem); letter-spacing: .03em; font-weight: 900; line-height: 1; }
+    /* PRICING — nouvelle architecture */
+    .offer-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; margin-top:3.5rem; border:1px solid var(--border); }
+    .offer-grid-4 { grid-template-columns:repeat(4,1fr); }
+    .obox { padding:2.2rem; background:var(--bg); position:relative; display:flex; flex-direction:column; gap:.7rem; transition:background .3s; }
+    .obox:hover { background:rgba(237,234,227,.02); }
+    .obox.feat { background:rgba(255,69,0,.04); }
+    .obox.feat:hover { background:rgba(255,69,0,.07); }
+    .obox-badge { font-size:.58rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:.22rem .7rem; border:1px solid; width:fit-content; }
+    .obox-badge.new { color:#1D9E75; border-color:rgba(29,158,117,.35); background:rgba(29,158,117,.08); }
+    .obox-badge.pop { color:var(--orange); border-color:rgba(255,69,0,.35); background:rgba(255,69,0,.08); }
+    .obox-badge.rec { color:#8B6FE8; border-color:rgba(139,111,232,.35); background:rgba(139,111,232,.08); }
+    .obox-badge.custom { color:#E8A730; border-color:rgba(232,167,48,.35); background:rgba(232,167,48,.08); }
+    .obox-name { font-size:.62rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    .obox-title { font-family:var(--ff-d); font-size:1.4rem; font-weight:900; line-height:1; }
+    .obox-price { font-family:var(--ff-d); font-size:clamp(1.6rem,2.5vw,2.2rem); line-height:1; font-weight:900; }
+    .obox-price small { font-size:.8rem; font-weight:400; color:var(--muted); }
+    .obox-target { font-size:.75rem; color:var(--orange); font-weight:500; }
+    .obox-sep { width:26px; height:1px; background:var(--border); }
+    .obox-features { list-style:none; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+    .obox-features li { font-size:.81rem; color:var(--muted2); display:flex; gap:.6rem; align-items:flex-start; line-height:1.5; }
+    .obox-features li::before { content:'—'; color:var(--orange); flex-shrink:0; }
+    .obox-cta { display:block; text-align:center; padding:.65rem; border:1px solid var(--borderh); color:var(--ink); text-decoration:none; font-size:.7rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; transition:background .2s,border-color .2s; margin-top:.5rem; }
+    .obox-cta:hover { background:rgba(237,234,227,.06); }
+    .obox.feat .obox-cta { background:var(--orange); border-color:var(--orange); color:#fff; }
+    .obox.feat .obox-cta:hover { background:#e03d00; }
+    .obox-full { grid-column:1/-1; border-top:1px solid var(--border); }
+    .obox-full-inner { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
+    .brief-form { display:flex; flex-direction:column; gap:.7rem; }
+    .brief-select { width:100%; background:rgba(237,234,227,.04); border:1px solid var(--border); color:var(--ink); font-family:var(--ff-b); font-size:.85rem; padding:.7rem 1rem; outline:none; border-radius:0; appearance:none; -webkit-appearance:none; transition:border-color .2s; }
+    .brief-select:focus { border-color:rgba(255,69,0,.5); }
+    .brief-select option { background:#1a1a1a; }
+    .offer-note { text-align:center; margin-top:1.6rem; font-size:.74rem; color:var(--muted); line-height:1.8; }
+    .abonnement-strip { margin-top:1px; background:rgba(139,111,232,.06); border:1px solid rgba(139,111,232,.2); padding:2rem 2.2rem; display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:center; }
+    .abonnement-strip-left h3 { font-family:var(--ff-d); font-size:1.3rem; font-weight:900; margin-bottom:.4rem; }
+    .abonnement-strip-left p { font-size:.85rem; color:var(--muted2); line-height:1.7; }
+    .abonnement-tiers { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1rem; }
+    .abonnement-tier { padding:.4rem 1rem; border:1px solid var(--border); font-size:.72rem; color:var(--muted2); }
+    .abonnement-tier strong { color:var(--ink); display:block; font-size:.85rem; }
 
-    /* ══════════════════════════════════════ PROCESS */
-    #process { background: #09090a; }
-    .process-list { margin-top: 5rem; }
-    .process-step {
-      display: grid; grid-template-columns: 3.5rem 1px 1fr 1fr;
-      gap: 0 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--border);
-      align-items: center; position: relative; overflow: hidden; transition: border-color .2s;
-    }
-    .process-step::before {
-      content: ''; position: absolute; left: 0; bottom: 0;
-      width: 0; height: 1px; background: var(--orange);
-      transition: width .55s var(--ease);
-    }
-    .process-step:hover::before { width: 100%; }
-    .step-idx { font-family: var(--ff-d); font-size: 1.8rem; font-weight: 900; color: var(--muted); transition: color .3s; }
-    .process-step:hover .step-idx { color: var(--orange); }
-    .step-div { width: 1px; height: 100%; background: var(--border); }
-    .step-title { font-family: var(--ff-d); font-size: clamp(1.1rem,2.3vw,1.6rem); letter-spacing: .03em; font-weight: 900; padding-left: 2.5rem; }
-    .step-desc { font-size: .87rem; color: var(--muted2); line-height: 1.78; }
+    /* CONTACT */
+    #contact { background:var(--bg); }
+    .contact-layout { display:grid; grid-template-columns:1.1fr 1fr; gap:6rem; margin-top:4.5rem; align-items:start; }
+    .contact-form-wrap { }
+    .form-title { font-family:var(--ff-d); font-size:1.3rem; font-weight:900; letter-spacing:.03em; margin-bottom:1.4rem; }
+    .form-group { margin-bottom:1rem; }
+    .form-group label { display:block; font-size:.62rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:.5rem; }
+    .form-group input,.form-group textarea { width:100%; background:rgba(237,234,227,.04); border:1px solid var(--border); color:var(--ink); font-family:var(--ff-b); font-size:.88rem; padding:.78rem 1rem; transition:border-color .2s; outline:none; border-radius:0; appearance:none; -webkit-appearance:none; }
+    .form-group input:focus,.form-group textarea:focus { border-color:rgba(255,69,0,.5); }
+    .form-group textarea { resize:vertical; min-height:100px; line-height:1.6; }
+    .form-group input::placeholder,.form-group textarea::placeholder { color:var(--muted); }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-status { font-size:.8rem; margin-top:.8rem; min-height:1.2rem; }
+    .form-status.ok { color:#1D9E75; }
+    .form-status.err { color:#e04444; }
+    .contact-right { display:flex; flex-direction:column; gap:1.8rem; }
+    .contact-ch { display:flex; align-items:center; gap:1.4rem; padding:1.4rem 0; border-bottom:1px solid var(--border); text-decoration:none; color:var(--ink); position:relative; overflow:hidden; transition:border-color .2s; }
+    .contact-ch::before { content:''; position:absolute; left:-100%; top:0; width:100%; height:100%; background:var(--odim); transition:left .4s var(--ease); }
+    .contact-ch:hover::before { left:0; }
+    .contact-ch:hover { border-color:rgba(255,69,0,.2); }
+    .ch-ico { width:46px; height:46px; flex-shrink:0; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:1.05rem; transition:border-color .2s,background .2s; }
+    .contact-ch:hover .ch-ico { border-color:rgba(255,69,0,.4); background:var(--odim); }
+    .ch-lbl { font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+    .ch-val { font-size:.9rem; font-weight:400; }
+    .ch-arr { margin-left:auto; font-size:.95rem; color:var(--muted); transform:translateX(-3px); transition:transform .3s var(--ease),color .3s; }
+    .contact-ch:hover .ch-arr { transform:translateX(0); color:var(--orange); }
+    .zone-box { padding:2rem; border:1px solid var(--border); }
+    .zone-box p { font-size:.87rem; color:var(--muted2); line-height:1.85; }
+    .social-row { display:flex; gap:.55rem; flex-wrap:wrap; }
+    .soc-btn { display:flex; align-items:center; gap:.5rem; padding:.58rem 1rem; border:1px solid var(--border); text-decoration:none; color:var(--muted); font-size:.7rem; font-weight:500; letter-spacing:.04em; transition:border-color .2s,color .2s; }
+    .soc-btn:hover { border-color:rgba(237,234,227,.3); color:var(--ink); }
 
-    /* ══════════════════════════════════════ PRICING */
-    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 4.5rem; border: 1px solid var(--border); }
-    .pbox {
-      padding: 2.8rem; background: var(--bg); position: relative;
-      transition: background .3s;
-    }
-    @media (pointer: fine) { .pbox { cursor: none; } }
-    .pbox:hover { background: rgba(237,234,227,.02); }
-    .pbox.feat { background: rgba(255,69,0,.04); }
-    .pbox.feat:hover { background: rgba(255,69,0,.07); }
-    .feat-tag {
-      position: absolute; top: -1px; left: 2.8rem;
-      background: var(--orange); color: #fff;
-      font-size: .6rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .28rem .85rem;
-    }
-    .pbox-name { font-size: .63rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.4rem; }
-    .pbox-price { font-family: var(--ff-d); font-size: clamp(2rem,3.5vw,3rem); line-height: 1; font-weight: 900; }
-    .pbox-period { font-size: .78rem; color: var(--muted); margin: .45rem 0 1.8rem; }
-    .pbox-features { list-style: none; display: flex; flex-direction: column; gap: .65rem; margin-bottom: 2.2rem; }
-    .pbox-features li { font-size: .84rem; color: var(--muted2); display: flex; gap: .65rem; align-items: flex-start; }
-    .pbox-features li::before { content: '—'; color: var(--orange); flex-shrink: 0; }
-    .pbox-cta {
-      display: block; text-align: center; padding: .72rem;
-      border: 1px solid var(--borderh); color: var(--ink); text-decoration: none;
-      font-size: .73rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
-      transition: background .2s, border-color .2s;
-    }
-    .pbox-cta:hover { background: rgba(237,234,227,.06); }
-    .pbox.feat .pbox-cta { background: var(--orange); border-color: var(--orange); color: #fff; }
-    .pbox.feat .pbox-cta:hover { background: #e03d00; }
-    .pricing-note { text-align: center; margin-top: 1.8rem; font-size: .75rem; color: var(--muted); }
+    /* FOOTER */
+    footer { border-top:1px solid var(--border); padding:2rem 3rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .foot-logo { display:flex; align-items:center; text-decoration:none; }
+    .foot-logo img { display:block; height:2rem; width:auto; }
+    footer p { font-size:.72rem; color:var(--muted); text-align:center; }
+    .foot-links { display:flex; gap:1.4rem; }
+    .foot-links a { font-size:.7rem; color:var(--muted); text-decoration:none; letter-spacing:.04em; transition:color .2s; }
+    .foot-links a:hover { color:var(--ink); }
 
-    /* ══════════════════════════════════════ ABOUT */
-    #about { background: #09090a; }
-    .about-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 6.5rem; align-items: center; margin-top: 4.5rem; }
-    .about-img {
-      aspect-ratio: 3/4; background: #111; position: relative;
-      overflow: hidden; border: 1px solid var(--border);
-    }
-    .about-img::after {
-      content: ''; position: absolute; top: -50%; right: -50%;
-      width: 200%; height: 200%;
-      background: linear-gradient(135deg, transparent 45%, rgba(255,69,0,.07) 45%, rgba(255,69,0,.07) 55%, transparent 55%);
-      pointer-events: none;
-    }
-    .about-img-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: .8rem; color: var(--muted); }
-    .about-year {
-      position: absolute; bottom: 2rem; right: -1px;
-      background: var(--orange); padding: 1.4rem 1.8rem; text-align: center;
-    }
-    .about-year .num { display: block; font-family: var(--ff-d); font-size: 2.2rem; font-weight: 900; line-height: 1; }
-    .about-year .lbl { display: block; font-size: .58rem; letter-spacing: .1em; margin-top: .28rem; }
-    .about-text { display: flex; flex-direction: column; gap: 1.4rem; }
-    .about-text p { font-size: .93rem; color: var(--muted2); line-height: 1.85; }
-    .about-text strong { color: var(--ink); font-weight: 500; }
-    .tags { display: flex; gap: .45rem; flex-wrap: wrap; margin-top: .3rem; }
-    .tag {
-      font-size: .63rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-      padding: .32rem .85rem; border: 1px solid var(--border); color: var(--muted);
-      transition: border-color .2s, color .2s;
-    }
-    .tag:hover { border-color: rgba(237,234,227,.3); color: var(--ink); }
-    .about-ctas { display: flex; gap: .9rem; flex-wrap: wrap; margin-top: .3rem; }
-
-    /* ══════════════════════════════════════ TESTIMONIALS */
-    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 4rem; border: 1px solid var(--border); }
-    .tcard { padding: 2.4rem; background: var(--bg); display: flex; flex-direction: column; transition: background .3s; }
-    .tcard:hover { background: rgba(237,234,227,.02); }
-    .stars { display: flex; gap: 3px; margin-bottom: 1.4rem; }
-    .stars span { color: var(--orange); font-size: .82rem; }
-    .tquote { font-size: .88rem; color: var(--muted2); line-height: 1.8; flex: 1; font-style: italic; margin-bottom: 1.8rem; }
-    .tauthor { display: flex; align-items: center; gap: .9rem; padding-top: 1.4rem; border-top: 1px solid var(--border); }
-    .tav {
-      width: 38px; height: 38px; background: var(--odim);
-      border: 1px solid rgba(255,69,0,.25);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--ff-d); font-size: 1rem; font-weight: 900; color: var(--orange); flex-shrink: 0;
-    }
-    .tname { font-size: .84rem; font-weight: 500; }
-    .trole { font-size: .72rem; color: var(--muted); margin-top: .1rem; }
-
-    /* ══════════════════════════════════════ CONTACT + FORMULAIRE INLINE
-       FIX CONVERSION : formulaire natif sans redirection */
-    #contact { background: #09090a; }
-    .contact-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 6rem; margin-top: 4.5rem; align-items: start; }
-    .contact-channels { display: flex; flex-direction: column; }
-    .contact-ch {
-      display: flex; align-items: center; gap: 1.4rem; padding: 1.4rem 0;
-      border-bottom: 1px solid var(--border); text-decoration: none; color: var(--ink);
-      position: relative; overflow: hidden; transition: border-color .2s;
-    }
-    @media (pointer: fine) { .contact-ch { cursor: none; } }
-    .contact-ch::before {
-      content: ''; position: absolute; left: -100%; top: 0;
-      width: 100%; height: 100%; background: var(--odim); transition: left .4s var(--ease);
-    }
-    .contact-ch:hover::before { left: 0; }
-    .contact-ch:hover { border-color: rgba(255,69,0,.2); }
-    .ch-ico {
-      width: 46px; height: 46px; flex-shrink: 0; border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center; font-size: 1.05rem;
-      transition: border-color .2s, background .2s; position: relative;
-    }
-    .contact-ch:hover .ch-ico { border-color: rgba(255,69,0,.4); background: var(--odim); }
-    .ch-lbl { font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-    .ch-val { font-size: .9rem; font-weight: 400; }
-    .ch-arr { margin-left: auto; font-size: .95rem; color: var(--muted); transform: translateX(-3px); transition: transform .3s var(--ease), color .3s; position: relative; }
-    .contact-ch:hover .ch-arr { transform: translateX(0); color: var(--orange); }
-
-    /* Formulaire inline */
-    .contact-form-wrap { margin-top: 2.5rem; }
-    .form-title { font-family: var(--ff-d); font-size: 1.3rem; font-weight: 900; letter-spacing: .03em; margin-bottom: 1.4rem; }
-    .form-group { margin-bottom: 1rem; }
-    .form-group label { display: block; font-size: .62rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .5rem; }
-    .form-group input,
-    .form-group textarea {
-      width: 100%; background: rgba(237,234,227,.04); border: 1px solid var(--border);
-      color: var(--ink); font-family: var(--ff-b); font-size: .88rem; padding: .78rem 1rem;
-      transition: border-color .2s;
-      outline: none;
-      border-radius: 0;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-    .form-group input:focus, .form-group textarea:focus { border-color: rgba(255,69,0,.5); }
-    .form-group textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--muted); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-status { font-size: .8rem; margin-top: .8rem; min-height: 1.2rem; }
-    .form-status.ok  { color: #1D9E75; }
-    .form-status.err { color: #e04444; }
-
-    .contact-right { display: flex; flex-direction: column; gap: 2.2rem; }
-    .zone-box { padding: 2.2rem; border: 1px solid var(--border); }
-    .zone-box p { font-size: .87rem; color: var(--muted2); line-height: 1.85; }
-    .social-row { display: flex; gap: .55rem; flex-wrap: wrap; }
-    .soc-btn {
-      display: flex; align-items: center; gap: .5rem; padding: .58rem 1rem;
-      border: 1px solid var(--border); text-decoration: none; color: var(--muted);
-      font-size: .7rem; font-weight: 500; letter-spacing: .04em;
-      transition: border-color .2s, color .2s;
-    }
-    .soc-btn:hover { border-color: rgba(237,234,227,.3); color: var(--ink); }
-
-    /* ══════════════════════════════════════ FOOTER */
-    footer {
-      border-top: 1px solid var(--border); padding: 2rem 3rem;
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-    }
-    .foot-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .foot-logo img {
-      display: block;
-      height: 2rem;
-      width: auto;
-    }
-    footer p { font-size: .72rem; color: var(--muted); text-align: center; }
-    .foot-links { display: flex; gap: 1.4rem; }
-    .foot-links a { font-size: .7rem; color: var(--muted); text-decoration: none; letter-spacing: .04em; transition: color .2s; }
-    .foot-links a:hover { color: var(--ink); }
-
-    /* ══════════════════════════════════════ VIDEO MODAL */
-    #modal {
-      position: fixed; inset: 0; z-index: 700;
-      background: rgba(6,6,6,.97);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none; transition: opacity .4s;
-    }
-    #modal.open { opacity: 1; pointer-events: all; }
-    .modal-wrap {
-      position: relative;
-      width: min(360px, 92vw);
-      max-height: 92vh;
-    }
-    .modal-wrap iframe {
-      width: 100%;
-      aspect-ratio: 9/16;
-      border: 1px solid rgba(237,234,227,.07);
-      border-radius: 12px;
-      display: block;
-    }
-    @media (max-width: 480px) {
-      .modal-wrap { width: 100vw; max-height: 100svh; }
-      .modal-wrap iframe { border-radius: 0; border: none; height: 100svh; aspect-ratio: unset; }
-      .modal-close { position: fixed; top: 1rem; right: 1rem; z-index: 10; background: rgba(6,6,6,.7); padding: .4rem .8rem; }
+    /* MODALES LÉGALES */
+    .legal-modal { position:fixed; inset:0; z-index:8500; background:rgba(6,6,6,.98); overflow-y:auto; opacity:0; pointer-events:none; transition:opacity .35s; }
+    .legal-modal.open { opacity:1; pointer-events:all; }
+    .legal-inner { max-width:760px; margin:0 auto; padding:3rem 2rem 5rem; }
+    .legal-nav { display:flex; align-items:center; justify-content:space-between; margin-bottom:3rem; padding-bottom:1.4rem; border-bottom:1px solid var(--border); }
+    .legal-nav-logo { font-family:var(--ff-d); font-size:1rem; font-weight:900; color:var(--ink); }
+    .legal-nav-logo span { color:var(--orange); }
+    .legal-close { background:none; border:1px solid var(--border); color:var(--muted2); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; padding:.45rem 1rem; cursor:pointer; transition:color .2s,border-color .2s; }
+    .legal-close:hover { color:var(--ink); border-color:var(--borderh); }
+    .legal-h1 { font-family:var(--ff-d); font-size:clamp(1.8rem,5vw,3rem); font-weight:900; line-height:1; margin-bottom:2rem; }
+    .legal-h1 em { font-style:normal; color:var(--orange); }
+    .legal-updated { font-size:.72rem; color:var(--muted); letter-spacing:.06em; text-transform:uppercase; padding-bottom:1.8rem; border-bottom:1px solid var(--border); margin-bottom:2.5rem; }
+    .legal-section { margin-bottom:2.4rem; }
+    .legal-h2 { font-family:var(--ff-d); font-size:1rem; font-weight:900; letter-spacing:.04em; margin-bottom:.9rem; display:flex; align-items:center; gap:.6rem; }
+    .legal-h2::before { content:''; width:20px; height:1px; background:var(--orange); flex-shrink:0; }
+    .legal-p { font-size:.88rem; color:var(--muted2); line-height:1.8; margin-bottom:.6rem; }
+    .legal-p:last-child { margin-bottom:0; }
+    .legal-p a { color:var(--orange); }
+    .legal-p strong { color:var(--ink); font-weight:500; }
+    .legal-block { background:rgba(237,234,227,.03); border:1px solid var(--border); padding:1.2rem 1.4rem; border-radius:4px; }
+    .legal-row { display:flex; gap:1rem; padding:.3rem 0; border-bottom:1px solid var(--border); font-size:.85rem; }
+    .legal-row:last-child { border-bottom:none; }
+    .legal-row-label { color:var(--muted); min-width:170px; flex-shrink:0; }
+    .legal-row-val { color:var(--ink); }
+    .legal-row-val a { color:var(--orange); }
+    .legal-highlight { background:rgba(255,69,0,.05); border:1px solid rgba(255,69,0,.18); border-radius:4px; padding:.9rem 1.1rem; margin:.6rem 0; }
+    .legal-highlight .legal-p { font-size:.84rem; margin:0; }
+    .legal-ul { list-style:none; padding:0; }
+    .legal-ul li { font-size:.88rem; color:var(--muted2); padding:.25rem 0; display:flex; gap:.6rem; line-height:1.6; }
+    .legal-ul li::before { content:'—'; color:var(--orange); flex-shrink:0; }
+    .legal-ul li strong { color:var(--ink); font-weight:500; }
+    @media (max-width:640px) {
+      .legal-row { flex-direction:column; gap:.2rem; }
+      .legal-row-label { min-width:unset; font-size:.75rem; }
     }
 
-    /* ══════════════════════════════════════ SCROLL REVEAL */
-    .rev { opacity: 0; transform: translateY(36px); transition: opacity .75s var(--ease), transform .75s var(--ease); }
-    .rev.in { opacity: 1; transform: translateY(0); }
-    .d1{transition-delay:.10s} .d2{transition-delay:.20s} .d3{transition-delay:.30s}
+    /* MODAL */
+    #modal { position:fixed; inset:0; z-index:700; background:rgba(6,6,6,.97); display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .4s; }
+    #modal.open { opacity:1; pointer-events:all; }
+    .modal-wrap { position:relative; width:min(360px,92vw); max-height:92vh; }
+    .modal-wrap iframe { width:100%; aspect-ratio:9/16; border:1px solid rgba(237,234,227,.07); border-radius:12px; display:block; }
+    .modal-close { position:absolute; top:-2.5rem; right:0; background:none; border:none; color:var(--ink); font-size:.8rem; letter-spacing:.1em; cursor:pointer; opacity:.6; transition:opacity .2s; }
+    .modal-close:hover { opacity:1; }
 
-    /* ══ HERO VIDÉO DROITE ══ */
-    .hero-video-wrap {
-      position: absolute;
-      top: 0; right: 0;
-      width: 38%; height: 100%;
-      z-index: 1;
-      overflow: hidden;
-    }
-    .hero-video-wrap iframe {
-      position: absolute;
-      top: 50%; left: 50%;
-      width: 100%; height: 180%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      border: none;
-    }
-    .hero-video-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to right, var(--bg) 0%, transparent 35%),
-                  linear-gradient(to top, var(--bg) 0%, transparent 25%);
-      z-index: 2;
-    }
-    .hero-video-mobile {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      .hero-video-wrap { display: none; }
-      .hero-video-mobile {
-        display: block;
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        z-index: 1;
-        overflow: hidden;
-      }
-      .hero-video-mobile iframe {
-        position: absolute;
-        top: 50%; left: 50%;
-        width: 300%; height: 100%;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        border: none;
-      }
-      .hero-video-mobile .hero-video-overlay {
-        position: absolute; inset: 0;
-        background: linear-gradient(
-          to bottom,
-          rgba(6,6,6,.75) 0%,
-          rgba(6,6,6,.55) 50%,
-          rgba(6,6,6,.80) 100%
-        );
-        z-index: 2;
-      }
-      .hero-main {
-        position: relative;
-        z-index: 3;
-      }
-      .hero-footer {
-        position: relative;
-        z-index: 3;
-      }
+    /* SCROLL REVEAL */
+    .rev { opacity:0; transform:translateY(36px); transition:opacity .75s var(--ease),transform .75s var(--ease); }
+    .rev.in { opacity:1; transform:translateY(0); }
+    .d1{transition-delay:.10s}.d2{transition-delay:.20s}.d3{transition-delay:.30s}
+
+    /* MOBILE VIDEO */
+    @media (max-width:768px) {
+      .hero-video-wrap { display:none; }
+      .hero-video-mobile { display:block; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow:hidden; }
+      .hero-video-mobile iframe { position:absolute; top:50%; left:50%; width:300%; height:100%; transform:translate(-50%,-50%); pointer-events:none; border:none; }
+      .hero-video-mobile .hero-video-overlay { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(6,6,6,.75) 0%,rgba(6,6,6,.55) 50%,rgba(6,6,6,.80) 100%); z-index:2; }
+      .hero-main,.hero-footer { position:relative; z-index:3; }
     }
 
-    /* ══════════════════════════════════════ RESPONSIVE */
-    @media (max-width: 1024px) {
-      nav { padding: 1.4rem 2rem; }
-      nav.scrolled { padding: 1rem 2rem; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .section, #stats { padding: 4rem 2rem; }
-      #hero, #portfolio .port-header, #portfolio .port-track { padding-left: 2rem; padding-right: 2rem; }
-      #stats { grid-template-columns: 1fr; }
-      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 2rem; }
-      .stat-item:last-child { border-bottom: none; }
-      .problem-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-      .process-step { grid-template-columns: 2.5rem 1fr; gap: 0 1.5rem; }
-      .step-div { display: none; }
-      .step-title { padding-left: 0; grid-column: 2; font-size: 1.05rem; margin-bottom: .3rem; }
-      .step-desc { grid-column: 2; }
-      .pricing-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .about-layout { grid-template-columns: 1fr; gap: 2.5rem; margin-top: 3rem; }
-      .about-img { aspect-ratio: 3/2; }
-      .about-text { gap: 1.2rem; }
-      .about-ctas { gap: .8rem; margin-top: .5rem; }
-      .testi-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-      .form-row { grid-template-columns: 1fr; gap: 1rem; }
-      footer { flex-direction: column; text-align: center; gap: 1.5rem; }
-      .foot-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-      nav .btn-mag {
-        padding: .62rem 0.35rem;
-        min-width: 0;
-        width: auto;
-      }
+    /* RESPONSIVE */
+    @media (max-width:1024px) {
+      nav { padding:1.4rem 2rem; } nav.scrolled { padding:1rem 2rem; }
+      .nav-links { display:none; }
+      .hamburger { display:flex; }
+      .section,#stats { padding:4rem 2rem; }
+      #hero,#portfolio .port-header,#portfolio .port-track { padding-left:2rem; padding-right:2rem; }
+      #stats { grid-template-columns:1fr; }
+      .stat-item { border-right:none; border-bottom:1px solid var(--border); padding:2rem; }
+      .stat-item:last-child { border-bottom:none; }
+      .offer-grid { grid-template-columns:1fr 1fr; }
+      .offer-grid-4 { grid-template-columns:1fr 1fr; }
+      .abonnement-strip { grid-template-columns:1fr; gap:1.5rem; }
+      .services-grid { grid-template-columns:1fr 1fr; }
+      .problem-layout { grid-template-columns:1fr; gap:2.5rem; }
+      .process-step { grid-template-columns:2.5rem 1fr; gap:0 1.5rem; }
+      .step-div { display:none; }
+      .step-title { padding-left:0; grid-column:2; font-size:1.05rem; margin-bottom:.3rem; }
+      .step-desc { grid-column:2; }
+      .obox { padding:1.8rem; }
+      .about-layout { grid-template-columns:1fr; gap:2.5rem; margin-top:3rem; }
+      .about-img { aspect-ratio:3/2; }
+      .testi-grid { grid-template-columns:1fr; gap:2rem; }
+      .contact-layout { grid-template-columns:1fr; gap:2.5rem; }
+      .form-row { grid-template-columns:1fr; gap:1rem; }
+      footer { flex-direction:column; text-align:center; gap:1.5rem; }
+      .foot-links { flex-wrap:wrap; justify-content:center; gap:1rem; }
+      nav .btn-mag { padding:.62rem .35rem; min-width:0; }
     }
-    @media (max-width: 640px) {
-      .section, #stats { padding: 3rem 1.5rem; }
-      .hero-h1 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
-      .hero-sub-row { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-      .hero-actions { flex-direction: column; width: 100%; gap: .8rem; }
-      .btn-mag, .btn-outline { justify-content: center; width: 100%; min-height: 48px; max-width: 280px; }
-      .pcard { flex: 0 0 58vw; }
-      .about-layout { gap: 2rem; margin-top: 2.5rem; }
-      .about-text { gap: 1rem; }
-      .about-ctas { flex-direction: column; gap: .6rem; }
-      .about-ctas .btn-mag, .about-ctas .btn-outline { width: 100%; max-width: 280px; }
-      .pricing-grid { gap: 1.5rem; }
-      .pbox { padding: 2rem 1.5rem; }
-      .pbox-features { margin: 1.5rem 0; }
-      .pbox-features li { margin-bottom: .8rem; }
-      .testi-grid { gap: 1.5rem; }
-      .contact-layout { gap: 2rem; }
-      .form-group { margin-bottom: 1.2rem; }
-      .form-group input, .form-group textarea { font-size: 16px; } /* Prevent zoom on iOS */
-      .port-track { gap: 1rem; padding: 0 1.5rem 1.5rem; }
-      .pcard { flex: 0 0 280px; }
-      .pcard video { height: 180px; object-fit: cover; }
-      .modal-wrap iframe { height: 70vh; }
+    @media (max-width:640px) {
+      .section,#stats { padding:3rem 1.5rem; }
+      .hero-h1 { font-size:clamp(2.8rem,14vw,4.5rem); }
+      .hero-sub-row { flex-direction:column; align-items:flex-start; gap:1.5rem; }
+      .hero-actions { flex-direction:column; width:100%; gap:.8rem; }
+      .btn-mag,.btn-outline { justify-content:center; width:100%; min-height:48px; max-width:280px; }
+      .offer-grid,.offer-grid-4 { grid-template-columns:1fr; }
+      .obox-full-inner { grid-template-columns:1fr; gap:1.5rem; }
+      .services-grid { grid-template-columns:1fr; }
+      .pcard { flex:0 0 280px; }
+      .port-track { gap:1rem; padding:0 1.5rem 1.5rem; }
     }
-    @media (max-width: 480px) {
-      .section, #stats { padding: 2.5rem 1rem; }
-      #hero { padding: 0 1rem; min-height: 100svh; }
-      .hero-main { padding-top: 5rem; }
-      .hero-h1 { font-size: clamp(2.5rem, 15vw, 4rem); line-height: .95; }
-      .hero-eyebrow { margin-bottom: 1.2rem; gap: .8rem; }
-      .hero-eyebrow-line { animation-duration: .4s; }
-      .hero-sub-row { margin-top: 2rem; }
-      .hero-sub { font-size: .9rem; max-width: none; }
-      .hero-footer { padding: 1rem 0 1.5rem; }
-      .hero-loc { font-size: .6rem; }
-      .ticker { padding: .6rem 0; }
-      .ticker-item { font-size: .95rem; padding: 0 1.5rem; gap: 1.5rem; }
-      .about-layout { gap: 1.5rem; margin-top: 2rem; }
-      .about-text h2 { font-size: 1.8rem; line-height: 1.2; }
-      .about-text p { font-size: .9rem; line-height: 1.7; }
-      .tags { gap: .3rem; margin-top: .4rem; }
-      .tag { font-size: .6rem; padding: .25rem .6rem; }
-      .pricing-grid { gap: 1rem; }
-      .pbox { padding: 1.5rem 1rem; }
-      .pbox-name { font-size: 1.4rem; }
-      .pbox-price { font-size: 1.6rem; }
-      .pbox-period { font-size: .8rem; }
-      .pbox-features { margin: 1rem 0; font-size: .85rem; }
-      .pbox-features li { margin-bottom: .6rem; }
-      .pbox-cta { font-size: .9rem; padding: .8rem 1.2rem; }
-      .testi-grid { gap: 1rem; }
-      .testi-item { padding: 1.5rem; }
-      .testi-text { font-size: .9rem; }
-      .contact-layout { gap: 1.5rem; }
-      .contact-text h2 { font-size: 1.8rem; }
-      .contact-text p { font-size: .9rem; }
-      .form-group { margin-bottom: 1rem; }
-      .form-group input, .form-group textarea { font-size: 16px; padding: .8rem; } /* Prevent zoom on iOS */
-      .form-row { gap: .8rem; }
-      footer { gap: 1rem; padding: 2rem 1rem; }
-      .foot-links { gap: .8rem; }
-      .foot-links a { font-size: .85rem; }
-      .port-track { gap: .8rem; padding: 0 1rem 1.5rem; }
-      .pcard { flex: 0 0 260px; }
-      .pcard video { height: 160px; }
-      .modal-wrap iframe { height: 60vh; }
+    @media (max-width:480px) {
+      .section,#stats { padding:2.5rem 1rem; }
+      #hero { padding:0 1rem; min-height:100svh; }
+      .hero-main { padding-top:5rem; }
+      .hero-h1 { font-size:clamp(2.5rem,15vw,4rem); line-height:.95; }
+      .hero-sub-row { margin-top:2rem; }
+      .hero-sub { font-size:.9rem; max-width:none; }
+      footer { gap:1rem; padding:2rem 1rem; }
+      .form-group input,.form-group textarea { font-size:16px; padding:.8rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══ CURSEUR CUSTOM ══ -->
-<!-- ══ FOND CINÉMATIQUE ══ -->
-<div class="bg-fx" aria-hidden="true">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+<div class="bg-fx" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
 
-<div id="cursor-dot"   aria-hidden="true"></div>
-<div id="cursor-ring"  aria-hidden="true"></div>
-
-<!-- ══ PRELOADER ══ -->
-<div id="preloader" role="status" aria-label="Chargement en cours">
-  <div class="pl-logo" aria-hidden="true">
-    <span>C</span><span>B</span><span>E</span><span>N</span><span>&nbsp;</span>
-    <span>P</span><span>R</span><span>O</span><span>D</span>
+<!-- BANDEAU STICKY CONFIANCE -->
+<div id="sticky-bar" aria-hidden="true" style="position:fixed;bottom:0;left:0;right:0;z-index:400;background:rgba(6,6,6,.95);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:.65rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(100%);transition:transform .4s var(--ease);flex-wrap:wrap">
+  <div style="display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap">
+    <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">⭐ 5/5 · 3 avis clients</span>
+    <span style="width:1px;height:14px;background:var(--border);flex-shrink:0"></span>
+    <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">⚡ À partir de 220€ HT</span>
+    <span style="width:1px;height:14px;background:var(--border);flex-shrink:0"></span>
+    <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">📍 Dunkerque · Hauts-de-France</span>
   </div>
-  <div class="pl-track"><div class="pl-bar" id="plBar"></div></div>
+  <a href="https://calendly.com/cbenprod/new-meeting" target="_blank" rel="noopener" style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--orange);padding:.45rem 1.1rem;text-decoration:none;white-space:nowrap;flex-shrink:0">Devis gratuit →</a>
+</div>
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- INTRO -->
+<div class="stage" id="stage" aria-label="Animation CBEN PROD" role="status">
+  <div class="bg-flash"></div>
+  <div class="bg-final"></div>
+  <div class="scan-intro"></div>
+  <div class="scan-intro2"></div>
+  <div class="particles"><div class="p p1"></div><div class="p p2"></div><div class="p p3"></div><div class="p p4"></div><div class="p p5"></div><div class="p p6"></div></div>
+  <div class="logo-stage">
+    <div class="cben-row">
+      <span class="letter c">C</span><span class="letter b">B</span><span class="letter e">E</span><span class="letter n">N</span>
+      <div class="dot-wrap"><div class="dot-ring"></div><div class="dot"></div></div>
+    </div>
+    <div class="separator"></div>
+    <div class="prod">PROD</div>
+  </div>
+  <div class="stage-hint">cbenprod.fr</div>
 </div>
 
-<!-- ══ MOBILE NAV ══ -->
+<!-- MOBILE NAV -->
 <nav class="mob-nav" id="mobNav" aria-label="Navigation mobile">
+  <a href="#services" onclick="closeNav()">Services</a>
   <a href="#portfolio" onclick="closeNav()">Réalisations</a>
-  <a href="#process"   onclick="closeNav()">Approche</a>
-  <a href="#pricing"   onclick="closeNav()">Tarifs</a>
-  <a href="#about"     onclick="closeNav()">À propos</a>
-  <a href="#contact"   onclick="closeNav()">Contact</a>
+  <a href="#pricing" onclick="closeNav()">Tarifs</a>
+  <a href="#about" onclick="closeNav()">À propos</a>
+  <a href="#faq" onclick="closeNav()">FAQ</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
 </nav>
 
-<!-- ══ NAV ══ -->
+<!-- NAV -->
 <nav id="nav" aria-label="Navigation principale">
-  <a href="#" class="nav-logo" aria-label="CBEN PROD">
-    <img src="assets/Logo CBEN PROD noir - videaste dunkerque - google.png" alt="CBEN PROD" loading="lazy">
+  <a href="#" class="nav-logo" aria-label="CBEN PROD – Accueil">
+    <img src="assets/Logo CBEN PROD noir - videaste dunkerque - google.png" alt="CBEN PROD – Vidéaste Dunkerque" loading="lazy">
   </a>
   <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Réalisations</a></li>
-    <li><a href="#process">Approche</a></li>
     <li><a href="#pricing">Tarifs</a></li>
     <li><a href="#about">À propos</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Prendre RDV" aria-label="Prendre rendez-vous sur Calendly">
+  <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Prendre RDV" aria-label="Prendre rendez-vous">
     <span class="btn-mag-inner">Prendre RDV →</span>
   </a>
   <button class="hamburger" id="hbg" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobNav">
@@ -1048,56 +625,42 @@
   </button>
 </nav>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-glow" aria-hidden="true"></div>
 
-  <!-- VIDÉO MOBILE -->
   <div class="hero-video-mobile" aria-hidden="true">
-      <iframe id="heroVideoMobile"
-        src="https://www.youtube.com/embed/rGIfaZjL3xY?autoplay=1&mute=1&loop=1&playlist=rGIfaZjL3xY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
-        title="Vidéo de présentation CBEN PROD mobile"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
+    <iframe id="heroVideoMobile"
+      src="https://www.youtube.com/embed/rGIfaZjL3xY?autoplay=1&mute=1&loop=1&playlist=rGIfaZjL3xY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+      title="Vidéaste Dunkerque – CBEN PROD" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div class="hero-video-overlay"></div>
   </div>
 
-  <!-- VIDÉO DROITE PC -->
   <div class="hero-video-wrap" aria-hidden="true">
-    <iframe
-      src="https://www.youtube.com/embed/gFdIpsjWsHg?autoplay=1&mute=1&loop=1&playlist=gFdIpsjWsHg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-      title="Vidéo de présentation CBEN PROD"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
+    <iframe src="https://www.youtube.com/embed/gFdIpsjWsHg?autoplay=1&mute=1&loop=1&playlist=gFdIpsjWsHg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      title="Vidéo CBEN PROD" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
     <div class="hero-video-overlay"></div>
   </div>
 
   <div class="hero-main">
     <div class="hero-eyebrow" aria-hidden="true">
       <span class="hero-eyebrow-line"></span>
-      <span class="hero-eyebrow-inner">Vidéaste professionnel — Dunkerque, Nord</span>
+      <span class="hero-eyebrow-inner">Vidéaste professionnel freelance — Dunkerque, Nord</span>
     </div>
-
     <h1 class="hero-h1">
       <span class="h1-line"><span class="h1-inner">DES VIDÉOS</span></span>
       <span class="h1-line"><span class="h1-inner">POUR ÊTRE <em>VU,</em></span></span>
       <span class="h1-line"><span class="h1-inner">COMPRIS</span></span>
       <span class="h1-line"><span class="h1-inner">ET CHOISI.</span></span>
     </h1>
-
     <div class="hero-sub-row">
-      <p class="hero-sub">
-        Artisans, restaurants et entreprises des Hauts-de-France. Je transforme votre savoir-faire en vidéos qui font vendre.
-      </p>
+      <p class="hero-sub">Mariage, corporate, événement, drone — je transforme chaque projet en vidéo qui marque les esprits. Réponse sous 24h, devis gratuit.</p>
       <div class="hero-actions">
-        <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Réserver →" aria-label="Réserver un appel découverte sur Calendly">
+        <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Réserver →" aria-label="Réserver un appel découverte">
           <span class="btn-mag-inner">📅 Réserver →</span>
         </a>
-        <a href="#portfolio" class="btn-outline">Voir les réalisations</a>
+        <a href="#services" class="btn-outline">Voir les services</a>
       </div>
     </div>
   </div>
@@ -1108,50 +671,109 @@
   </div>
 </section>
 
-<!-- ══ TICKER ══ -->
+<!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
     <span class="ticker-item">Vidéaste Dunkerque</span>
-    <span class="ticker-item">Vidéo Réseaux Sociaux</span>
-    <span class="ticker-item">Artisans & PME Nord</span>
-    <span class="ticker-item">Tournage Hauts-de-France</span>
-    <span class="ticker-item">Montage Professionnel</span>
+    <span class="ticker-item">Vidéo Mariage Nord</span>
+    <span class="ticker-item">Corporate PME</span>
+    <span class="ticker-item">Drone Professionnel</span>
+    <span class="ticker-item">Réseaux Sociaux</span>
+    <span class="ticker-item">Événement Professionnel</span>
     <span class="ticker-item">+40 000 Vues</span>
-    <span class="ticker-item">Vidéo Entreprise</span>
+    <span class="ticker-item">Vidéo Promotionnelle</span>
+    <span class="ticker-item">Montage Pro</span>
     <span class="ticker-item">Vidéaste Dunkerque</span>
-    <span class="ticker-item">Vidéo Réseaux Sociaux</span>
-    <span class="ticker-item">Artisans & PME Nord</span>
-    <span class="ticker-item">Tournage Hauts-de-France</span>
-    <span class="ticker-item">Montage Professionnel</span>
+    <span class="ticker-item">Vidéo Mariage Nord</span>
+    <span class="ticker-item">Corporate PME</span>
+    <span class="ticker-item">Drone Professionnel</span>
+    <span class="ticker-item">Réseaux Sociaux</span>
+    <span class="ticker-item">Événement Professionnel</span>
     <span class="ticker-item">+40 000 Vues</span>
-    <span class="ticker-item">Vidéo Entreprise</span>
+    <span class="ticker-item">Vidéo Promotionnelle</span>
+    <span class="ticker-item">Montage Pro</span>
   </div>
 </div>
 
-<!-- ══ STATS ══ -->
+<!-- STATS -->
 <div id="stats" aria-label="Chiffres clés de la vidéo marketing">
   <div class="stat-item rev">
     <span class="stat-num" data-target="82" data-suf="%">0%</span>
     <div class="stat-label">Du trafic web = vidéo</div>
-    <p class="stat-desc">L'attention se gagne en images. La vidéo domine.</p>
+    <p class="stat-desc">L'attention se gagne en images. La vidéo domine tous les autres formats.</p>
     <div class="stat-src">Source : Cisco Annual Internet Report</div>
   </div>
   <div class="stat-item rev d1">
     <span class="stat-num" data-target="765" data-pre="×" data-div="100">0</span>
     <div class="stat-label">Retour sur investissement</div>
-    <p class="stat-desc">La vidéo surpasse tous les autres formats marketing.</p>
+    <p class="stat-desc">La vidéo génère jusqu'à 7,65× plus de résultats que les autres formats marketing.</p>
     <div class="stat-src">Source : Aberdeen Group</div>
   </div>
   <div class="stat-item rev d2">
     <span class="stat-num" data-target="53" data-pre="+" data-suf="%">0</span>
-    <div class="stat-label">Conversions potentielles</div>
-    <p class="stat-desc">Les prospects achètent après avoir vu une vidéo.</p>
+    <div class="stat-label">Conversions en plus</div>
+    <p class="stat-desc">Les prospects passent à l'acte plus souvent après avoir vu une vidéo produit.</p>
     <div class="stat-src">Source : Forrester Research</div>
   </div>
 </div>
 
-<!-- ══ PROBLEM ══ -->
-<section id="problem" class="section">
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="inner">
+    <div class="label rev">Ce que je fais</div>
+    <h2 class="rev">Un service pour <em style="font-style:normal;color:var(--orange)">chaque besoin.</em></h2>
+    <p class="rev" style="color:var(--muted2);margin-top:.9rem;font-size:.93rem;max-width:520px">B2B ou B2C, mariage ou corporate, réseaux sociaux ou événement — CBEN PROD s'adapte à chaque projet dans les Hauts-de-France.</p>
+    <div class="services-grid" style="margin-top:3.5rem">
+      <article class="svc-card rev">
+        <span class="svc-ico">💍</span>
+        <h3 class="svc-title">Vidéo Mariage & Événements</h3>
+        <p class="svc-desc">Film de mariage professionnel, baptême, anniversaire, communion. Je capture chaque émotion du jour J avec discrétion et créativité.</p>
+        <div class="svc-tags"><span class="svc-tag">Mariage</span><span class="svc-tag">Baptême</span><span class="svc-tag">Anniversaire</span></div>
+      </article>
+      <article class="svc-card rev d1">
+        <span class="svc-ico">🎬</span>
+        <h3 class="svc-title">Vidéo Corporate & Entreprise</h3>
+        <p class="svc-desc">Vidéo d'entreprise, interview dirigeant, reportage corporate, vidéo de recrutement. Pour PME, artisans et grandes structures.</p>
+        <div class="svc-tags"><span class="svc-tag">Corporate</span><span class="svc-tag">Interview</span><span class="svc-tag">Reportage</span></div>
+      </article>
+      <article class="svc-card rev d2">
+        <span class="svc-ico">📱</span>
+        <h3 class="svc-title">Vidéo Réseaux Sociaux</h3>
+        <p class="svc-desc">Contenus courts pour Instagram Reels, TikTok et LinkedIn. Formats optimisés pour l'algorithme, livrés clés en main.</p>
+        <div class="svc-tags"><span class="svc-tag">Instagram</span><span class="svc-tag">TikTok</span><span class="svc-tag">LinkedIn</span></div>
+      </article>
+      <article class="svc-card rev">
+        <span class="svc-ico">📣</span>
+        <h3 class="svc-title">Vidéo Promotionnelle & Pub</h3>
+        <p class="svc-desc">Spot publicitaire local, vidéo de lancement de produit, vidéo vitrine pour PME et artisans des Hauts-de-France.</p>
+        <div class="svc-tags"><span class="svc-tag">Pub locale</span><span class="svc-tag">Produit</span><span class="svc-tag">Vitrine</span></div>
+      </article>
+      <article class="svc-card rev d1">
+        <span class="svc-ico">🎪</span>
+        <h3 class="svc-title">Événement Professionnel</h3>
+        <p class="svc-desc">Couverture vidéo de séminaires, inaugurations, salons, conférences. Montage livré rapidement pour diffusion immédiate.</p>
+        <div class="svc-tags"><span class="svc-tag">Séminaire</span><span class="svc-tag">Inauguration</span><span class="svc-tag">Salon</span></div>
+      </article>
+      <article class="svc-card rev d2">
+        <span class="svc-ico">🏠</span>
+        <h3 class="svc-title">Vidéo Immobilière & Drone</h3>
+        <p class="svc-desc">Visite filmée, reportage immobilier et prises de vue aériennes par drone pour agences et promoteurs immobiliers.</p>
+        <div class="svc-tags"><span class="svc-tag">Immobilier</span><span class="svc-tag">Drone</span><span class="svc-tag">Aérien</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA INTERMÉDIAIRE — après Services -->
+<div style="background:#09090a;padding:3rem;text-align:center;border-top:1px solid var(--border)">
+  <p style="font-size:.9rem;color:var(--muted2);margin-bottom:1.4rem">Vous reconnaissez votre besoin ? Obtenez un devis personnalisé gratuit sous 24h.</p>
+  <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Devis gratuit →" style="display:inline-flex">
+    <span class="btn-mag-inner">📅 Devis gratuit →</span>
+  </a>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem" class="section" style="background:#09090a">
   <div class="inner">
     <div class="problem-layout">
       <div class="rev">
@@ -1163,7 +785,7 @@
           </div>
           <div class="problem-item">
             <div class="prob-num">02</div>
-            <p class="prob-txt">Vos <strong>réseaux sociaux</strong> sont irréguliers ou peu professionnels.</p>
+            <p class="prob-txt">Vos <strong>concurrents</strong> ont des vidéos pro et vous pas encore.</p>
           </div>
           <div class="problem-item">
             <div class="prob-num">03</div>
@@ -1177,15 +799,15 @@
       <div class="rev d1">
         <div class="quote-big">Votre expertise<br>mérite d'être <em>vue.</em><br>Je m'occupe du reste.</div>
         <p style="color:var(--muted2);margin-top:1.8rem;font-size:.88rem;line-height:1.9;max-width:380px">
-          Tournage sur le terrain, montage dynamique, optimisation pour les réseaux. Vous restez concentré sur votre activité.
+          Mariages, événements, vidéos promotionnelles, corporate ou films d'entreprise à Dunkerque et dans le Nord — tournage, montage, optimisation réseaux. Livraison sous 5 jours.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ PORTFOLIO ══ -->
-<section id="portfolio">
+<!-- PORTFOLIO -->
+<section id="portfolio" aria-label="Réalisations CBEN PROD">
   <div class="port-header">
     <div>
       <div class="label rev">Réalisations</div>
@@ -1193,74 +815,38 @@
     </div>
     <div class="scroll-hint rev" aria-hidden="true">
       Faire défiler
-      <svg width="17" height="11" viewBox="0 0 17 11" fill="none" aria-hidden="true">
-        <path d="M11.5 1L16 5.5L11.5 10M1 5.5H16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-      </svg>
+      <svg width="17" height="11" viewBox="0 0 17 11" fill="none" aria-hidden="true"><path d="M11.5 1L16 5.5L11.5 10M1 5.5H16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </div>
   </div>
-
   <div class="port-track" id="portTrack" role="list">
-    <!-- ▶ Remplacer VIDEO_ID_1..4 par vos vrais IDs YouTube
-         ▶ Décommenter les balises <img> et supprimer les .pcard-bg div vides -->
-    <a class="pcard rev" href="#" onclick="openVid('OS9jbYF8NcQ',event)" role="listitem" aria-label="Voir la vidéo Thibdog Educ — plus de 8 000 vues">
+    <a class="pcard rev" href="#" onclick="openVid('OS9jbYF8NcQ',event)" role="listitem" aria-label="Thibdog'Educ – plus de 8 000 vues">
       <div class="pcard-badge">Short</div>
-      <div class="pcard-bg">
-        <img src="https://img.youtube.com/vi/OS9jbYF8NcQ/hqdefault.jpg" alt="Vidéo de présentation Thibdog'Educ par CBEN PROD" style="width:100%;height:100%;object-fit:cover" loading="lazy">
-        <div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
+      <div class="pcard-bg"><img src="https://img.youtube.com/vi/OS9jbYF8NcQ/hqdefault.jpg" alt="Vidéo Thibdog'Educ par CBEN PROD vidéaste Dunkerque" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
       <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true">
-        <div class="pcard-num">01 / 04</div>
-        <div class="pcard-client">Thibdog'Educ</div>
-        <div class="pcard-stats"><span class="pcard-stat">+8 000 vues</span><span class="pcard-stat">+120 partages</span></div>
-      </div>
+      <div class="pcard-info" aria-hidden="true"><div class="pcard-num">01 / 04</div><div class="pcard-client">Thibdog'Educ</div><div class="pcard-stats"><span class="pcard-stat">+8 000 vues</span><span class="pcard-stat">+120 partages</span></div></div>
     </a>
-
-    <a class="pcard rev d1" href="#" onclick="openVid('E36itvozcFs',event)" role="listitem" aria-label="Voir la vidéo La Latina — plus de 7 000 vues">
+    <a class="pcard rev d1" href="#" onclick="openVid('E36itvozcFs',event)" role="listitem" aria-label="La Latina – plus de 8 000 vues">
       <div class="pcard-badge">Short</div>
-      <div class="pcard-bg">
-        <img src="https://img.youtube.com/vi/E36itvozcFs/hqdefault.jpg" alt="Vidéo restaurant La Latina Dunkerque par CBEN PROD" style="width:100%;height:100%;object-fit:cover" loading="lazy">
-        <div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
+      <div class="pcard-bg"><img src="https://img.youtube.com/vi/E36itvozcFs/hqdefault.jpg" alt="Vidéo restaurant La Latina Dunkerque par CBEN PROD" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
       <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true">
-        <div class="pcard-num">02 / 04</div>
-        <div class="pcard-client">La Latina</div>
-        <div class="pcard-stats"><span class="pcard-stat">+8 000 vues</span><span class="pcard-stat">50 likes</span></div>
-      </div>
+      <div class="pcard-info" aria-hidden="true"><div class="pcard-num">02 / 04</div><div class="pcard-client">La Latina</div><div class="pcard-stats"><span class="pcard-stat">+8 000 vues</span><span class="pcard-stat">50 likes</span></div></div>
     </a>
-
-    <a class="pcard rev d2" href="#" onclick="openVid('6-k0XejomR0',event)" role="listitem" aria-label="Voir la vidéo LTF Coaching — plus de 9 100 vues">
+    <a class="pcard rev d2" href="#" onclick="openVid('6-k0XejomR0',event)" role="listitem" aria-label="LTF Coaching – plus de 9 100 vues">
       <div class="pcard-badge">Short</div>
-      <div class="pcard-bg">
-        <img src="https://img.youtube.com/vi/6-k0XejomR0/hqdefault.jpg" alt="Vidéo LTF Coaching par CBEN PROD" style="width:100%;height:100%;object-fit:cover" loading="lazy">
-        <div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
+      <div class="pcard-bg"><img src="https://img.youtube.com/vi/6-k0XejomR0/hqdefault.jpg" alt="Vidéo LTF Coaching par CBEN PROD" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
       <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true">
-        <div class="pcard-num">03 / 04</div>
-        <div class="pcard-client">LTF Coaching</div>
-        <div class="pcard-stats"><span class="pcard-stat">+9 100 vues</span><span class="pcard-stat">142 likes</span></div>
-      </div>
+      <div class="pcard-info" aria-hidden="true"><div class="pcard-num">03 / 04</div><div class="pcard-client">LTF Coaching</div><div class="pcard-stats"><span class="pcard-stat">+9 100 vues</span><span class="pcard-stat">142 likes</span></div></div>
     </a>
-
-    <a class="pcard rev d3" href="#" onclick="openVid('KJjq900eegw',event)" role="listitem" aria-label="Meilleure performance — plus de 40 000 vues">
+    <a class="pcard rev d3" href="#" onclick="openVid('KJjq900eegw',event)" role="listitem" aria-label="Meilleure performance – plus de 40 000 vues">
       <div class="pcard-badge">Short</div>
-      <div class="pcard-bg" style="background:#0d0a09">
-        <img src="https://img.youtube.com/vi/KJjq900eegw/hqdefault.jpg" alt="Vidéo virale 40 000 vues CBEN PROD" style="width:100%;height:100%;object-fit:cover" loading="lazy">
-        <div class="pcard-play" style="background:var(--orange);border-color:var(--orange)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
+      <div class="pcard-bg" style="background:#0d0a09"><img src="https://img.youtube.com/vi/KJjq900eegw/hqdefault.jpg" alt="Vidéo virale 40 000 vues CBEN PROD Dunkerque" loading="lazy"><div class="pcard-play" style="background:var(--orange);border-color:var(--orange)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
       <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true">
-        <div class="pcard-num" style="color:var(--orange)">BEST PERF.</div>
-        <div class="pcard-client">Meilleure vidéo</div>
-        <div class="pcard-stats"><span class="pcard-stat">+40 000 vues</span><span class="pcard-stat">1 530 likes</span></div>
-      </div>
+      <div class="pcard-info" aria-hidden="true"><div class="pcard-num" style="color:var(--orange)">BEST PERF.</div><div class="pcard-client">Meilleure vidéo</div><div class="pcard-stats"><span class="pcard-stat">+40 000 vues</span><span class="pcard-stat">1 530 likes</span></div></div>
     </a>
   </div>
 </section>
 
-<!-- ══ PROCESS ══ -->
+<!-- PROCESS -->
 <section id="process" class="section">
   <div class="inner">
     <div class="label rev">Comment ça marche</div>
@@ -1270,113 +856,158 @@
         <div class="step-idx" aria-hidden="true">01</div>
         <div class="step-div" aria-hidden="true"></div>
         <div class="step-title">APPEL DÉCOUVERTE</div>
-        <p class="step-desc">30 minutes pour comprendre votre activité, vos objectifs et le message à transmettre. Sans engagement, sans jargon.</p>
+        <p class="step-desc">30 minutes pour comprendre votre activité, vos objectifs et le message à transmettre. Gratuit, sans engagement, sans jargon.</p>
       </div>
       <div class="process-step rev d1">
         <div class="step-idx" aria-hidden="true">02</div>
         <div class="step-div" aria-hidden="true"></div>
         <div class="step-title">TOURNAGE SUR SITE</div>
-        <p class="step-desc">Je viens chez vous avec tout le matériel. Vous continuez votre activité normalement — je m'adapte à votre rythme.</p>
+        <p class="step-desc">Je viens chez vous avec tout le matériel professionnel. Caméra 4K, stabilisation, son, drone si besoin. Vous continuez votre activité normalement.</p>
       </div>
       <div class="process-step rev d2">
         <div class="step-idx" aria-hidden="true">03</div>
         <div class="step-div" aria-hidden="true"></div>
         <div class="step-title">LIVRAISON & PUBLICATION</div>
-        <p class="step-desc">Montage dynamique, sous-titres, formats optimisés. Vidéo livrée sous 5 jours ouvrés, prête à publier sur tous vos réseaux.</p>
+        <p class="step-desc">Montage dynamique, sous-titres, color grading, sound design. Vidéo livrée sous 4 à 7 jours ouvrés, dans tous les formats, prête à publier.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ PRICING ══ -->
-<section id="pricing" class="section">
+<!-- PRICING -->
+<section id="pricing" class="section" style="background:#09090a">
   <div class="inner">
     <div class="label rev">Investissement</div>
-    <h2 class="rev">Des tarifs <em style="font-style:normal;color:var(--orange)">transparents.</em></h2>
-    <p class="rev" style="color:var(--muted2);margin-top:.9rem;font-size:.93rem;max-width:480px">Chaque projet est unique. Voici une base indicative pour planifier votre budget.</p>
-    <div class="pricing-grid">
-      <div class="pbox rev">
-        <div class="pbox-name">Déclic</div>
-        <div class="pbox-price">270€ <span style="font-size:.9rem;font-weight:400">HT</span></div>
-        <div class="pbox-period">Acompte 50% à la commande · Soldé à la livraison</div>
-        <ul class="pbox-features">
-          <li>1 vidéo courte 30-45 sec</li>
-          <li>Tournage sur site (2h max)</li>
+    <h2 class="rev">Une offre pour <em style="font-style:normal;color:var(--orange)">chaque projet.</em></h2>
+    <p class="rev" style="color:var(--muted2);margin-top:.9rem;font-size:.93rem;max-width:520px">Des repères tarifaires clairs pour vous aider à planifier. Chaque projet est unique — un appel de 15 minutes suffit à construire le devis qui vous correspond.</p>
+
+    <!-- GRILLE 4 OFFRES -->
+    <div class="offer-grid offer-grid-4 rev">
+
+      <!-- ENTRÉE -->
+      <div class="obox">
+        <span class="obox-badge new">Point d'entrée</span>
+        <div class="obox-name">Premier regard</div>
+        <div class="obox-title">Essentiel</div>
+        <div class="obox-price">À partir de 220€ <small>HT</small></div>
+        <div class="obox-target">TPE · artisans · premiers contenus</div>
+        <div class="obox-sep"></div>
+        <ul class="obox-features">
+          <li>1 vidéo courte 15–30 sec</li>
+          <li>Tournage 1h sur site</li>
           <li>Montage dynamique</li>
+          <li>Format vertical livré</li>
+          <li>Livraison sous 3 jours</li>
+        </ul>
+        <a href="https://calendly.com/cbenprod/new-meeting" class="obox-cta" target="_blank" rel="noopener">Demander un devis →</a>
+      </div>
+
+      <!-- RÉSEAUX -->
+      <div class="obox">
+        <span class="obox-badge" style="color:var(--muted);border-color:var(--border)">Réseaux sociaux</span>
+        <div class="obox-name">Présence</div>
+        <div class="obox-title">Réseaux</div>
+        <div class="obox-price">À partir de 390€ <small>HT</small></div>
+        <div class="obox-target">Restaurants · boutiques · indépendants</div>
+        <div class="obox-sep"></div>
+        <ul class="obox-features">
+          <li>1 vidéo 30–60 sec</li>
+          <li>Tournage 2h · 2 révisions</li>
           <li>Sous-titres inclus</li>
-          <li>Format vertical + carré</li>
-          <li>2 révisions</li>
+          <li>Formats vertical + carré</li>
+          <li>Livraison sous 4 jours</li>
         </ul>
-        <div style="color:#1D9E75;font-size:.8rem;margin-bottom:.7rem">● Livraison sous 4 jours ouvrés</div>
-        <a href="https://calendly.com/cbenprod/new-meeting" class="pbox-cta" target="_blank" rel="noopener">Choisir ce pack ↗</a>
+        <a href="https://calendly.com/cbenprod/new-meeting" class="obox-cta" target="_blank" rel="noopener">Demander un devis →</a>
       </div>
-      <div class="pbox feat rev d1">
-        <div class="feat-tag">Le plus choisi</div>
-        <div class="pbox-name">Présence</div>
-        <div class="pbox-price">490€ <span style="font-size:.9rem;font-weight:400">HT</span></div>
-        <div class="pbox-period">Acompte 50% à la commande · Soldé à la livraison</div>
-        <ul class="pbox-features">
-          <li>1 vidéo principale 45-90 sec</li>
-          <li>1 formats courts 15-30 sec</li>
-          <li>Tournage sur site (4h)</li>
-          <li>Direction artistique incluse</li>
+
+      <!-- VITRINE — FEATURED -->
+      <div class="obox feat">
+        <span class="obox-badge pop">Le plus choisi</span>
+        <div class="obox-name">Corporate · Mariage · Événement</div>
+        <div class="obox-title">Vitrine Pro</div>
+        <div class="obox-price">À partir de 750€ <small>HT</small></div>
+        <div class="obox-target">PME · mariages · événements pro</div>
+        <div class="obox-sep"></div>
+        <ul class="obox-features">
+          <li>1 vidéo principale 45–90 sec</li>
+          <li>1 format court 15–30 sec</li>
+          <li>Tournage 4h · révisions illimitées</li>
           <li>Color grading + sound design</li>
-          <li>Sous-titres premium</li>
-          <li>Formats V/H/carré</li>
-          <li>Brief personnalisé (30 min)</li>
+          <li>Sous-titres premium · multi-format</li>
+          <li>Brief personnalisé 30 min</li>
           <li>Guide de publication inclus</li>
-          <li>Révisions illimitées</li>
+          <li>Livraison sous 5 jours</li>
         </ul>
-        <div style="color:#1D9E75;font-size:.8rem;margin-bottom:.7rem">● Livraison sous 5 jours ouvrés</div>
-        <a href="https://calendly.com/cbenprod/new-meeting" class="pbox-cta" target="_blank" rel="noopener">Choisir ce pack ↗</a>
+        <a href="https://calendly.com/cbenprod/new-meeting" class="obox-cta" target="_blank" rel="noopener">Demander un devis →</a>
       </div>
-      <div class="pbox rev d2">
-        <div class="pbox-name">Visibilité</div>
-        <div class="pbox-price">890€ <span style="font-size:.9rem;font-weight:400">HT</span></div>
-        <div class="pbox-period">Acompte 50% à la commande · Soldé à la livraison</div>
-        <ul class="pbox-features">
-          <li>1 vidéo premium 60-120 sec</li>
-          <li>3 formats courts multi-plateformes</li>
-          <li>Journée de tournage complète</li>
-          <li>Direction artistique poussée</li>
-          <li>Color grading cinématique</li>
-          <li>Sous-titres + habillage graphique</li>
-          <li>Visio stratégie (1h)</li>
-          <li>Plan de publication 4 semaines</li>
-          <li>Audit présence en ligne</li>
-          <li>Module Ads : brief + ciblage</li>
-          <li>Révisions illimitées</li>
+
+      <!-- SUR MESURE -->
+      <div class="obox">
+        <span class="obox-badge custom">Sur devis</span>
+        <div class="obox-name">Projet complexe · B2B</div>
+        <div class="obox-title">Sur mesure</div>
+        <div class="obox-price">Devis <small>sous 24h</small></div>
+        <div class="obox-target">Grosses entreprises · institutionnel · campagne</div>
+        <div class="obox-sep"></div>
+        <ul class="obox-features">
+          <li>Brief téléphonique gratuit 30 min</li>
+          <li>Journée(s) de tournage complète</li>
+          <li>Drone · multi-caméras · interview</li>
+          <li>Reportage d'entreprise · film institutionnel</li>
+          <li>Séminaire · inauguration · salon</li>
+          <li>Devis détaillé adapté au projet</li>
         </ul>
-        <div style="color:#1D9E75;font-size:.8rem;margin-bottom:.7rem">● Livraison sous 7 jours ouvrés</div>
-        <a href="https://calendly.com/cbenprod/new-meeting" class="pbox-cta" target="_blank" rel="noopener">Choisir ce pack ↗</a>
+        <a href="#contact" class="obox-cta">Décrire mon projet →</a>
       </div>
+
     </div>
-    <p class="pricing-note">Tous les prix sont en euros HT. TVA applicable selon votre statut. Déplacements inclus dans un rayon de 50 km autour de Dunkerque. Au-delà, supplément kilométrique au tarif légal.</p>
+
+    <!-- ABONNEMENT MENSUEL -->
+    <div class="abonnement-strip rev">
+      <div class="abonnement-strip-left">
+        <span class="obox-badge rec" style="margin-bottom:.8rem;display:inline-block">Revenus récurrents</span>
+        <h3>Contenu mensuel — <em style="font-style:normal;color:#8B6FE8">abonnement</em></h3>
+        <p>1 à 2 vidéos par mois, planning éditorial inclus. Tarif bloqué, priorité agenda, zéro gestion de votre côté. Engagement 3 mois minimum. Idéal pour les professionnels qui veulent une présence régulière sur les réseaux sans s'en occuper.</p>
+        <div class="abonnement-tiers">
+          <div class="abonnement-tier"><strong>À partir de 490€ HT/mois</strong>1 vidéo / mois</div>
+          <div class="abonnement-tier"><strong>À partir de 850€ HT/mois</strong>2 vidéos / mois</div>
+        </div>
+      </div>
+      <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="En savoir plus →" style="flex-shrink:0;white-space:nowrap">
+        <span class="btn-mag-inner">📅 En savoir plus →</span>
+      </a>
+    </div>
+
+    <p class="offer-note rev">
+      Tarifs HT · TVA non applicable, art. 293 B du CGI<br>
+      Déplacements inclus dans un rayon de 50 km autour de Dunkerque · Au-delà, supplément kilométrique au tarif légal<br>
+      <strong style="color:var(--ink)">Tous les prix sont indicatifs</strong> — chaque devis est construit sur mesure après un appel de 15 minutes.
+    </p>
   </div>
 </section>
 
-<!-- ══ ABOUT ══ -->
+<!-- ABOUT -->
 <section id="about" class="section">
   <div class="inner">
     <div class="about-layout">
       <div class="about-img rev">
-        <img src="assets/AC2DBC60-297E-4ED5-8F37-3C5370BDED1D.PNG" alt="Benjamin, vidéaste CBEN PROD à Dunkerque" style="width:100%;height:100%;object-fit:contain;display:block">
-        <!--<div class="about-img-ph">📸 Votre photo ici</div>-->
+        <img src="assets/AC2DBC60-297E-4ED5-8F37-3C5370BDED1D.PNG" alt="Benjamin, vidéaste freelance CBEN PROD à Dunkerque" style="width:100%;height:100%;object-fit:contain;display:block">
       </div>
       <div class="about-text rev d1">
         <div class="label">À propos</div>
         <h2>Benjamin, vidéaste<br><em style="font-style:normal;color:var(--orange)">certifié</em> à Dunkerque.</h2>
-        <p>Spécialisé dans la création de contenus vidéo pour les professionnels du Nord. Mon approche est directe : pas de jargon, pas de surproduction — juste des <strong>vidéos qui fonctionnent.</strong></p>
-        <p>Je gère tout, du tournage au montage en passant par l'optimisation pour les réseaux sociaux. Vous restez concentré sur votre activité, <strong>je m'occupe de votre image.</strong></p>
-        <p>Basé à Dunkerque, j'interviens dans tout le Nord-Pas-de-Calais et les Hauts-de-France.</p>
+        <p>Vidéaste freelance basé à Dunkerque, je travaille avec les entreprises, les artisans et les particuliers du Nord pour transformer leur quotidien en <strong>vidéos qui fonctionnent vraiment.</strong></p>
+        <p>Mon approche est directe : pas de jargon, pas de surproduction inutile. Je cadre, je monte, j'optimise. Du mariage à la vidéo corporate, <strong>chaque projet mérite le même niveau d'exigence.</strong></p>
+        <p>Basé à Dunkerque, j'interviens dans tout le Nord-Pas-de-Calais et les Hauts-de-France : Calais, Boulogne, Lille, Valenciennes, Arras et alentours.</p>
         <div class="tags">
-          <span class="tag">Monteur certifié</span>
+          <span class="tag">Vidéaste certifié</span>
+          <span class="tag">Sony A7 III</span>
+          <span class="tag">DaVinci Resolve</span>
+          <span class="tag">Drone</span>
           <span class="tag">Dunkerque & Nord</span>
-          <span class="tag">Réseaux sociaux</span>
-          <span class="tag">Hauts-de-France</span>
         </div>
         <div class="about-ctas">
-          <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Réserver →" aria-label="Réserver un appel découverte">
+          <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Réserver →">
             <span class="btn-mag-inner">📅 Réserver un appel →</span>
           </a>
           <a href="mailto:cbenprod@gmail.com" class="btn-outline">✉️ Email</a>
@@ -1386,55 +1017,119 @@
   </div>
 </section>
 
-<!-- ══ TESTIMONIALS ══ -->
-<section id="testimonials" class="section">
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section" style="background:#09090a">
   <div class="inner">
     <div class="label rev">Avis clients</div>
     <h2 class="rev">Ils me font <em style="font-style:normal;color:var(--orange)">confiance.</em></h2>
     <div class="testi-grid">
       <div class="tcard rev">
-        <div class="stars" aria-label="5 étoiles sur 5"><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span></div>
-        <p class="tquote">« J’ai fait appel à Benjamin pour une vidéo de présentation de mon entreprise et le résultat est tout simplement top.<br>La qualité de l’image et du montage est excellente, rien à redire.<br>Benjamin est très disponible, à l’écoute et prend vraiment le temps de demander des retours pour s’assurer que tout corresponde à nos attentes. Les ajustements ont été faits rapidement et avec professionnalisme.<br>En plus de ça, il est très sympa, ce qui rend la collaboration encore plus agréable.<br>Je recommande vivement ! »</p>
-        <div class="tauthor">
-          <div class="tav" aria-hidden="true">T</div>
-          <div><div class="tname">Thibdog'Educ</div><div class="trole">Éducateur canin, Dunkerque</div></div>
-        </div>
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Benjamin est très disponible, à l'écoute et très professionnel. Les ajustements ont été faits rapidement. La qualité de l'image et du montage est excellente. Je recommande vivement ! »</p>
+        <div class="tauthor"><div class="tav">T</div><div><div class="tname">Thibdog'Educ</div><div class="trole">Éducateur canin, Dunkerque</div></div></div>
       </div>
       <div class="tcard rev d1">
-        <div class="stars" aria-label="5 étoiles sur 5"><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span></div>
-        <p class="tquote">« Un grand merci à Cben Prod pour cette superbe vidéo de notre restaurant. Elle nous a permis de faire connaître notre établissement et d’offrir un visuel fidèle et qualitatif de notre travail. Un rendu très professionnel que je recommande sans hésiter. »</p>
-        <div class="tauthor">
-          <div class="tav" aria-hidden="true">L</div>
-          <div><div class="tname">La Latina</div><div class="trole">Restaurant, Dunkerque</div></div>
-        </div>
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Un grand merci à CBEN PROD pour cette superbe vidéo de notre restaurant. Elle nous a permis de faire connaître notre établissement. Un rendu très professionnel que je recommande sans hésiter. »</p>
+        <div class="tauthor"><div class="tav">L</div><div><div class="tname">La Latina</div><div class="trole">Restaurant, Dunkerque</div></div></div>
       </div>
       <div class="tcard rev d2">
-        <div class="stars" aria-label="5 étoiles sur 5"><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span></div>
-        <p class="tquote">« Très pro merci beaucoup ! »</p>
-        <div class="tauthor">
-          <div class="tav" aria-hidden="true">L</div>
-          <div><div class="tname">LTF Coaching</div><div class="trole">Coach sportif, Hauts-de-France</div></div>
-        </div>
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Très pro, merci beaucoup ! Résultat au-delà de mes attentes, livraison rapide et communication impeccable tout au long du projet. »</p>
+        <div class="tauthor"><div class="tav">L</div><div><div class="tname">LTF Coaching</div><div class="trole">Coach sportif, Hauts-de-France</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ CONTACT ══ -->
-<section id="contact" class="section">
+<!-- CTA INTERMÉDIAIRE — après Témoignages -->
+<div style="padding:3.5rem 3rem;text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div style="max-width:600px;margin:0 auto">
+    <p style="font-family:var(--ff-d);font-size:clamp(1.4rem,3vw,2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem">Prêt à donner une image <em style="font-style:normal;color:var(--orange)">professionnelle</em> à votre activité ?</p>
+    <p style="font-size:.88rem;color:var(--muted2);margin-bottom:1.6rem">Réponse garantie sous 24h · Devis gratuit · Sans engagement</p>
+    <div style="display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap">
+      <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Réserver →">
+        <span class="btn-mag-inner">📅 Réserver un appel →</span>
+      </a>
+      <a href="tel:+33652889685" class="btn-outline">📞 +33 6 52 88 96 85</a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <div class="inner">
+    <div class="label rev">Questions fréquentes</div>
+    <h2 class="rev">Tout ce que vous <em style="font-style:normal;color:var(--orange)">voulez savoir.</em></h2>
+    <div class="faq-list" style="margin-top:3rem">
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">Quel est le tarif d'un vidéaste à Dunkerque ?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Les tarifs CBEN PROD démarrent à <strong>220€ HT</strong> pour une vidéo courte d'entrée, <strong>390€ HT</strong> pour un pack réseaux sociaux et <strong>750€ HT</strong> pour un pack vitrine pro complet. Pour les projets corporate ou complexes, le devis est personnalisé après un appel gratuit de 15 minutes. TVA non applicable, art. 293 B du CGI.</p></div>
+      </div>
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">Intervenez-vous pour les mariages dans tout le Nord ?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Oui ! CBEN PROD intervient pour les vidéos de mariage dans tout le Nord-Pas-de-Calais et les Hauts-de-France : Dunkerque, Calais, Boulogne-sur-Mer, Lille, Valenciennes, Arras et alentours. Les déplacements jusqu'à 50 km sont inclus dans tous les forfaits.</p></div>
+      </div>
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">Quel est le délai de livraison ?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>CBEN PROD livre sous <strong>4 jours ouvrés</strong> pour le pack Déclic, <strong>5 jours</strong> pour le pack Présence et <strong>7 jours</strong> pour le pack Visibilité. C'est l'un des délais les plus rapides du marché dans la région, sans compromettre la qualité.</p></div>
+      </div>
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">Faites-vous de la vidéo drone ?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Oui, CBEN PROD propose des prises de vue aériennes par drone pour les projets immobiliers, événementiels et corporate dans les Hauts-de-France. Les images drone apportent une dimension supplémentaire à vos vidéos promotionnelles ou de mariage.</p></div>
+      </div>
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">Que comprend le montage vidéo professionnel ?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Le montage CBEN PROD inclut le découpage des rushes, l'assemblage narratif, le color grading (étalonnage colorimétrique), le sound design, les sous-titres et l'export dans tous les formats adaptés à votre plateforme (Instagram, YouTube, LinkedIn, site web).</p></div>
+      </div>
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">Proposez-vous des vidéos pour entreprises B2B ?<span class="faq-arrow">+</span></button>
+        <div class="faq-a"><p>Absolument. CBEN PROD travaille régulièrement avec des PME, artisans, coaches et agences pour créer des vidéos corporate, des reportages d'entreprise, des interviews de dirigeants et des vidéos de recrutement dans les Hauts-de-France.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" style="background:#09090a">
   <div class="inner">
     <div class="label rev">Contact</div>
     <h2 class="rev">Commençons à<br>travailler <em style="font-style:normal;color:var(--orange)">ensemble.</em></h2>
     <div class="contact-layout">
-
-      <!-- Canaux rapides + formulaire inline -->
       <div class="rev">
+        <form id="contactForm" method="POST" action="https://formspree.io/f/xdajgpwg" class="contact-form-wrap">
+          <h3 class="form-title">Envoyez un message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Votre nom *</label>
+              <input type="text" id="f-name" name="name" placeholder="Jean Dupont" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="f-email">Votre email *</label>
+              <input type="email" id="f-email" name="email" placeholder="jean@exemple.fr" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-sujet">Type de projet</label>
+            <input type="text" id="f-sujet" name="sujet" placeholder="Mariage, corporate, réseaux sociaux…">
+          </div>
+          <div class="form-group">
+            <label for="f-msg">Message *</label>
+            <textarea id="f-msg" name="message" placeholder="Décrivez votre projet en quelques mots…" required></textarea>
+          </div>
+          <button type="submit" class="btn-mag" style="border:none" data-text="Envoyer →">
+            <span class="btn-mag-inner">Envoyer →</span>
+          </button>
+          <div id="formStatus" class="form-status" role="alert"></div>
+        </form>
+      </div>
+      <div class="contact-right rev d1">
         <a href="https://calendly.com/cbenprod/new-meeting" class="contact-ch" target="_blank" rel="noopener" aria-label="Réserver sur Calendly">
           <div class="ch-ico">📅</div>
           <div><div class="ch-lbl">Réserver en ligne</div><div class="ch-val">Calendly — 30 min découverte</div></div>
           <span class="ch-arr" aria-hidden="true">→</span>
         </a>
-        <a href="mailto:cbenprod@gmail.com" class="contact-ch" aria-label="Envoyer un email à CBEN PROD">
+        <a href="mailto:cbenprod@gmail.com" class="contact-ch" aria-label="Envoyer un email">
           <div class="ch-ico">✉️</div>
           <div><div class="ch-lbl">Email professionnel</div><div class="ch-val">cbenprod@gmail.com</div></div>
           <span class="ch-arr" aria-hidden="true">→</span>
@@ -1444,29 +1139,16 @@
           <div><div class="ch-lbl">Téléphone direct</div><div class="ch-val">+33 6 52 88 96 85</div></div>
           <span class="ch-arr" aria-hidden="true">→</span>
         </a>
-      </div>
-
-      <!-- Zone + réseaux -->
-      <div class="contact-right rev d1">
         <div class="zone-box">
           <div class="label" style="margin-bottom:.8rem">Zone d'intervention</div>
           <p>Basé à <strong style="color:var(--ink)">Dunkerque</strong>, j'interviens dans tout le <strong style="color:var(--ink)">Nord-Pas-de-Calais</strong> et les Hauts-de-France : Calais, Boulogne, Lille, Valenciennes, Arras.<br><br>Déplacements jusqu'à <strong style="color:var(--ink)">50 km</strong> inclus dans tous les forfaits.</p>
         </div>
         <div>
-          <div class="label" style="margin-bottom:1rem">Retrouvez-moi sur les réseaux</div>
+          <div class="label" style="margin-bottom:1rem">Retrouvez-moi</div>
           <div class="social-row">
-            <a href="https://www.facebook.com/profile.php?id=61572382226421" class="soc-btn" target="_blank" rel="noopener" aria-label="Facebook CBEN PROD">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.81v-9.294H9.692V11.03h3.118V8.413c0-3.1 1.893-4.788 4.657-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.676h-3.12V24h6.116C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"/></svg>
-              Facebook
-            </a>
-            <a href="https://www.instagram.com/cben_prod" class="soc-btn" target="_blank" rel="noopener" aria-label="Instagram CBEN PROD">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              Instagram
-            </a>
-            <a href="https://share.google/xuyZupJtCsWxomXu1" class="soc-btn" target="_blank" rel="noopener" aria-label="Google My Business CBEN PROD">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.07 14.25l-4-6.93-2.93 5.06c-.15.25-.03.57.25.66.1.04.2.06.3.06.19 0 .38-.09.49-.25L11 13.2l1.6 2.77c.1.17.28.27.48.27.06 0 .12-.01.18-.03.28-.09.41-.39.31-.67z"/></svg>
-              Google
-            </a>
+            <a href="https://www.facebook.com/profile.php?id=61572382226421" class="soc-btn" target="_blank" rel="noopener" aria-label="Facebook CBEN PROD"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.81v-9.294H9.692V11.03h3.118V8.413c0-3.1 1.893-4.788 4.657-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.676h-3.12V24h6.116C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"/></svg>Facebook</a>
+            <a href="https://www.instagram.com/cben_prod" class="soc-btn" target="_blank" rel="noopener" aria-label="Instagram CBEN PROD"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
+            <a href="https://www.youtube.com/@cbenprod" class="soc-btn" target="_blank" rel="noopener" aria-label="YouTube CBEN PROD"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>YouTube</a>
           </div>
         </div>
       </div>
@@ -1474,100 +1156,248 @@
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
-  <a href="#" class="foot-logo" aria-label="CBEN PROD">
-    <img src="assets/Logo CBEN PROD noir - videaste dunkerque - google.png" alt="CBEN PROD" loading="lazy">
+  <a href="/" class="foot-logo" aria-label="CBEN PROD – Accueil">
+    <img src="assets/Logo CBEN PROD noir - videaste dunkerque - google.png" alt="CBEN PROD Vidéaste Dunkerque" loading="lazy">
   </a>
-  <p>© 2026 CBEN PROD – Vidéaste à Dunkerque – Hauts-de-France<br>Siret : [Votre numéro SIRET]</p>
+  <p>© 2026 CBEN PROD – Vidéaste freelance à Dunkerque – Hauts-de-France<br>
+  SIRET : 10324961100015 · TVA non applicable, art. 293 B du CGI</p>
   <div class="foot-links">
-    <a href="#">Mentions légales</a>
-    <a href="#">Politique de confidentialité</a>
+    <a href="#" onclick="openLegal('mentions');return false;">Mentions légales</a>
+    <a href="#" onclick="openLegal('confidentialite');return false;">Confidentialité</a>
   </div>
 </footer>
 
-<!-- ══ VIDEO MODAL ══ -->
-<div id="modal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo" onclick="handleModalBg(event)">
+<!-- MODALE MENTIONS LÉGALES -->
+<div id="modal-mentions" class="legal-modal" role="dialog" aria-modal="true" aria-label="Mentions légales">
+  <div class="legal-inner">
+    <div class="legal-nav">
+      <span class="legal-nav-logo">CBEN <span>PROD</span></span>
+      <button class="legal-close" onclick="closeLegal('mentions')">✕ Fermer</button>
+    </div>
+    <h1 class="legal-h1">Mentions <em>légales</em></h1>
+    <p class="legal-updated">Dernière mise à jour : mai 2026</p>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Éditeur du site</h2>
+      <div class="legal-block">
+        <div class="legal-row"><span class="legal-row-label">Raison sociale</span><span class="legal-row-val">CBEN PROD</span></div>
+        <div class="legal-row"><span class="legal-row-label">Forme juridique</span><span class="legal-row-val">Micro-entreprise</span></div>
+        <div class="legal-row"><span class="legal-row-label">Responsable</span><span class="legal-row-val">Benjamin — CBEN PROD</span></div>
+        <div class="legal-row"><span class="legal-row-label">SIRET</span><span class="legal-row-val">10324961100015</span></div>
+        <div class="legal-row"><span class="legal-row-label">Activité</span><span class="legal-row-val">Arts créatifs audiovisuels — Vidéaste freelance</span></div>
+        <div class="legal-row"><span class="legal-row-label">Adresse</span><span class="legal-row-val">Dunkerque, Hauts-de-France, France</span></div>
+        <div class="legal-row"><span class="legal-row-label">Email</span><span class="legal-row-val"><a href="mailto:cbenprod@gmail.com">cbenprod@gmail.com</a></span></div>
+        <div class="legal-row"><span class="legal-row-label">Téléphone</span><span class="legal-row-val"><a href="tel:+33652889685">+33 6 52 88 96 85</a></span></div>
+        <div class="legal-row"><span class="legal-row-label">TVA</span><span class="legal-row-val">Non applicable, art. 293 B du CGI</span></div>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Hébergement</h2>
+      <div class="legal-block">
+        <div class="legal-row"><span class="legal-row-label">Hébergeur</span><span class="legal-row-val">Netlify, Inc.</span></div>
+        <div class="legal-row"><span class="legal-row-label">Adresse</span><span class="legal-row-val">512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis</span></div>
+        <div class="legal-row"><span class="legal-row-label">Site</span><span class="legal-row-val"><a href="https://www.netlify.com" target="_blank" rel="noopener">www.netlify.com</a></span></div>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Propriété intellectuelle</h2>
+      <p class="legal-p">L'ensemble du contenu de ce site (textes, images, vidéos, logos, graphismes) est la propriété exclusive de CBEN PROD, sauf mention contraire. Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable est interdite et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+      <p class="legal-p">Les vidéos de réalisations présentées sur ce site sont des œuvres de CBEN PROD réalisées pour des clients. Leur diffusion est effectuée avec l'accord des clients concernés.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Responsabilité</h2>
+      <p class="legal-p">CBEN PROD s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, CBEN PROD ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.</p>
+      <p class="legal-p">CBEN PROD ne saurait être tenu responsable des dommages directs ou indirects résultant de l'accès au site ou de l'utilisation des informations qui y sont contenues.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Liens hypertextes</h2>
+      <p class="legal-p">Ce site peut contenir des liens vers des sites tiers. CBEN PROD n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou leurs pratiques en matière de protection des données personnelles.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Droit applicable</h2>
+      <p class="legal-p">Le présent site et les mentions légales sont soumis au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODALE POLITIQUE DE CONFIDENTIALITÉ -->
+<div id="modal-confidentialite" class="legal-modal" role="dialog" aria-modal="true" aria-label="Politique de confidentialité">
+  <div class="legal-inner">
+    <div class="legal-nav">
+      <span class="legal-nav-logo">CBEN <span>PROD</span></span>
+      <button class="legal-close" onclick="closeLegal('confidentialite')">✕ Fermer</button>
+    </div>
+    <h1 class="legal-h1">Politique de <em>confidentialité</em></h1>
+    <p class="legal-updated">Dernière mise à jour : mai 2026 · Conforme RGPD</p>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Responsable du traitement</h2>
+      <div class="legal-block">
+        <div class="legal-row"><span class="legal-row-label">Responsable</span><span class="legal-row-val">Benjamin — CBEN PROD</span></div>
+        <div class="legal-row"><span class="legal-row-label">Email</span><span class="legal-row-val"><a href="mailto:cbenprod@gmail.com">cbenprod@gmail.com</a></span></div>
+        <div class="legal-row"><span class="legal-row-label">Téléphone</span><span class="legal-row-val">+33 6 52 88 96 85</span></div>
+        <div class="legal-row"><span class="legal-row-label">Adresse</span><span class="legal-row-val">Dunkerque, Hauts-de-France, France</span></div>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Données collectées</h2>
+      <p class="legal-p">CBEN PROD collecte uniquement les données strictement nécessaires à la prise de contact et à l'établissement de devis. Aucune donnée n'est collectée à des fins publicitaires ou revendue à des tiers.</p>
+      <p class="legal-p"><strong>Via le formulaire de contact</strong>, les données suivantes peuvent être collectées :</p>
+      <ul class="legal-ul">
+        <li>Nom et prénom</li>
+        <li>Adresse email</li>
+        <li>Type de projet et message libre</li>
+      </ul>
+      <p class="legal-p" style="margin-top:.8rem"><strong>Via la navigation</strong>, des données techniques peuvent être collectées par l'hébergeur Netlify (adresse IP, navigateur, pages visitées) à des fins de sécurité et de statistiques anonymes.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Finalités et base légale</h2>
+      <div class="legal-block">
+        <div class="legal-row"><span class="legal-row-label">Répondre aux demandes</span><span class="legal-row-val">Intérêt légitime / exécution d'un contrat</span></div>
+        <div class="legal-row"><span class="legal-row-label">Établir des devis</span><span class="legal-row-val">Exécution d'un contrat</span></div>
+        <div class="legal-row"><span class="legal-row-label">Statistiques anonymes</span><span class="legal-row-val">Intérêt légitime</span></div>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Sous-traitants et transferts</h2>
+      <p class="legal-p">CBEN PROD fait appel aux prestataires suivants pour le traitement des données :</p>
+      <div class="legal-highlight">
+        <p class="legal-p"><strong>Formspree, Inc.</strong> — Traitement des soumissions du formulaire de contact.<br>Les données saisies dans le formulaire (nom, email, message) transitent via les serveurs de Formspree Inc., société américaine conforme au RGPD. <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Politique de confidentialité Formspree →</a></p>
+      </div>
+      <div class="legal-highlight">
+        <p class="legal-p"><strong>Netlify, Inc.</strong> — Hébergement du site web.<br>Les données de navigation sont traitées par Netlify pour assurer la disponibilité et la sécurité du site. <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Politique de confidentialité Netlify →</a></p>
+      </div>
+      <div class="legal-highlight">
+        <p class="legal-p"><strong>Calendly, LLC</strong> — Prise de rendez-vous en ligne.<br>Si vous utilisez le bouton "Prendre RDV", vous êtes redirigé vers Calendly, soumis à leur propre politique. <a href="https://calendly.com/privacy" target="_blank" rel="noopener">Politique de confidentialité Calendly →</a></p>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Durée de conservation</h2>
+      <ul class="legal-ul">
+        <li>Données de contact et messages : 3 ans à compter du dernier contact</li>
+        <li>Données de facturation et contrats : 10 ans (obligation légale)</li>
+        <li>Données de navigation : selon les politiques de Netlify (généralement 30 jours)</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Vos droits (RGPD)</h2>
+      <p class="legal-p">Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679), vous disposez des droits suivants :</p>
+      <ul class="legal-ul">
+        <li><strong>Droit d'accès</strong> — obtenir une copie de vos données</li>
+        <li><strong>Droit de rectification</strong> — corriger des données inexactes</li>
+        <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données</li>
+        <li><strong>Droit d'opposition</strong> — vous opposer au traitement</li>
+        <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré</li>
+      </ul>
+      <p class="legal-p" style="margin-top:.8rem">Pour exercer ces droits : <a href="mailto:cbenprod@gmail.com">cbenprod@gmail.com</a></p>
+      <p class="legal-p">En cas de réclamation non résolue, vous pouvez saisir la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Cookies</h2>
+      <p class="legal-p">Ce site n'utilise <strong>pas de cookies publicitaires ou de tracking</strong>. Le seul mécanisme de stockage local utilisé est <code>localStorage</code> pour mémoriser si vous avez déjà visionné l'animation d'introduction (donnée purement technique, non transmise à des tiers). Aucun cookie de mesure d'audience tiers n'est utilisé.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2 class="legal-h2">Sécurité</h2>
+      <p class="legal-p">Le site est servi exclusivement en HTTPS. Les accès aux outils de gestion sont protégés par des mots de passe robustes. CBEN PROD met en œuvre les mesures techniques appropriées pour protéger vos données contre tout accès non autorisé.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL VIDÉO -->
+<div id="modal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo" onclick="if(event.target===this)closeVid()">
   <div class="modal-wrap">
-    <button class="modal-close" id="modalClose" onclick="closeVid()" aria-label="Fermer la vidéo">✕ Fermer</button>
+    <button class="modal-close" id="modalClose" onclick="closeVid()" aria-label="Fermer">✕ Fermer</button>
     <iframe id="modalFrame" src="" title="Vidéo CBEN PROD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-/* ══════════════ PRELOADER — durée liée au load event
-   FIX PERF : min 700ms, max 1600ms, puis exit */
+/* ══ INTRO — 1ère visite uniquement via localStorage ══ */
 (function() {
-  var bar = document.getElementById('plBar');
-  var pl  = document.getElementById('preloader');
-  var start = Date.now();
-  var MIN = 700, MAX = 1600;
-  var done = false;
+  var stage = document.getElementById('stage');
+  if (!stage) return;
 
-  /* Anime la barre en continu */
-  var prog = 0;
-  var iv = setInterval(function() {
-    prog = Math.min(prog + (Math.random() * 12 + 4), 90);
-    bar.style.transition = 'width .35s ease';
-    bar.style.width = prog + '%';
-  }, 120);
+  /* Charger Cormorant + Montserrat en différé (intro seulement) */
+  var lnk = document.createElement('link');
+  lnk.rel = 'stylesheet';
+  lnk.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@300;400&display=swap';
+  document.head.appendChild(lnk);
+
+  /* Première visite ? */
+  var seen = localStorage.getItem('cbenprod_intro_seen');
+  if (seen) {
+    /* Visite suivante : supprimer l'intro immédiatement */
+    stage.style.display = 'none';
+    return;
+  }
+  localStorage.setItem('cbenprod_intro_seen', '1');
+
+  var done = false;
+  var MIN = 2500, MAX = 3200;
+  var start = Date.now();
 
   function finish() {
     if (done) return;
     done = true;
-    clearInterval(iv);
-    bar.style.transition = 'width .3s ease';
-    bar.style.width = '100%';
-    setTimeout(function() { pl.classList.add('done'); setTimeout(function() { pl.remove(); }, 750); }, 250);
+    stage.classList.add('done');
+    setTimeout(function() { if (stage.parentNode) stage.parentNode.removeChild(stage); }, 800);
   }
 
   window.addEventListener('load', function() {
     var elapsed = Date.now() - start;
-    var wait = Math.min(Math.max(MIN - elapsed, 0), MAX - elapsed);
-    setTimeout(finish, Math.max(wait, 0));
+    setTimeout(finish, Math.max(MIN - elapsed, 0));
   });
-
-  /* Sécurité : force la fin à MAX ms même sans load event */
   setTimeout(finish, MAX);
 })();
 
-/* ══════════════ CURSEUR — seulement sur pointer précis (souris)
-   FIX ACCESSIBILITÉ */
-if (window.matchMedia('(pointer: fine)').matches) {
-  var dot  = document.getElementById('cursor-dot');
+/* ══ CURSOR ══ */
+if (window.matchMedia('(pointer:fine)').matches) {
+  var dot = document.getElementById('cursor-dot');
   var ring = document.getElementById('cursor-ring');
   var mx = 0, my = 0, rx = 0, ry = 0;
-  var raf;
 
   document.addEventListener('mousemove', function(e) {
     mx = e.clientX; my = e.clientY;
     dot.style.left = mx + 'px';
-    dot.style.top  = my + 'px';
+    dot.style.top = my + 'px';
   });
 
   (function loop() {
     rx += (mx - rx) * .11;
     ry += (my - ry) * .11;
     ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    raf = requestAnimationFrame(loop);
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(loop);
   })();
 
-  var hovers = document.querySelectorAll('a, button, .pcard, .process-step, .problem-item, .tcard, .contact-ch, .tag, .pbox, .form-group input, .form-group textarea');
-  hovers.forEach(function(el) {
+  document.querySelectorAll('a, button, .pcard, .process-step, .problem-item, .tcard, .contact-ch, .svc-card, .pbox, .faq-q, input, textarea').forEach(function(el) {
     el.addEventListener('mouseenter', function() { document.body.classList.add('chover'); });
     el.addEventListener('mouseleave', function() { document.body.classList.remove('chover'); });
   });
 }
 
-/* ══════════════ NAV */
-var nav = document.getElementById('nav');
+/* ══ NAV ══ */
+var navEl = document.getElementById('nav');
 var hbg = document.getElementById('hbg');
 var mob = document.getElementById('mobNav');
 
 window.addEventListener('scroll', function() {
-  nav.classList.toggle('scrolled', window.scrollY > 55);
+  navEl.classList.toggle('scrolled', window.scrollY > 55);
 }, { passive: true });
 
 hbg.addEventListener('click', function() {
@@ -1584,26 +1414,24 @@ function closeNav() {
   document.body.style.overflow = '';
 }
 
-/* ══════════════ SCROLL REVEAL */
-var revEls = document.querySelectorAll('.rev');
+/* ══ SCROLL REVEAL ══ */
 var revObs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
     if (e.isIntersecting) { e.target.classList.add('in'); revObs.unobserve(e.target); }
   });
 }, { threshold: 0.08 });
-revEls.forEach(function(el) { revObs.observe(el); });
+document.querySelectorAll('.rev').forEach(function(el) { revObs.observe(el); });
 
-/* ══════════════ COMPTEURS ANIMÉS */
+/* ══ COUNTERS ══ */
 function animCount(el) {
   var target = parseInt(el.dataset.target);
-  var pre    = el.dataset.pre  || '';
-  var suf    = el.dataset.suf  || '';
-  var div    = el.dataset.div  ? parseInt(el.dataset.div) : 1;
-  var dur    = 1500;
-  var t0     = performance.now();
+  var pre = el.dataset.pre || '';
+  var suf = el.dataset.suf || '';
+  var div = el.dataset.div ? parseInt(el.dataset.div) : 1;
+  var t0 = performance.now();
   (function step(now) {
-    var p   = Math.min((now - t0) / dur, 1);
-    var e   = 1 - Math.pow(1 - p, 3);
+    var p = Math.min((now - t0) / 1500, 1);
+    var e = 1 - Math.pow(1 - p, 3);
     var val = Math.round(e * target);
     el.textContent = pre + (div > 1 ? (val / div).toFixed(2) : val) + suf;
     if (p < 1) requestAnimationFrame(step);
@@ -1616,97 +1444,54 @@ var cObs = new IntersectionObserver(function(entries) {
 }, { threshold: 0.5 });
 document.querySelectorAll('.stat-num[data-target]').forEach(function(el) { cObs.observe(el); });
 
-/* ══════════════ PORTFOLIO DRAG SCROLL — Souris et Tactile */
+/* ══ PORTFOLIO DRAG ══ */
 var track = document.getElementById('portTrack');
 var isDown = false, startX, scrollLeft;
-
-function handleDown(e) {
-  isDown = true;
-  startX = (e.pageX || e.touches[0].pageX) - track.offsetLeft;
-  scrollLeft = track.scrollLeft;
-}
-
-function handleUp() {
-  isDown = false;
-}
-
-function handleMove(e) {
-  if (!isDown) return;
-  var x = (e.pageX || e.touches[0].pageX) - track.offsetLeft;
-  var walk = (x - startX) * 1.4;
-  track.scrollLeft = scrollLeft - walk;
-}
-
-/* Événements Souris */
+function handleDown(e) { isDown = true; startX = (e.pageX || (e.touches && e.touches[0].pageX)) - track.offsetLeft; scrollLeft = track.scrollLeft; }
+function handleUp() { isDown = false; }
+function handleMove(e) { if (!isDown) return; var x = (e.pageX || (e.touches && e.touches[0].pageX)) - track.offsetLeft; track.scrollLeft = scrollLeft - (x - startX) * 1.4; }
 track.addEventListener('mousedown', handleDown);
 track.addEventListener('mouseleave', handleUp);
 track.addEventListener('mouseup', handleUp);
 track.addEventListener('mousemove', handleMove);
-
-/* Événements Tactiles */
 if ('ontouchstart' in window) {
   track.addEventListener('touchstart', handleDown, { passive: true });
   track.addEventListener('touchend', handleUp, { passive: true });
-  track.addEventListener('touchcancel', handleUp, { passive: true });
   track.addEventListener('touchmove', handleMove, { passive: true });
 }
 
-/* ══════════════ BOUTONS MAGNÉTIQUES — pointer:fine seulement */
-if (window.matchMedia('(pointer: fine)').matches) {
+/* ══ MAGNETIC BUTTONS ══ */
+if (window.matchMedia('(pointer:fine)').matches) {
   document.querySelectorAll('.btn-mag').forEach(function(btn) {
     btn.addEventListener('mousemove', function(e) {
-      var r  = btn.getBoundingClientRect();
-      var dx = (e.clientX - r.left - r.width  / 2) * .26;
-      var dy = (e.clientY - r.top  - r.height / 2) * .26;
+      var r = btn.getBoundingClientRect();
+      var dx = (e.clientX - r.left - r.width / 2) * .26;
+      var dy = (e.clientY - r.top - r.height / 2) * .26;
       btn.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
     });
     btn.addEventListener('mouseleave', function() { btn.style.transform = ''; });
   });
 }
 
-/* ══════════════ PARALLAX GLOW — pointer:fine seulement */
-if (window.matchMedia('(pointer: fine)').matches) {
+/* ══ PARALLAX GLOW ══ */
+if (window.matchMedia('(pointer:fine)').matches) {
   var glow = document.querySelector('.hero-glow');
   document.addEventListener('mousemove', function(e) {
     if (!glow) return;
-    var x = (e.clientX / window.innerWidth  - .5) * 28;
-    var y = (e.clientY / window.innerHeight - .5) * 28;
-    glow.style.transform = 'translate(calc(-50% + ' + x + 'px), calc(-50% + ' + y + 'px))';
+    glow.style.transform = 'translate(calc(-50% + ' + (e.clientX / window.innerWidth - .5) * 28 + 'px),calc(-50% + ' + (e.clientY / window.innerHeight - .5) * 28 + 'px))';
   }, { passive: true });
 }
 
-/* ══════════════ VIDEO MODAL — gestion focus trap */
-var modal      = document.getElementById('modal');
+/* ══ VIDEO MODAL ══ */
+var modal = document.getElementById('modal');
 var modalFrame = document.getElementById('modalFrame');
 var modalClose = document.getElementById('modalClose');
 var lastFocus;
 
-function getYouTubeId(input) {
-  if (!input) return input;
-  try {
-    var url = new URL(input);
-    var host = url.hostname.toLowerCase();
-    if (host.includes('youtu')) {
-      if (host === 'youtu.be') return url.pathname.slice(1);
-      if (url.pathname.startsWith('/shorts/')) return url.pathname.split('/')[2];
-      if (url.pathname.startsWith('/embed/')) return url.pathname.split('/')[2];
-      if (url.searchParams.has('v')) return url.searchParams.get('v');
-    }
-  } catch (err) {
-    // Not a URL — probably already a video ID.
-  }
-  return input;
-}
-
 function openVid(id, e) {
   e.preventDefault();
-  if (id.includes('VIDEO_ID')) {
-    alert('Remplacez VIDEO_ID_X par votre vrai identifiant YouTube.\nShort : youtube.com/shorts/XXXXXXXX\nVidéo : youtube.com/watch?v=XXXXXXXX');
-    return;
-  }
   lastFocus = document.activeElement;
-  modalFrame.src = 'https://www.youtube.com/embed/' + id
-    + '?autoplay=1&rel=0&loop=1&playlist=' + id + '&modestbranding=1&fs=1';
+  modalFrame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&loop=1&playlist=' + id + '&modestbranding=1&fs=1';
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
   setTimeout(function() { modalClose.focus(); }, 50);
@@ -1719,105 +1504,109 @@ function closeVid() {
   if (lastFocus) lastFocus.focus();
 }
 
-function handleModalBg(e) {
-  if (e.target === modal) closeVid();
-}
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && modal.classList.contains('open')) closeVid();
-});
-
-/* ══════════════ FORMULAIRE INLINE — FIX CONVERSION
-   Soumission asynchrone : pas de rechargement de page */
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form   = e.target;
-  var status = document.getElementById('formStatus');
-  var btn    = form.querySelector('button[type=submit]');
-
-  /* Validation simple */
-  var name  = form.querySelector('#f-name').value.trim();
-  var email = form.querySelector('#f-email').value.trim();
-  var msg   = form.querySelector('#f-msg').value.trim();
-  var emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!name || !email || !msg) {
-    status.textContent = 'Merci de remplir tous les champs.';
-    status.className = 'form-status err';
-    return;
-  }
-  if (!emailRx.test(email)) {
-    status.textContent = 'Adresse email invalide.';
-    status.className = 'form-status err';
-    return;
-  }
-
-  btn.disabled = true;
-  status.textContent = 'Envoi en cours…';
-  status.className = 'form-status';
-
-  fetch(form.action, {
-    method: 'POST',
-    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name: name, email: email, message: msg })
-  })
-  .then(function(r) {
-    if (r.ok) {
-      status.textContent = '✓ Message envoyé ! Je vous réponds sous 24h.';
-      status.className = 'form-status ok';
-      form.reset();
-    } else {
-      throw new Error('server');
-    }
-  })
-  .catch(function() {
-    status.textContent = 'Une erreur est survenue. Utilisez l\'email ou le téléphone.';
-    status.className = 'form-status err';
-  })
-  .finally(function() {
-    btn.disabled = false;
+/* ══ FAQ ACCORDION ══ */
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded', 'false'); });
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+    else { btn.setAttribute('aria-expanded', 'false'); }
   });
 });
 
-var player;
+/* ══ CONTACT FORM ══ */
+var contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var status = document.getElementById('formStatus');
+    var btn = form.querySelector('button[type=submit]');
+    var name = form.querySelector('#f-name').value.trim();
+    var email = form.querySelector('#f-email').value.trim();
+    var msg = form.querySelector('#f-msg').value.trim();
+
+    if (!name || !email || !msg) { status.textContent = 'Merci de remplir tous les champs.'; status.className = 'form-status err'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.textContent = 'Adresse email invalide.'; status.className = 'form-status err'; return; }
+
+    btn.disabled = true;
+    status.textContent = 'Envoi en cours…';
+    status.className = 'form-status';
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, message: msg })
+    }).then(function(r) {
+      if (r.ok) { status.textContent = '✓ Message envoyé ! Réponse sous 24h.'; status.className = 'form-status ok'; form.reset(); }
+      else { throw new Error(); }
+    }).catch(function() {
+      status.textContent = 'Erreur — utilisez l\'email ou le téléphone.'; status.className = 'form-status err';
+    }).finally(function() { btn.disabled = false; });
+  });
+}
+
+/* ══ YOUTUBE MOBILE ══ */
+var ytPlayer;
 function onYouTubeIframeAPIReady() {
-  if (window.matchMedia('(max-width: 768px)').matches) {
-    player = new YT.Player('heroVideoMobile', {
+  if (window.matchMedia('(max-width:768px)').matches) {
+    ytPlayer = new YT.Player('heroVideoMobile', {
       events: {
-        'onReady': function(event) {
-          event.target.mute();
-          event.target.playVideo();
-        }
+        'onReady': function(event) { event.target.mute(); event.target.playVideo(); }
       }
     });
   }
 }
 
-/* Fallback iOS : déclenche la lecture au premier toucher */
 var mobilePlayed = false;
 function tryPlayMobile() {
-  if (mobilePlayed) return;
-  if (!window.matchMedia('(max-width: 768px)').matches) return;
+  if (mobilePlayed || !window.matchMedia('(max-width:768px)').matches) return;
   mobilePlayed = true;
-  if (player && typeof player.playVideo === 'function') {
-    player.mute();
-    player.playVideo();
+  if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
+    ytPlayer.mute(); ytPlayer.playVideo();
   } else {
     var iframe = document.getElementById('heroVideoMobile');
-    if (iframe) {
-      var src = iframe.src;
-      if (src.indexOf('autoplay=1') === -1) {
-        iframe.src = src + '&autoplay=1';
-      } else {
-        iframe.src = iframe.src;
-      }
-    }
+    if (iframe) iframe.src = iframe.src;
   }
-  document.removeEventListener('touchstart', tryPlayMobile);
-  document.removeEventListener('scroll', tryPlayMobile);
 }
 document.addEventListener('touchstart', tryPlayMobile, { passive: true });
-document.addEventListener('scroll', tryPlayMobile, { passive: true });
+document.addEventListener('scroll', tryPlayMobile, { passive: true, once: true });
+
+/* ══ MODALES LÉGALES ══ */
+function openLegal(type) {
+  var m = document.getElementById('modal-' + type);
+  if (!m) return;
+  m.classList.add('open');
+  m.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+function closeLegal(type) {
+  var m = document.getElementById('modal-' + type);
+  if (!m) return;
+  m.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeLegal('mentions');
+    closeLegal('confidentialite');
+    if (modal.classList.contains('open')) closeVid();
+  }
+});
+
+/* ══ BANDEAU STICKY ══ */
+var stickyBar = document.getElementById('sticky-bar');
+if (stickyBar) {
+  var stickyShown = false;
+  window.addEventListener('scroll', function() {
+    if (!stickyShown && window.scrollY > 400) {
+      stickyShown = true;
+      stickyBar.style.transform = 'translateY(0)';
+      stickyBar.removeAttribute('aria-hidden');
+    }
+  }, { passive: true });
+}
 </script>
 </body>
 </html>
