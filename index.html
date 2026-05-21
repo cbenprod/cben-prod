@@ -566,7 +566,7 @@
 <!-- BANDEAU STICKY CONFIANCE -->
 <div id="sticky-bar" aria-hidden="true" style="position:fixed;bottom:0;left:0;right:0;z-index:400;background:rgba(6,6,6,.95);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:.65rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(100%);transition:transform .4s var(--ease);flex-wrap:wrap">
   <div style="display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap">
-    <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">⭐ 5/5 · 5 avis clients</span>
+    <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">⭐ 5/5 · 3 avis clients</span>
     <span style="width:1px;height:14px;background:var(--border);flex-shrink:0"></span>
     <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">⚡ À partir de 220€ HT</span>
     <span style="width:1px;height:14px;background:var(--border);flex-shrink:0"></span>
@@ -632,14 +632,18 @@
 
   <div class="hero-video-mobile" aria-hidden="true">
     <iframe id="heroVideoMobile"
-      src="https://www.youtube.com/embed/rGIfaZjL3xY?autoplay=1&mute=1&loop=1&playlist=rGIfaZjL3xY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+      src="https://www.youtube.com/embed/rGIfaZjL3xY?autoplay=1&mute=1&loop=1&playlist=rGIfaZjL3xY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3"
       title="Vidéaste Dunkerque – CBEN PROD" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- Masque titre YouTube — couvre le bandeau du haut de l'iframe -->
+    <div style="position:absolute;top:0;left:0;right:0;height:80px;background:var(--bg);z-index:3;pointer-events:none"></div>
     <div class="hero-video-overlay"></div>
   </div>
 
   <div class="hero-video-wrap" aria-hidden="true">
-    <iframe src="https://www.youtube.com/embed/gFdIpsjWsHg?autoplay=1&mute=1&loop=1&playlist=gFdIpsjWsHg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+    <iframe src="https://www.youtube.com/embed/gFdIpsjWsHg?autoplay=1&mute=1&loop=1&playlist=gFdIpsjWsHg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3"
       title="Vidéo CBEN PROD" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+    <!-- Masque titre YouTube desktop -->
+    <div style="position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,var(--bg) 60%,transparent);z-index:3;pointer-events:none"></div>
     <div class="hero-video-overlay"></div>
   </div>
 
@@ -952,7 +956,7 @@
         <ul class="obox-features">
           <li>Brief téléphonique gratuit 30 min</li>
           <li>Journée(s) de tournage complète</li>
-          <li>Drone · interview</li>
+          <li>Drone · multi-caméras · interview</li>
           <li>Reportage d'entreprise · film institutionnel</li>
           <li>Séminaire · inauguration · salon</li>
           <li>Devis détaillé adapté au projet</li>
@@ -1162,7 +1166,7 @@
     <img src="assets/Logo CBEN PROD noir - videaste dunkerque - google.png" alt="CBEN PROD Vidéaste Dunkerque" loading="lazy">
   </a>
   <p>© 2026 CBEN PROD – Vidéaste freelance à Dunkerque – Hauts-de-France<br>
-  SIRET : 10324961100015 · TVA non applicable, art. 293 B du CGI</p>
+  SIRET : [REMPLACER PAR VOTRE SIRET] · TVA non applicable, art. 293 B du CGI</p>
   <div class="foot-links">
     <a href="#" onclick="openLegal('mentions');return false;">Mentions légales</a>
     <a href="#" onclick="openLegal('confidentialite');return false;">Confidentialité</a>
@@ -1185,7 +1189,7 @@
         <div class="legal-row"><span class="legal-row-label">Raison sociale</span><span class="legal-row-val">CBEN PROD</span></div>
         <div class="legal-row"><span class="legal-row-label">Forme juridique</span><span class="legal-row-val">Micro-entreprise</span></div>
         <div class="legal-row"><span class="legal-row-label">Responsable</span><span class="legal-row-val">Benjamin — CBEN PROD</span></div>
-        <div class="legal-row"><span class="legal-row-label">SIRET</span><span class="legal-row-val">10324961100015</span></div>
+        <div class="legal-row"><span class="legal-row-label">SIRET</span><span class="legal-row-val">[REMPLACER PAR VOTRE SIRET]</span></div>
         <div class="legal-row"><span class="legal-row-label">Activité</span><span class="legal-row-val">Arts créatifs audiovisuels — Vidéaste freelance</span></div>
         <div class="legal-row"><span class="legal-row-label">Adresse</span><span class="legal-row-val">Dunkerque, Hauts-de-France, France</span></div>
         <div class="legal-row"><span class="legal-row-label">Email</span><span class="legal-row-val"><a href="mailto:cbenprod@gmail.com">cbenprod@gmail.com</a></span></div>
