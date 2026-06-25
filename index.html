@@ -52,7 +52,7 @@
         "openingHours": "Mo-Fr 09:00-19:00",
         "areaServed": ["Dunkerque","Calais","Boulogne-sur-Mer","Lille","Hauts-de-France","Nord-Pas-de-Calais"],
         "sameAs": ["https://www.facebook.com/profile.php?id=61572382226421","https://www.instagram.com/cben_prod","https://www.youtube.com/@cbenprod"],
-        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "3" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "10" },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Services vidéo CBEN PROD",
@@ -68,9 +68,16 @@
           ]
         },
         "review": [
+          {"@type":"Review","author":{"@type":"Organization","name":"Association YAKABOUGER"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Notre association a bénéficié d'une prestation par Benjamin de CBEN Prod pour filmer notre gala de danse. Professionnalisme et travail de qualité. Le rendu est magnifique. Nous recommandons vivement CBEN Prod."},
+          {"@type":"Review","author":{"@type":"Person","name":"Client mariage"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Le résultat est tout simplement exceptionnel. Il a réussi à capturer chaque émotion avec beaucoup de talent. Je recommande à 100% les yeux fermés."},
+          {"@type":"Review","author":{"@type":"Person","name":"Client mariage"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Pour la vidéo de mon mariage, je ne pouvais espérer mieux, un travail fantastique de Benjamin, tout était parfait."},
+          {"@type":"Review","author":{"@type":"Person","name":"Client mariage"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Un montage magnifique, plein d'émotions et de souvenirs précieux. Nous sommes ravis d'avoir fait appel à toi et te recommandons sans hésiter !"},
+          {"@type":"Review","author":{"@type":"Person","name":"Mayline — May 5 Sens"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Professionnalisme, créativité, bonne humeur et œil de dingue. Merci pour cette magnifique mise en lumière de notre institut !"},
           {"@type":"Review","author":{"@type":"Organization","name":"Thibdog'Educ"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Très disponible, à l'écoute et très professionnel. Les ajustements ont été faits rapidement. Je recommande vivement !"},
           {"@type":"Review","author":{"@type":"Organization","name":"La Latina Restaurant"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Un rendu très professionnel qui nous a permis de faire connaître notre établissement."},
-          {"@type":"Review","author":{"@type":"Organization","name":"LTF Coaching"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Très pro merci beaucoup !"}
+          {"@type":"Review","author":{"@type":"Organization","name":"LTF Coaching"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Très pro merci beaucoup !"},
+          {"@type":"Review","author":{"@type":"Person","name":"Client CBEN PROD"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Un travail au top, qui correspond complètement à mes attentes."},
+          {"@type":"Review","author":{"@type":"Person","name":"Client CBEN PROD"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Disponible et à l'écoute."}
         ]
       },
       {
@@ -293,23 +300,32 @@
 
     /* PORTFOLIO */
     #portfolio { padding:8rem 0; }
-    .port-header { padding:0 3rem; display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:3rem; }
-    .scroll-hint { font-size:.67rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:.6rem; }
-    .scroll-hint svg { animation:nudge 1.5s ease-in-out infinite; }
-    @keyframes nudge { 0%,100%{transform:translateX(0)} 50%{transform:translateX(5px)} }
+    .port-header { padding:0 3rem; display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:2.5rem; }
+    .port-nav { display:flex; align-items:center; gap:.8rem; }
+    .port-arrow { width:44px; height:44px; border:1px solid var(--borderh); background:rgba(237,234,227,.04); border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .2s,border-color .2s,transform .2s; flex-shrink:0; }
+    .port-arrow:hover { background:var(--orange); border-color:var(--orange); transform:scale(1.08); }
+    .port-arrow svg { width:14px; height:14px; stroke:var(--ink); fill:none; stroke-width:1.8; stroke-linecap:round; }
+    .port-dots { display:flex; gap:.45rem; align-items:center; }
+    .port-dot { width:6px; height:6px; border-radius:50%; background:var(--border); transition:background .3s,transform .3s; cursor:pointer; border:none; padding:0; }
+    .port-dot.active { background:var(--orange); transform:scale(1.4); }
+    .port-wrap { position:relative; overflow:hidden; }
     .port-track { display:flex; gap:1.4rem; padding:0 3rem 1.5rem; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; -webkit-overflow-scrolling:touch; scrollbar-width:none; touch-action:pan-x; -webkit-user-select:none; user-select:none; }
     .port-track::-webkit-scrollbar { display:none; }
-    .pcard { flex:0 0 clamp(200px,22vw,300px); aspect-ratio:9/16; position:relative; overflow:hidden; scroll-snap-align:start; scroll-snap-stop:always; border:1px solid var(--border); text-decoration:none; border-radius:12px; }
+    /* Dégradés latéraux */
+    .port-wrap::before,.port-wrap::after { content:''; position:absolute; top:0; bottom:1.5rem; width:60px; z-index:2; pointer-events:none; }
+    .port-wrap::before { left:0; background:linear-gradient(to right,var(--bg),transparent); }
+    .port-wrap::after { right:0; background:linear-gradient(to left,var(--bg),transparent); }
+    .pcard { flex:0 0 clamp(220px,24vw,310px); aspect-ratio:9/16; position:relative; overflow:hidden; scroll-snap-align:center; scroll-snap-stop:always; border:1px solid var(--border); text-decoration:none; border-radius:12px; transition:border-color .3s; }
+    .pcard:hover { border-color:rgba(237,234,227,.18); }
     .pcard-bg { width:100%; height:100%; background:#111; display:flex; align-items:center; justify-content:center; transition:transform .65s var(--ease); }
     .pcard:hover .pcard-bg { transform:scale(1.04); }
     .pcard-bg img { width:100%; height:100%; object-fit:cover; object-position:center; }
     .pcard-play { width:60px; height:60px; border:1px solid rgba(237,234,227,.15); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:transform .4s var(--ease),background .3s,border-color .3s; }
     .pcard:hover .pcard-play { background:var(--orange); border-color:var(--orange); transform:scale(1.15); }
     .pcard-play svg { fill:var(--ink); width:17px; margin-left:3px; }
-    .pcard-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(6,6,6,.9) 0%,rgba(6,6,6,.05) 50%,transparent 100%); }
+    .pcard-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(6,6,6,.92) 0%,rgba(6,6,6,.05) 55%,transparent 100%); }
     .pcard-badge { position:absolute; top:.8rem; left:.8rem; z-index:3; background:var(--orange); color:#fff; font-size:.58rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.22rem .65rem; border-radius:3px; }
-    .pcard-info { position:absolute; bottom:0; left:0; right:0; padding:1.8rem; transform:translateY(7px); transition:transform .4s var(--ease); }
-    .pcard:hover .pcard-info { transform:translateY(0); }
+    .pcard-info { position:absolute; bottom:0; left:0; right:0; padding:1.8rem; }
     .pcard-num { font-family:var(--ff-d); font-size:.72rem; letter-spacing:.14em; color:var(--orange); margin-bottom:.35rem; }
     .pcard-client { font-family:var(--ff-d); font-size:clamp(1.3rem,2.8vw,1.9rem); letter-spacing:.03em; font-weight:900; line-height:1; }
     .pcard-stats { display:flex; flex-direction:column; gap:.3rem; margin-top:.6rem; opacity:0; transform:translateY(5px); transition:opacity .35s .05s,transform .35s .05s var(--ease); }
@@ -344,7 +360,15 @@
     .tag:hover { border-color:rgba(237,234,227,.3); color:var(--ink); }
     .about-ctas { display:flex; gap:.9rem; flex-wrap:wrap; margin-top:.3rem; }
 
-    /* TESTIMONIALS */
+    /* TESTIMONIALS CAROUSEL */
+    .testi-track { display:flex; gap:1.4rem; padding:0 3rem 1rem; width:max-content; animation:testiScroll 60s linear infinite; }
+    .testi-track:hover { animation-play-state:paused; }
+    @keyframes testiScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    .tcard-h { flex:0 0 clamp(300px,32vw,420px); background:rgba(237,234,227,.03); border:1px solid var(--border); padding:2.2rem; display:flex; flex-direction:column; gap:.9rem; transition:background .3s,border-color .3s; border-radius:4px; }
+    .tcard-h:hover { background:rgba(237,234,227,.055); border-color:rgba(237,234,227,.12); }
+    @media (prefers-reduced-motion:reduce) { .testi-track { animation:none; } }
+
+    /* TESTIMONIALS GRID (fallback) */
     .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:4rem; border:1px solid var(--border); }
     .tcard { padding:2.4rem; background:var(--bg); display:flex; flex-direction:column; transition:background .3s; }
     .tcard:hover { background:rgba(237,234,227,.02); }
@@ -489,8 +513,10 @@
     #modal.open { opacity:1; pointer-events:all; }
     .modal-wrap { position:relative; width:min(360px,92vw); max-height:92vh; }
     .modal-wrap iframe { width:100%; aspect-ratio:9/16; border:1px solid rgba(237,234,227,.07); border-radius:12px; display:block; }
-    .modal-close { position:absolute; top:-2.5rem; right:0; background:none; border:none; color:var(--ink); font-size:.8rem; letter-spacing:.1em; cursor:pointer; opacity:.6; transition:opacity .2s; }
-    .modal-close:hover { opacity:1; }
+    .modal-close { position:fixed; top:1.2rem; right:1.2rem; width:44px; height:44px; border-radius:50%; background:rgba(20,20,20,.85); border:1.5px solid rgba(237,234,227,.25); color:#EDEAE3; font-size:1.1rem; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:9999; transition:background .2s,transform .2s,border-color .2s; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); line-height:1; }
+    .modal-close:hover { background:rgba(255,69,0,.8); border-color:var(--orange); transform:scale(1.1); }
+    .modal-hint { position:fixed; bottom:1.4rem; left:50%; transform:translateX(-50%); font-size:.62rem; color:rgba(237,234,227,.3); letter-spacing:.1em; text-transform:uppercase; pointer-events:none; }
+    @media (max-width:640px) { .modal-hint { display:none; } }
 
     /* SCROLL REVEAL */
     .rev { opacity:0; transform:translateY(36px); transition:opacity .75s var(--ease),transform .75s var(--ease); }
@@ -544,8 +570,9 @@
       .offer-grid,.offer-grid-4 { grid-template-columns:1fr; }
       .obox-full-inner { grid-template-columns:1fr; gap:1.5rem; }
       .services-grid { grid-template-columns:1fr; }
-      .pcard { flex:0 0 280px; }
-      .port-track { gap:1rem; padding:0 1.5rem 1.5rem; }
+      .pcard { flex:0 0 82vw; }
+      .port-track { gap:.9rem; padding:0 2rem 1.5rem; }
+      .port-wrap::before,.port-wrap::after { width:30px; }
     }
     @media (max-width:480px) {
       .section,#stats { padding:2.5rem 1rem; }
@@ -566,7 +593,7 @@
 <!-- BANDEAU STICKY CONFIANCE -->
 <div id="sticky-bar" aria-hidden="true" style="position:fixed;bottom:0;left:0;right:0;z-index:400;background:rgba(6,6,6,.95);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:.65rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(100%);transition:transform .4s var(--ease);flex-wrap:wrap">
   <div style="display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap">
-    <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">⭐ 5/5 · 3 avis clients</span>
+    <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">⭐ 5/5 · 10 avis Google</span>
     <span style="width:1px;height:14px;background:var(--border);flex-shrink:0"></span>
     <span style="font-size:.72rem;color:var(--muted2);letter-spacing:.04em">⚡ À partir de 220€ HT</span>
     <span style="width:1px;height:14px;background:var(--border);flex-shrink:0"></span>
@@ -817,42 +844,49 @@
       <div class="label rev">Réalisations</div>
       <h2 class="rev" style="margin-top:.4rem">Des résultats <em style="font-style:normal;color:var(--orange)">concrets.</em></h2>
     </div>
-    <div class="scroll-hint rev" aria-hidden="true">
-      Faire défiler
-      <svg width="17" height="11" viewBox="0 0 17 11" fill="none" aria-hidden="true"><path d="M11.5 1L16 5.5L11.5 10M1 5.5H16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    <div class="port-nav rev" aria-hidden="true">
+      <div class="port-dots" id="portDots"></div>
+      <button class="port-arrow" id="portPrev" aria-label="Vidéo précédente">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="port-arrow" id="portNext" aria-label="Vidéo suivante">
+        <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
     </div>
   </div>
-  <div class="port-track" id="portTrack" role="list">
-    <a class="pcard rev" href="#" onclick="openVid('OS9jbYF8NcQ',event)" role="listitem" aria-label="Thibdog'Educ – plus de 8 000 vues">
-      <div class="pcard-badge">Short</div>
-      <div class="pcard-bg"><img src="https://img.youtube.com/vi/OS9jbYF8NcQ/hqdefault.jpg" alt="Vidéo Thibdog'Educ par CBEN PROD vidéaste Dunkerque" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true"><div class="pcard-num">01 / 04</div><div class="pcard-client">Thibdog'Educ</div><div class="pcard-stats"><span class="pcard-stat">+8 000 vues</span><span class="pcard-stat">+120 partages</span></div></div>
-    </a>
-    <a class="pcard rev d1" href="#" onclick="openVid('E36itvozcFs',event)" role="listitem" aria-label="La Latina – plus de 8 000 vues">
-      <div class="pcard-badge">Short</div>
-      <div class="pcard-bg"><img src="https://img.youtube.com/vi/E36itvozcFs/hqdefault.jpg" alt="Vidéo restaurant La Latina Dunkerque par CBEN PROD" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true"><div class="pcard-num">02 / 04</div><div class="pcard-client">La Latina</div><div class="pcard-stats"><span class="pcard-stat">+8 000 vues</span><span class="pcard-stat">50 likes</span></div></div>
-    </a>
-    <a class="pcard rev d2" href="#" onclick="openVid('6-k0XejomR0',event)" role="listitem" aria-label="LTF Coaching – plus de 9 100 vues">
-      <div class="pcard-badge">Short</div>
-      <div class="pcard-bg"><img src="https://img.youtube.com/vi/6-k0XejomR0/hqdefault.jpg" alt="Vidéo LTF Coaching par CBEN PROD" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true"><div class="pcard-num">03 / 04</div><div class="pcard-client">LTF Coaching</div><div class="pcard-stats"><span class="pcard-stat">+9 100 vues</span><span class="pcard-stat">142 likes</span></div></div>
-    </a>
-    <a class="pcard rev d3" href="#" onclick="openVid('KJjq900eegw',event)" role="listitem" aria-label="Meilleure performance – plus de 40 000 vues">
-      <div class="pcard-badge">Short</div>
-      <div class="pcard-bg" style="background:#0d0a09"><img src="https://img.youtube.com/vi/KJjq900eegw/hqdefault.jpg" alt="Vidéo virale 40 000 vues CBEN PROD Dunkerque" loading="lazy"><div class="pcard-play" style="background:var(--orange);border-color:var(--orange)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true"><div class="pcard-num" style="color:var(--orange)">BEST PERF.</div><div class="pcard-client">Meilleure vidéo</div><div class="pcard-stats"><span class="pcard-stat">+40 000 vues</span><span class="pcard-stat">1 530 likes</span></div></div>
-    </a>
-    <a class="pcard rev d1" href="#" onclick="openVid('-57rOwQL-n4',event)" role="listitem" aria-label="M5S Institut de beauté – plus de 2 500 vues">
-      <div class="pcard-badge">Short</div>
-      <div class="pcard-bg"><img src="https://img.youtube.com/vi/-57rOwQL-n4/hqdefault.jpg" alt="Vidéo M5S Institut de beauté par CBEN PROD vidéaste Dunkerque" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      <div class="pcard-overlay" aria-hidden="true"></div>
-      <div class="pcard-info" aria-hidden="true"><div class="pcard-num">05 / 05</div><div class="pcard-client">M5S Institut</div><div class="pcard-stats"><span class="pcard-stat">+2 500 vues</span><span class="pcard-stat">72 likes</span></div></div>
-    </a>
+  <div class="port-wrap">
+    <div class="port-track" id="portTrack" role="list">
+      <a class="pcard rev" href="#" onclick="openVid('-57rOwQL-n4',event)" role="listitem" aria-label="M5S Institut – plus de 2 500 vues">
+        <div class="pcard-badge">Short</div>
+        <div class="pcard-bg"><img src="https://img.youtube.com/vi/-57rOwQL-n4/hqdefault.jpg" alt="Vidéo M5S Institut de beauté par CBEN PROD" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="pcard-overlay" aria-hidden="true"></div>
+        <div class="pcard-info" aria-hidden="true"><div class="pcard-num">01 / 05</div><div class="pcard-client">M5S Institut</div><div class="pcard-stats"><span class="pcard-stat">+2 500 vues</span><span class="pcard-stat">72 likes</span></div></div>
+      </a>
+      <a class="pcard rev d1" href="#" onclick="openVid('OS9jbYF8NcQ',event)" role="listitem" aria-label="Thibdog'Educ – plus de 8 000 vues">
+        <div class="pcard-badge">Short</div>
+        <div class="pcard-bg"><img src="https://img.youtube.com/vi/OS9jbYF8NcQ/hqdefault.jpg" alt="Vidéo Thibdog'Educ par CBEN PROD vidéaste Dunkerque" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="pcard-overlay" aria-hidden="true"></div>
+        <div class="pcard-info" aria-hidden="true"><div class="pcard-num">02 / 05</div><div class="pcard-client">Thibdog'Educ</div><div class="pcard-stats"><span class="pcard-stat">+8 000 vues</span><span class="pcard-stat">+120 partages</span></div></div>
+      </a>
+      <a class="pcard rev d2" href="#" onclick="openVid('E36itvozcFs',event)" role="listitem" aria-label="La Latina – plus de 8 000 vues">
+        <div class="pcard-badge">Short</div>
+        <div class="pcard-bg"><img src="https://img.youtube.com/vi/E36itvozcFs/hqdefault.jpg" alt="Vidéo restaurant La Latina Dunkerque par CBEN PROD" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="pcard-overlay" aria-hidden="true"></div>
+        <div class="pcard-info" aria-hidden="true"><div class="pcard-num">03 / 05</div><div class="pcard-client">La Latina</div><div class="pcard-stats"><span class="pcard-stat">+8 000 vues</span><span class="pcard-stat">50 likes</span></div></div>
+      </a>
+      <a class="pcard rev d2" href="#" onclick="openVid('6-k0XejomR0',event)" role="listitem" aria-label="LTF Coaching – plus de 9 100 vues">
+        <div class="pcard-badge">Short</div>
+        <div class="pcard-bg"><img src="https://img.youtube.com/vi/6-k0XejomR0/hqdefault.jpg" alt="Vidéo LTF Coaching par CBEN PROD" loading="lazy"><div class="pcard-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="pcard-overlay" aria-hidden="true"></div>
+        <div class="pcard-info" aria-hidden="true"><div class="pcard-num">04 / 05</div><div class="pcard-client">LTF Coaching</div><div class="pcard-stats"><span class="pcard-stat">+9 100 vues</span><span class="pcard-stat">142 likes</span></div></div>
+      </a>
+      <a class="pcard rev d3" href="#" onclick="openVid('KJjq900eegw',event)" role="listitem" aria-label="Chat Noir – plus de 40 000 vues">
+        <div class="pcard-badge">Short</div>
+        <div class="pcard-bg" style="background:#0d0a09"><img src="https://img.youtube.com/vi/KJjq900eegw/hqdefault.jpg" alt="Vidéo virale Chat Noir 40 000 vues CBEN PROD Dunkerque" loading="lazy"><div class="pcard-play" style="background:var(--orange);border-color:var(--orange)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="pcard-overlay" aria-hidden="true"></div>
+        <div class="pcard-info" aria-hidden="true"><div class="pcard-num" style="color:var(--orange)">BEST PERF.</div><div class="pcard-client">Chat Noir</div><div class="pcard-stats"><span class="pcard-stat">+40 000 vues</span><span class="pcard-stat">1 530 likes</span></div></div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -924,7 +958,7 @@
           <li>1 vidéo 30–60 sec</li>
           <li>Tournage 2h · 2 révisions</li>
           <li>Sous-titres inclus</li>
-          <li>Formats vertical ou horizontal </li>
+          <li>Formats vertical + carré</li>
           <li>Livraison sous 4 jours</li>
         </ul>
         <a href="https://calendly.com/cbenprod/new-meeting" class="obox-cta" target="_blank" rel="noopener">Demander un devis →</a>
@@ -1032,21 +1066,102 @@
   <div class="inner">
     <div class="label rev">Avis clients</div>
     <h2 class="rev">Ils me font <em style="font-style:normal;color:var(--orange)">confiance.</em></h2>
-    <div class="testi-grid">
-      <div class="tcard rev">
+    <p class="rev" style="color:var(--muted2);margin-top:.8rem;font-size:.88rem">10 avis Google · Note moyenne 5/5 ⭐</p>
+  </div>
+
+  <!-- CAROUSEL AUTO-DÉFILANT -->
+  <div class="testi-carousel-wrap" style="overflow:hidden;margin-top:3rem;position:relative">
+    <!-- Dégradés latéraux -->
+    <div style="position:absolute;top:0;left:0;width:120px;height:100%;background:linear-gradient(to right,#09090a,transparent);z-index:2;pointer-events:none"></div>
+    <div style="position:absolute;top:0;right:0;width:120px;height:100%;background:linear-gradient(to left,#09090a,transparent);z-index:2;pointer-events:none"></div>
+
+    <div class="testi-track" id="testiTrack">
+      <!-- CARTE 1 — YAKABOUGER -->
+      <div class="tcard-h">
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Notre association a bénéficié d'une prestation par Benjamin de CBEN Prod pour filmer notre gala de danse. Nous pouvons souligner le professionnalisme et le travail de qualité réalisé en très peu de temps. Benjamin a su s'adapter à nos demandes et a réussi à répondre totalement aux attentes. Le rendu est magnifique. Nous vous recommandons vivement CBEN Prod. »</p>
+        <div class="tauthor"><div class="tav">Y</div><div><div class="tname">L'association YAKABOUGER</div><div class="trole">Gala de danse, Dunkerque</div></div></div>
+      </div>
+      <!-- CARTE 2 — MARIAGE -->
+      <div class="tcard-h">
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Le résultat est tout simplement exceptionnel. Il nous a suivis tout au long de cette journée si spéciale et a réussi à capturer chaque émotion, chaque détail et chaque instant important avec beaucoup de talent. La qualité de l'image est incroyable, les couleurs sont magnifiques, le montage est parfaitement réalisé. Grâce à lui, nous avons un souvenir inestimable que nous regarderons encore et encore avec la même émotion. Je recommande à 100 % les yeux fermés. »</p>
+        <div class="tauthor"><div class="tav">M</div><div><div class="tname">Marie & Thomas</div><div class="trole">Mariage, Hauts-de-France</div></div></div>
+      </div>
+      <!-- CARTE 3 — MARIAGE COURT -->
+      <div class="tcard-h">
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Pour la vidéo de mon mariage, je ne pouvais espérer mieux, un travail fantastique de Benjamin, tout était parfait, je vous le recommande les yeux fermés. »</p>
+        <div class="tauthor"><div class="tav">S</div><div><div class="tname">Client mariage</div><div class="trole">Mariage, Nord</div></div></div>
+      </div>
+      <!-- CARTE 4 — MARIAGE DISCRÉTION -->
+      <div class="tcard-h">
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Un immense merci pour ce travail exceptionnel ! Dès le jour J, tu as su nous mettre en confiance grâce à ta bonne humeur, ton professionnalisme et ton côté très rassurant. Tu as capturé chaque moment avec beaucoup de naturel et de discrétion. Le résultat final est au-delà de nos attentes : un montage magnifique, plein d'émotions et de souvenirs précieux. Nous sommes ravis d'avoir fait appel à toi et te recommandons sans hésiter ! »</p>
+        <div class="tauthor"><div class="tav">A</div><div><div class="tname">Client mariage</div><div class="trole">Mariage, Dunkerque</div></div></div>
+      </div>
+      <!-- CARTE 5 — MAY 5 SENS -->
+      <div class="tcard-h">
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Un immense merci à notre talentueux vidéaste pour avoir capturé l'univers de May 5 Sens avec autant de justesse et d'émotion. Tu as réussi à retranscrire l'ambiance, la douceur et toute l'expérience que l'on souhaite faire vivre à nos clientes. Professionnalisme, créativité, bonne humeur et œil de dingue. Merci pour cette magnifique mise en lumière de notre institut ! »</p>
+        <div class="tauthor"><div class="tav">M</div><div><div class="tname">Mayline — May 5 Sens</div><div class="trole">Institut de beauté, Dunkerque</div></div></div>
+      </div>
+      <!-- CARTE 6 — THIBDOG -->
+      <div class="tcard-h">
         <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
         <p class="tquote">« Benjamin est très disponible, à l'écoute et très professionnel. Les ajustements ont été faits rapidement. La qualité de l'image et du montage est excellente. Je recommande vivement ! »</p>
         <div class="tauthor"><div class="tav">T</div><div><div class="tname">Thibdog'Educ</div><div class="trole">Éducateur canin, Dunkerque</div></div></div>
       </div>
-      <div class="tcard rev d1">
+      <!-- CARTE 7 — LA LATINA -->
+      <div class="tcard-h">
         <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
         <p class="tquote">« Un grand merci à CBEN PROD pour cette superbe vidéo de notre restaurant. Elle nous a permis de faire connaître notre établissement. Un rendu très professionnel que je recommande sans hésiter. »</p>
         <div class="tauthor"><div class="tav">L</div><div><div class="tname">La Latina</div><div class="trole">Restaurant, Dunkerque</div></div></div>
       </div>
-      <div class="tcard rev d2">
+      <!-- CARTE 8 — LTF COACHING -->
+      <div class="tcard-h">
         <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
         <p class="tquote">« Très pro, merci beaucoup ! Résultat au-delà de mes attentes, livraison rapide et communication impeccable tout au long du projet. »</p>
         <div class="tauthor"><div class="tav">L</div><div><div class="tname">LTF Coaching</div><div class="trole">Coach sportif, Hauts-de-France</div></div></div>
+      </div>
+      <!-- CARTE 9 -->
+      <div class="tcard-h">
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Un travail au top, qui correspond complètement à mes attentes. »</p>
+        <div class="tauthor"><div class="tav">C</div><div><div class="tname">Client CBEN PROD</div><div class="trole">Dunkerque</div></div></div>
+      </div>
+      <!-- CARTE 10 -->
+      <div class="tcard-h">
+        <div class="stars" aria-label="5 étoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Disponible et à l'écoute. »</p>
+        <div class="tauthor"><div class="tav">C</div><div><div class="tname">Client CBEN PROD</div><div class="trole">Dunkerque</div></div></div>
+      </div>
+
+      <!-- DOUBLON pour boucle infinie -->
+      <div class="tcard-h" aria-hidden="true">
+        <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Notre association a bénéficié d'une prestation par Benjamin de CBEN Prod pour filmer notre gala de danse. Nous pouvons souligner le professionnalisme et le travail de qualité réalisé en très peu de temps. Le rendu est magnifique. Nous vous recommandons vivement CBEN Prod. »</p>
+        <div class="tauthor"><div class="tav">Y</div><div><div class="tname">L'association YAKABOUGER</div><div class="trole">Gala de danse, Dunkerque</div></div></div>
+      </div>
+      <div class="tcard-h" aria-hidden="true">
+        <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Le résultat est tout simplement exceptionnel. Grâce à lui, nous avons un souvenir inestimable que nous regarderons encore et encore avec la même émotion. Je recommande à 100 % les yeux fermés. »</p>
+        <div class="tauthor"><div class="tav">M</div><div><div class="tname">Marie & Thomas</div><div class="trole">Mariage, Hauts-de-France</div></div></div>
+      </div>
+      <div class="tcard-h" aria-hidden="true">
+        <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Pour la vidéo de mon mariage, je ne pouvais espérer mieux, un travail fantastique de Benjamin, tout était parfait, je vous le recommande les yeux fermés. »</p>
+        <div class="tauthor"><div class="tav">S</div><div><div class="tname">Client mariage</div><div class="trole">Mariage, Nord</div></div></div>
+      </div>
+      <div class="tcard-h" aria-hidden="true">
+        <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Dès le jour J, tu as su nous mettre en confiance. Le résultat final est au-delà de nos attentes : un montage magnifique, plein d'émotions et de souvenirs précieux. »</p>
+        <div class="tauthor"><div class="tav">A</div><div><div class="tname">Client mariage</div><div class="trole">Mariage, Dunkerque</div></div></div>
+      </div>
+      <div class="tcard-h" aria-hidden="true">
+        <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tquote">« Professionnalisme, créativité, bonne humeur et œil de dingue. Merci pour cette magnifique mise en lumière de notre institut ! »</p>
+        <div class="tauthor"><div class="tav">M</div><div><div class="tname">Mayline — May 5 Sens</div><div class="trole">Institut de beauté, Dunkerque</div></div></div>
       </div>
     </div>
   </div>
@@ -1329,10 +1444,11 @@
 
 <!-- MODAL VIDÉO -->
 <div id="modal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo" onclick="if(event.target===this)closeVid()">
+  <button class="modal-close" id="modalClose" onclick="closeVid()" aria-label="Fermer la vidéo">✕</button>
   <div class="modal-wrap">
-    <button class="modal-close" id="modalClose" onclick="closeVid()" aria-label="Fermer">✕ Fermer</button>
     <iframe id="modalFrame" src="" title="Vidéo CBEN PROD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
+  <p class="modal-hint">Appuyer sur Échap pour fermer</p>
 </div>
 
 <script src="https://www.youtube.com/iframe_api"></script>
@@ -1454,21 +1570,118 @@ var cObs = new IntersectionObserver(function(entries) {
 }, { threshold: 0.5 });
 document.querySelectorAll('.stat-num[data-target]').forEach(function(el) { cObs.observe(el); });
 
-/* ══ PORTFOLIO DRAG ══ */
-var track = document.getElementById('portTrack');
-var isDown = false, startX, scrollLeft;
-function handleDown(e) { isDown = true; startX = (e.pageX || (e.touches && e.touches[0].pageX)) - track.offsetLeft; scrollLeft = track.scrollLeft; }
-function handleUp() { isDown = false; }
-function handleMove(e) { if (!isDown) return; var x = (e.pageX || (e.touches && e.touches[0].pageX)) - track.offsetLeft; track.scrollLeft = scrollLeft - (x - startX) * 1.4; }
-track.addEventListener('mousedown', handleDown);
-track.addEventListener('mouseleave', handleUp);
-track.addEventListener('mouseup', handleUp);
-track.addEventListener('mousemove', handleMove);
-if ('ontouchstart' in window) {
-  track.addEventListener('touchstart', handleDown, { passive: true });
-  track.addEventListener('touchend', handleUp, { passive: true });
-  track.addEventListener('touchmove', handleMove, { passive: true });
-}
+/* ══ PORTFOLIO CAROUSEL ══ */
+(function() {
+  var track = document.getElementById('portTrack');
+  var prevBtn = document.getElementById('portPrev');
+  var nextBtn = document.getElementById('portNext');
+  var dotsWrap = document.getElementById('portDots');
+  if (!track) return;
+
+  var cards = Array.from(track.querySelectorAll('.pcard'));
+  var total = cards.length;
+  var current = 0;
+
+  /* Créer les dots */
+  cards.forEach(function(_, i) {
+    var d = document.createElement('button');
+    d.className = 'port-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Vidéo ' + (i + 1));
+    d.addEventListener('click', function() { goTo(i); });
+    dotsWrap.appendChild(d);
+  });
+
+  function getDots() { return dotsWrap.querySelectorAll('.port-dot'); }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, total - 1));
+    var card = cards[current];
+    var trackLeft = track.getBoundingClientRect().left;
+    var cardLeft = card.getBoundingClientRect().left;
+    var offset = track.scrollLeft + cardLeft - trackLeft;
+    /* Centrer la carte dans la fenêtre */
+    var center = offset - (track.clientWidth / 2) + (card.offsetWidth / 2);
+    track.scrollTo({ left: center, behavior: 'smooth' });
+    /* Mettre à jour les dots */
+    getDots().forEach(function(d, i) { d.classList.toggle('active', i === current); });
+    /* Mettre à jour l'état des flèches */
+    prevBtn.style.opacity = current === 0 ? '.35' : '1';
+    nextBtn.style.opacity = current === total - 1 ? '.35' : '1';
+  }
+
+  prevBtn.addEventListener('click', function() { goTo(current - 1); });
+  nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+  /* Détecter la carte visible via IntersectionObserver */
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.intersectionRatio > 0.6) {
+        var idx = cards.indexOf(e.target);
+        if (idx !== -1 && idx !== current) {
+          current = idx;
+          getDots().forEach(function(d, i) { d.classList.toggle('active', i === current); });
+          prevBtn.style.opacity = current === 0 ? '.35' : '1';
+          nextBtn.style.opacity = current === total - 1 ? '.35' : '1';
+        }
+      }
+    });
+  }, { root: track, threshold: 0.6 });
+  cards.forEach(function(c) { io.observe(c); });
+
+  /* Swipe touch natif amélioré */
+  var touchStartX = 0, touchStartScroll = 0, isDragging = false;
+  track.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartScroll = track.scrollLeft;
+    isDragging = false;
+  }, { passive: true });
+  track.addEventListener('touchmove', function(e) {
+    var dx = touchStartX - e.touches[0].clientX;
+    if (Math.abs(dx) > 5) isDragging = true;
+    track.scrollLeft = touchStartScroll + dx;
+  }, { passive: true });
+  track.addEventListener('touchend', function(e) {
+    if (!isDragging) return;
+    var dx = touchStartX - e.changedTouches[0].clientX;
+    if (dx > 40) goTo(current + 1);
+    else if (dx < -40) goTo(current - 1);
+    else goTo(current); /* recaler */
+  }, { passive: true });
+
+  /* Drag souris desktop */
+  var mouseDown = false, mouseStartX = 0, mouseStartScroll = 0, mouseMoved = false;
+  track.addEventListener('mousedown', function(e) {
+    mouseDown = true; mouseMoved = false;
+    mouseStartX = e.clientX; mouseStartScroll = track.scrollLeft;
+    track.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (!mouseDown) return;
+    mouseDown = false;
+    track.style.cursor = '';
+    if (mouseMoved) {
+      var dx = mouseStartX - e.clientX;
+      if (dx > 40) goTo(current + 1);
+      else if (dx < -40) goTo(current - 1);
+      else goTo(current);
+    }
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!mouseDown) return;
+    var dx = mouseStartX - e.clientX;
+    if (Math.abs(dx) > 5) mouseMoved = true;
+    track.scrollLeft = mouseStartScroll + dx;
+  });
+  /* Empêcher le clic sur la carte si on a dragué */
+  track.querySelectorAll('.pcard').forEach(function(c) {
+    c.addEventListener('click', function(e) {
+      if (mouseMoved) e.preventDefault();
+    });
+  });
+
+  /* Init */
+  goTo(0);
+})();
 
 /* ══ MAGNETIC BUTTONS ══ */
 if (window.matchMedia('(pointer:fine)').matches) {
