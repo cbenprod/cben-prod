@@ -431,6 +431,18 @@
     .abonnement-tier { padding:.4rem 1rem; border:1px solid var(--border); font-size:.72rem; color:var(--muted2); }
     .abonnement-tier strong { color:var(--ink); display:block; font-size:.85rem; }
 
+    /* PRICING ÉPURÉ */
+    .price-row { display:flex; align-items:center; justify-content:space-between; gap:2rem; padding:1.8rem 0; border-bottom:1px solid var(--border); transition:border-color .2s; }
+    .price-row:hover { border-color:rgba(237,234,227,.15); }
+    .price-row--featured .price-label { color:var(--orange); }
+    .price-row--featured .price-right { color:var(--orange); }
+    .price-left { display:flex; flex-direction:column; gap:.3rem; }
+    .price-label { font-family:var(--ff-d); font-size:clamp(1.1rem,2.2vw,1.6rem); font-weight:900; letter-spacing:.01em; color:var(--ink); }
+    .price-sub { font-size:.75rem; color:var(--muted); letter-spacing:.06em; text-transform:uppercase; }
+    .price-right { font-family:var(--ff-d); font-size:clamp(1.1rem,2vw,1.5rem); font-weight:900; color:var(--ink); white-space:nowrap; flex-shrink:0; }
+    .price-right small { font-family:var(--ff-b); font-size:.75rem; font-weight:400; color:var(--muted); margin-left:.3rem; }
+    @media (max-width:640px) { .price-row { flex-direction:column; align-items:flex-start; gap:.6rem; } .price-right { font-size:1.2rem; } }
+
     /* CONTACT */
     #contact { background:var(--bg); }
     .contact-layout { display:grid; grid-template-columns:1.1fr 1fr; gap:6rem; margin-top:4.5rem; align-items:start; }
@@ -925,100 +937,69 @@
     <h2 class="rev">Une offre pour <em style="font-style:normal;color:var(--orange)">chaque projet.</em></h2>
     <p class="rev" style="color:var(--muted2);margin-top:.9rem;font-size:.93rem;max-width:520px">Des repères tarifaires clairs pour vous aider à planifier. Chaque projet est unique — un appel de 15 minutes suffit à construire le devis qui vous correspond.</p>
 
-    <!-- GRILLE 4 OFFRES -->
-    <div class="offer-grid offer-grid-4 rev">
+    <!-- GRILLE ÉPURÉE -->
+    <div class="rev" style="margin-top:4rem">
 
-      <!-- ENTRÉE -->
-      <div class="obox">
-        <span class="obox-badge new">Point d'entrée</span>
-        <div class="obox-name">Premier regard</div>
-        <div class="obox-title">Essentiel</div>
-        <div class="obox-price">À partir de 220€ <small>HT</small></div>
-        <div class="obox-target">TPE · artisans · premiers contenus</div>
-        <div class="obox-sep"></div>
-        <ul class="obox-features">
-          <li>1 vidéo courte 15–30 sec</li>
-          <li>Tournage 1h sur site</li>
-          <li>Montage dynamique</li>
-          <li>Format vertical livré</li>
-          <li>Livraison sous 3 jours</li>
-        </ul>
-        <a href="https://calendly.com/cbenprod/new-meeting" class="obox-cta" target="_blank" rel="noopener">Demander un devis →</a>
+      <!-- LIGNE OFFRE -->
+      <div class="price-row">
+        <div class="price-left">
+          <span class="price-label">Essentiel</span>
+          <span class="price-sub">TPE · Artisans · Premiers contenus</span>
+        </div>
+        <div class="price-right">À partir de 220€ <small>HT</small></div>
       </div>
 
-      <!-- RÉSEAUX -->
-      <div class="obox">
-        <span class="obox-badge" style="color:var(--muted);border-color:var(--border)">Réseaux sociaux</span>
-        <div class="obox-name">Présence</div>
-        <div class="obox-title">Réseaux</div>
-        <div class="obox-price">À partir de 390€ <small>HT</small></div>
-        <div class="obox-target">Restaurants · boutiques · indépendants</div>
-        <div class="obox-sep"></div>
-        <ul class="obox-features">
-          <li>1 vidéo 30–60 sec</li>
-          <li>Tournage 2h · 2 révisions</li>
-          <li>Sous-titres inclus</li>
-          <li>Formats vertical + carré</li>
-          <li>Livraison sous 4 jours</li>
-        </ul>
-        <a href="https://calendly.com/cbenprod/new-meeting" class="obox-cta" target="_blank" rel="noopener">Demander un devis →</a>
+      <div class="price-row">
+        <div class="price-left">
+          <span class="price-label">Réseaux Sociaux</span>
+          <span class="price-sub">Restaurants · Boutiques · Indépendants</span>
+        </div>
+        <div class="price-right">À partir de 390€ <small>HT</small></div>
       </div>
 
-      <!-- VITRINE — FEATURED -->
-      <div class="obox feat">
-        <span class="obox-badge pop">Le plus choisi</span>
-        <div class="obox-name">Corporate · Mariage · Événement</div>
-        <div class="obox-title">Vitrine Pro</div>
-        <div class="obox-price">À partir de 750€ <small>HT</small></div>
-        <div class="obox-target">PME · mariages · événements pro</div>
-        <div class="obox-sep"></div>
-        <ul class="obox-features">
-          <li>1 vidéo principale 45–90 sec</li>
-          <li>1 format court 15–30 sec</li>
-          <li>Tournage 4h · révisions illimitées</li>
-          <li>Color grading + sound design</li>
-          <li>Sous-titres premium · multi-format</li>
-          <li>Brief personnalisé 30 min</li>
-          <li>Guide de publication inclus</li>
-          <li>Livraison sous 5 jours</li>
-        </ul>
-        <a href="https://calendly.com/cbenprod/new-meeting" class="obox-cta" target="_blank" rel="noopener">Demander un devis →</a>
+      <div class="price-row price-row--featured">
+        <div class="price-left">
+          <span class="price-label">Vitrine Pro</span>
+          <span class="price-sub">Entreprise · Événement · Corporate</span>
+        </div>
+        <div class="price-right">À partir de 750€ <small>HT</small></div>
       </div>
 
-      <!-- SUR MESURE -->
-      <div class="obox">
-        <span class="obox-badge custom">Sur devis</span>
-        <div class="obox-name">Projet complexe · B2B</div>
-        <div class="obox-title">Sur mesure</div>
-        <div class="obox-price">Devis <small>sous 24h</small></div>
-        <div class="obox-target">Grosses entreprises · institutionnel · campagne</div>
-        <div class="obox-sep"></div>
-        <ul class="obox-features">
-          <li>Brief téléphonique gratuit 30 min</li>
-          <li>Journée(s) de tournage complète</li>
-          <li>Drone · multi-caméras · interview</li>
-          <li>Reportage d'entreprise · film institutionnel</li>
-          <li>Séminaire · inauguration · salon</li>
-          <li>Devis détaillé adapté au projet</li>
-        </ul>
-        <a href="#contact" class="obox-cta">Décrire mon projet →</a>
+      <div class="price-row">
+        <div class="price-left">
+          <span class="price-label">Mariage</span>
+          <span class="price-sub">Jour J complet · Préparatifs jusqu'à la soirée</span>
+        </div>
+        <div class="price-right">À partir de 750€ <small>HT</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-left">
+          <span class="price-label">Sur mesure</span>
+          <span class="price-sub">Grands projets · B2B · Institutionnel</span>
+        </div>
+        <div class="price-right" style="font-size:1.1rem;letter-spacing:.06em">Devis <small>sous 24h</small></div>
+      </div>
+
+      <div class="price-row" style="border-bottom:none">
+        <div class="price-left">
+          <span class="price-label">Abonnement mensuel</span>
+          <span class="price-sub">1 à 2 vidéos / mois · Planning inclus</span>
+        </div>
+        <div class="price-right">À partir de 190€ <small>HT / mois</small></div>
       </div>
 
     </div>
 
-    <!-- ABONNEMENT MENSUEL -->
-    <div class="abonnement-strip rev">
-      <div class="abonnement-strip-left">
-        <span class="obox-badge rec" style="margin-bottom:.8rem;display:inline-block">Revenus récurrents</span>
-        <h3>Contenu mensuel — <em style="font-style:normal;color:#8B6FE8">abonnement</em></h3>
-        <p>1 à 2 vidéos par mois, planning éditorial inclus. Tarif bloqué, priorité agenda, zéro gestion de votre côté. Engagement 3 mois minimum. Idéal pour les professionnels qui veulent une présence régulière sur les réseaux sans s'en occuper.</p>
-        <div class="abonnement-tiers">
-          <div class="abonnement-tier"><strong>À partir de 490€ HT/mois</strong>1 vidéo / mois</div>
-          <div class="abonnement-tier"><strong>À partir de 850€ HT/mois</strong>2 vidéos / mois</div>
-        </div>
-      </div>
-      <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="En savoir plus →" style="flex-shrink:0;white-space:nowrap">
-        <span class="btn-mag-inner">📅 En savoir plus →</span>
+    <!-- NOTE + CTA -->
+    <div class="rev" style="margin-top:3.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;padding-top:2.5rem;border-top:1px solid var(--border)">
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.9;max-width:480px">
+        Chaque projet est unique.<br>
+        Un appel de 15 minutes suffit à construire le devis qui vous correspond.<br>
+        <span style="color:rgba(237,234,227,.25);font-size:.72rem">TVA non applicable, art. 293 B du CGI · Déplacements inclus jusqu'à 50 km</span>
+      </p>
+      <a href="https://calendly.com/cbenprod/new-meeting" class="btn-mag" target="_blank" rel="noopener" data-text="Parlons-en →" style="flex-shrink:0">
+        <span class="btn-mag-inner">📅 Parlons-en →</span>
       </a>
     </div>
 
