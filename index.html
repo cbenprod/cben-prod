@@ -254,14 +254,6 @@
        "provider": {
         "@id": "https://www.cbenprod.fr/#business"
        }
-      },
-      "price": "220",
-      "priceCurrency": "EUR",
-      "priceSpecification": {
-       "@type": "PriceSpecification",
-       "minPrice": 220,
-       "priceCurrency": "EUR",
-       "valueAddedTaxIncluded": false
       }
      },
      {
@@ -269,18 +261,10 @@
       "itemOffered": {
        "@type": "Service",
        "name": "Pack Visibilité entreprise",
-       "description": "3 vidéos, audit de la visibilité en ligne (Google, avis, site, réseaux sociaux) et stratégie de communication pour les entreprises du Nord.",
+       "description": "Plusieurs vidéos, audit de la visibilité en ligne (Google, avis, site, réseaux sociaux) et stratégie de communication pour les entreprises du Nord.",
        "provider": {
         "@id": "https://www.cbenprod.fr/#business"
        }
-      },
-      "price": "790",
-      "priceCurrency": "EUR",
-      "priceSpecification": {
-       "@type": "PriceSpecification",
-       "minPrice": 790,
-       "priceCurrency": "EUR",
-       "valueAddedTaxIncluded": false
       }
      },
      {
@@ -360,7 +344,7 @@
      "name": "Quel est le tarif d'un vidéaste à Dunkerque pour une entreprise ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Les vidéos sur mesure démarrent à 220 € pour une vidéo courte, tournée rapidement. Le Pack Visibilité à 790 € comprend 3 vidéos, un audit de votre visibilité en ligne (Google, avis, site, réseaux sociaux) et une stratégie de communication. Devis personnalisé gratuit sous 24h. TVA non applicable, art. 293 B du CGI."
+      "text": "Chaque projet est différent, le prix est donc fixé sur devis. CBEN PROD propose deux formules : un tournage simple, pour une vidéo courte tournée rapidement, et le Pack Visibilité, plus complet, avec plusieurs vidéos, un audit de votre visibilité en ligne (Google, avis, site, réseaux sociaux) et une stratégie de communication. Devis personnalisé gratuit sous 24h."
      }
     },
     {
@@ -581,6 +565,13 @@
     .svc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
     .svc-tags span{font-size:.78rem;font-weight:500;padding:5px 11px;border-radius:999px;background:var(--paper);color:var(--ink2)}
     .svc--wide .svc-tags span{background:var(--white)}
+    .svc-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1000px;margin:0 auto}
+    .svc-duo .svc{padding:36px;gap:14px}
+    .svc-duo h3{font-size:1.45rem}
+    .svc--wed{background:var(--orange-soft);border-color:#FFD9C8}
+    .svc--wed .svc-ico{background:var(--white)}
+    .svc-duo .svc-list{margin:6px 0 4px}
+    .svc-cta{margin-top:auto;align-self:flex-start}
     .svc-list{list-style:none;display:grid;gap:10px}
     .svc-list li{display:flex;gap:10px;font-size:.95rem}
     .svc-list svg{width:20px;height:20px;color:var(--orange);flex-shrink:0;margin-top:2px}
@@ -588,6 +579,17 @@
     /* Comparatif */
     .compare{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;max-width:1000px;margin:0 auto}
     .cmp{border-radius:var(--r-xl);padding:36px}
+    .problem .cmp-title h3{font-size:1.1rem;color:rgba(255,255,255,.7);font-weight:600}
+    .pproof{max-width:880px;margin:26px auto 0;text-align:center}
+    .pproof-rating{font-weight:600;font-size:.95rem;color:var(--ink)}
+    .pproof-rating span{color:var(--orange);letter-spacing:2px;margin-right:6px}
+    .pquotes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;text-align:left}
+    .pquotes--one{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+    .pquotes figure{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-m);padding:18px 20px}
+    .pquotes blockquote{font-size:.95rem;line-height:1.55;color:var(--ink)}
+    .pquotes figcaption{margin-top:8px;font-size:.82rem;color:var(--muted)}
+    .btn-wa svg{width:20px;height:20px;margin-right:8px;flex-shrink:0}
+    .mbar .btn-ghost svg{width:22px;height:22px}
     .cmp--us{background:var(--ink);color:#fff}
     .cmp--them{background:var(--white);border:1px solid var(--line);color:var(--ink2)}
     .cmp-title{display:flex;align-items:center;gap:12px;margin-bottom:26px}
@@ -825,6 +827,14 @@
 
     /* Barre mobile */
     .mbar{display:none}
+    a.chip{text-decoration:none;color:inherit;transition:transform .2s var(--ease)}
+    a.chip:hover{transform:translateY(-2px)}
+    a.g-badge{text-decoration:none;color:inherit}
+    .pproof-rating a,.proof-item p a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+    .reviews-google{display:flex;justify-content:center;margin-top:12px}
+    .wa-float{position:fixed;right:22px;bottom:22px;z-index:540;display:flex;align-items:center;gap:10px;height:56px;padding:0 20px 0 16px;border-radius:999px;background:#1FAF54;color:#fff;font-weight:600;text-decoration:none;box-shadow:0 14px 30px -12px rgba(0,0,0,.45);transition:transform .2s var(--ease),box-shadow .2s}
+    .wa-float:hover{transform:translateY(-3px);box-shadow:0 18px 36px -12px rgba(0,0,0,.5)}
+    .wa-float svg{width:24px;height:24px}
 
     /* Modale vidéo */
     .vmodal{position:fixed;inset:0;z-index:900;background:rgba(10,10,10,.92);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s,visibility 0s .3s}
@@ -925,9 +935,13 @@
       .proof-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.1);padding:24px}
       .proof-item:last-child{border-bottom:0}
       .svc-grid{grid-template-columns:1fr}
+      .svc-duo{grid-template-columns:1fr}
+      .svc-duo .svc{padding:26px 22px}
+      .svc-cta{align-self:stretch}
       .svc--wide{grid-column:auto;grid-template-columns:1fr}
       .svc--span2{grid-column:auto}
       .cmp{padding:26px}
+      .pquotes{grid-template-columns:1fr}
       .compare{grid-template-columns:1fr}
       .work-head{flex-direction:column;align-items:flex-start}
       .work{grid-auto-columns:68%;margin:0 -18px;padding-left:18px;padding-right:18px}
@@ -955,6 +969,7 @@
       .f-row{grid-template-columns:1fr;gap:0}
       .foot-grid{grid-template-columns:1fr}
       .ltable div{grid-template-columns:1fr;gap:2px}
+      .wa-float{display:none}
       .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:550;gap:8px;transform:translateY(130%);transition:transform .35s var(--ease)}
       .mbar.show{transform:none}
       .mbar .btn{flex:1;padding:16px 12px;font-size:.95rem;box-shadow:0 12px 30px -12px rgba(0,0,0,.45)}
@@ -978,13 +993,13 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#realisations">Réalisations</a></li>
         <li><a href="#immobilier">Immobilier</a></li>
-        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#tarifs">Offres</a></li>
         <li><a href="#methode">Méthode</a></li>
         <li><a href="#avis">Avis</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-    <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary" target="_blank" rel="noopener">Devis gratuit</a>
+    <a href="#contact" class="btn btn-primary" data-goatcounter-click="cta-devis-header">Devis gratuit</a>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -993,11 +1008,11 @@
   <a href="#services">Services</a>
   <a href="#realisations">Réalisations</a>
   <a href="#immobilier">Immobilier</a>
-  <a href="#tarifs">Tarifs</a>
+  <a href="#tarifs">Offres</a>
   <a href="#methode">Méthode</a>
   <a href="#avis">Avis</a>
   <a href="#faq">FAQ</a>
-  <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary" target="_blank" rel="noopener">Réserver un appel découverte</a>
+  <a href="https://calendly.com/cbenprod/new-meeting" data-goatcounter-click="calendly" class="btn btn-primary" target="_blank" rel="noopener">Réserver un appel découverte</a>
 </nav>
 
 <main id="contenu" tabindex="-1">
@@ -1016,7 +1031,7 @@
       </h1>
       <p class="lead">Films de mariage cinématiques, vidéos corporate et contenus pour les réseaux sociaux, partout dans le Nord et les Hauts-de-France. Tournage, montage, drone : je m'occupe de tout, vous recevez une vidéo prête à publier.</p>
       <div class="hero-cta">
-        <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary" target="_blank" rel="noopener">Recevoir mon devis gratuit</a>
+        <a href="#contact" class="btn btn-primary" data-goatcounter-click="cta-devis-hero">Recevoir mon devis gratuit</a>
         <a href="#mariage" class="btn btn-ghost">Voir les films de mariage</a>
       </div>
       <div class="hero-meta">
@@ -1031,9 +1046,9 @@
       <div class="rec" aria-hidden="true"><b></b>REC <span id="tc">00:00:00</span></div>
       <div class="rec-spec" aria-hidden="true">4K · 25p</div>
 
-      <a class="phone phone--l" href="https://www.facebook.com/reel/1614065076254571" data-fb="https://www.facebook.com/reel/1614065076254571" aria-label="Voir la vidéo Chat Noir, plus de 40 000 vues">
+      <a class="phone phone--l" href="https://www.facebook.com/reel/1614065076254571" data-fb="https://www.facebook.com/reel/1614065076254571" aria-label="Voir la vidéo Chat Noir">
         <img src="https://i.ytimg.com/vi/KJjq900eegw/hqdefault.jpg" alt="Vidéo virale Chat Noir réalisée par CBEN PROD à Dunkerque" width="480" height="360" loading="eager">
-        <div class="phone-cap"><strong>Chat Noir</strong><span>+40 000 vues</span></div>
+        <div class="phone-cap"><strong>Chat Noir</strong><span>Reel · Dunkerque</span></div>
       </a>
       <!-- Dès que ton teaser mariage vertical est en ligne, remplace l'ID h5n34TYwvak (3 fois) par le sien et retire data-wide -->
       <a class="phone phone--c" href="https://www.youtube.com/watch?v=h5n34TYwvak" data-video="h5n34TYwvak" data-wide aria-label="Regarder un film de mariage CBEN PROD">
@@ -1043,10 +1058,10 @@
       </a>
       <a class="phone phone--r" href="https://www.youtube.com/shorts/E36itvozcFs" data-video="E36itvozcFs" aria-label="Voir la vidéo du restaurant La Latina">
         <img src="https://i.ytimg.com/vi/E36itvozcFs/hqdefault.jpg" alt="Vidéo du restaurant La Latina à Dunkerque par CBEN PROD" width="480" height="360" loading="eager">
-        <div class="phone-cap"><strong>La Latina</strong><span>+8 000 vues</span></div>
+        <div class="phone-cap"><strong>La Latina</strong><span>Restaurant · Dunkerque</span></div>
       </a>
 
-      <div class="chip chip--views" aria-hidden="true"><em>+40 000</em> vues sur un seul Reel</div>
+      <a class="chip chip--views" href="https://share.google/v76xIdr0MpWdiBi3a" target="_blank" rel="noopener" data-goatcounter-click="google-avis-hero" aria-label="Voir les 13 avis Google de CBEN PROD"><em>5/5</em> sur 13 avis Google</a>
       <div class="chip chip--loc" aria-hidden="true">📍 Dunkerque &amp; Nord</div>
     </div>
   </div>
@@ -1080,9 +1095,8 @@
 <section aria-label="CBEN PROD en chiffres" style="padding:48px 0 0">
   <div class="wrap">
     <div class="proof rv">
-      <!-- Vérifie ce total : les 5 vidéos visibles sur le site cumulent environ 68 000 vues -->
-      <div class="proof-item"><div class="proof-num">+80k</div><p>vues générées sur plusieurs vidéos</p></div>
-      <div class="proof-item"><div class="proof-num">5<small>/5</small></div><p>de note moyenne sur 13 avis Google</p></div>
+      <div class="proof-item"><div class="proof-num">4K</div><p>tournage et livraison, plans drone inclus</p></div>
+      <div class="proof-item"><div class="proof-num">5<small>/5</small></div><p>de note moyenne sur <a href="https://share.google/v76xIdr0MpWdiBi3a" target="_blank" rel="noopener" data-goatcounter-click="google-avis-chiffres">13 avis Google</a></p></div>
       <div class="proof-item"><div class="proof-num">24<small>h</small></div><p>pour recevoir votre devis personnalisé</p></div>
       <div class="proof-item"><div class="proof-num">50<small>km</small></div><p>de déplacements inclus autour de Dunkerque</p></div>
     </div>
@@ -1094,54 +1108,33 @@
   <div class="wrap">
     <div class="sec-head rv">
       <span class="kicker">Services</span>
-      <h2>Un vidéaste à Dunkerque pour chaque besoin.</h2>
-      <p class="lead">Mariage ou corporate, réseaux sociaux ou événement : CBEN PROD s'adapte à chaque projet, pour les particuliers comme pour les entreprises des Hauts-de-France.</p>
+      <h2>Vidéaste à Dunkerque, pour vous et votre entreprise.</h2>
+      <p class="lead">Particulier ou professionnel : choisissez ce qui vous concerne.</p>
     </div>
-    <div class="svc-grid">
-      <article class="svc svc--wide rv">
-        <div>
-          <span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="14.5" r="5.5"/><circle cx="15" cy="14.5" r="5.5"/><path d="m10 3.5 2-1.5 2 1.5-2 2.5z"/></svg></span>
-          <h3 style="margin-top:14px">Vidéaste mariage à Dunkerque et dans le Nord</h3>
-          <p style="margin-top:10px">Un film de mariage naturel, cinématique et émouvant. Je capture chaque émotion du jour J avec discrétion, des préparatifs jusqu'à la soirée. Également pour les baptêmes, anniversaires et communions.</p>
-          <a href="#mariage" class="btn btn-dark" style="margin-top:20px;padding:13px 20px;font-size:.92rem">Voir les films de mariage</a>
-          <div class="svc-tags" style="margin-top:16px"><span>Mariage</span><span>Baptême</span><span>Anniversaire</span><span>Communion</span></div>
-        </div>
+    <div class="svc-duo">
+      <article class="svc svc--wed rv">
+        <span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="14.5" r="5.5"/><circle cx="15" cy="14.5" r="5.5"/><path d="m10 3.5 2-1.5 2 1.5-2 2.5z"/></svg></span>
+        <h3>Vidéaste mariage à Dunkerque</h3>
+        <p>Des films courts et émouvants, à revoir et à partager.</p>
         <ul class="svc-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Présence des préparatifs à la soirée</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Film de 2 à 4 min ou de 5 à 10 min</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Teaser vertical ou horizontal pour vos réseaux (formule Signature)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Plans drone et livraison en 4K</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Aussi baptêmes, communions et anniversaires</li>
         </ul>
+        <a href="#mariage" class="btn btn-dark svc-cta">Voir les films de mariage</a>
       </article>
       <article class="svc rv">
         <span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="13.5" height="12" rx="2.5"/><path d="m16 10.5 5.5-3v9l-5.5-3"/></svg></span>
-        <h3>Vidéo corporate et entreprise</h3>
-        <p>Vidéo d'entreprise, interview de dirigeant, reportage, vidéo de recrutement. Pour les PME, artisans et grandes structures du Nord.</p>
-        <div class="svc-tags"><span>Corporate</span><span>Interview</span><span>Reportage</span></div>
-      </article>
-      <article class="svc rv">
-        <span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
-        <h3>Vidéo pour les réseaux sociaux</h3>
-        <p>Contenus courts pour Instagram Reels, TikTok et LinkedIn. Formats pensés pour l'algorithme, livrés clés en main.</p>
-        <div class="svc-tags"><span>Instagram</span><span>TikTok</span><span>LinkedIn</span></div>
-      </article>
-      <article class="svc rv">
-        <span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10v4a1 1 0 0 0 1 1H7l7 4.5V5.5L7 9H4.5a1 1 0 0 0-1 1z"/><path d="M17.5 9a4 4 0 0 1 0 6M20 6.5a7.5 7.5 0 0 1 0 11"/></svg></span>
-        <h3>Vidéo promotionnelle et publicité locale</h3>
-        <p>Spot publicitaire local, lancement de produit, vidéo vitrine pour les commerces, PME et artisans des Hauts-de-France.</p>
-        <div class="svc-tags"><span>Pub locale</span><span>Produit</span><span>Vitrine</span></div>
-      </article>
-      <article class="svc rv">
-        <span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/><path d="m12 12.6.9 1.9 2.1.3-1.5 1.5.4 2.1-1.9-1-1.9 1 .4-2.1-1.5-1.5 2.1-.3z"/></svg></span>
-        <h3>Vidéo d'événement professionnel</h3>
-        <p>Séminaires, inaugurations, salons, conférences, galas. Montage livré rapidement pour une diffusion immédiate.</p>
-        <div class="svc-tags"><span>Séminaire</span><span>Inauguration</span><span>Salon</span></div>
-      </article>
-      <article class="svc svc--span2 rv">
-        <span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6" rx="1.5"/><path d="M9 9 6.5 6.5M15 9l2.5-2.5M9 15l-2.5 2.5M15 15l2.5 2.5"/><circle cx="5" cy="5" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/></svg></span>
-        <h3>Vidéo drone et prises de vue aériennes</h3>
-        <p>Plans aériens par drone pour les mariages, l'immobilier et les événements dans le Nord et les Hauts-de-France. <a href="#immobilier" style="color:var(--orange-tx);font-weight:600">Voir les vidéos immobilières</a></p>
-        <div class="svc-tags"><span>Drone</span><span>Immobilier</span><span>Aérien</span></div>
+        <h3>Vidéo d'entreprise à Dunkerque</h3>
+        <p>Des vidéos qui font connaître votre activité.</p>
+        <ul class="svc-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Présentation, interview, reportage</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Contenus pour Instagram, TikTok et LinkedIn</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Publicité locale et événements professionnels</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Drone et vidéo immobilière</li>
+        </ul>
+        <a href="#realisations" class="btn btn-dark svc-cta">Voir les réalisations</a>
       </article>
     </div>
   </div>
@@ -1157,11 +1150,11 @@
       <div>
         <span class="kicker">Films de mariage</span>
         <h2>Vos films de mariage à Dunkerque et dans le Nord.</h2>
-        <p class="lead">Des préparatifs à la soirée, je filme votre journée avec discrétion pour en faire un film cinématique et émouvant, à revoir encore et encore. Découvrez quelques mariages filmés dans les Hauts-de-France.</p>
+        <p class="lead">Dans vingt ans, vous reverrez votre premier regard, l'émotion de vos proches et les fous rires de la soirée exactement comme vous les avez vécus. Cette journée ne se vit qu'une fois : je la filme avec discrétion, des préparatifs à la soirée, pour en faire un film que vous aurez envie de revoir encore et encore.</p>
       </div>
       <blockquote class="wed-quote">
         <p>« Grâce à lui, nous avons un souvenir inestimable que nous regarderons encore et encore avec la même émotion. »</p>
-        <span>Avis Google, mariage dans les Hauts-de-France</span>
+        <span>Marion, mariage</span>
       </blockquote>
     </div>
     <ul class="wed-incl rv" aria-label="Inclus dans le film de mariage">
@@ -1171,46 +1164,41 @@
       <li><b>Livraison 4K</b><span>À revoir et partager avec vos proches</span></li>
     </ul>
     <div class="films rv" role="list">
-      <!-- Personnalise le titre (prénoms du couple, lieu) -->
       <a class="film film--main" role="listitem" href="https://www.youtube.com/watch?v=h5n34TYwvak" data-video="h5n34TYwvak" data-wide aria-label="Regarder le film de mariage 1">
         <img src="https://i.ytimg.com/vi/h5n34TYwvak/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/h5n34TYwvak/hqdefault.jpg'" alt="Film de mariage cinématique réalisé par CBEN PROD, vidéaste mariage à Dunkerque" width="1280" height="720" loading="lazy" decoding="async">
         <span class="phone-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="film-cap"><strong>Film de mariage</strong><span>Regarder le film</span></div>
+        <div class="film-cap"><span>Regarder le film</span></div>
       </a>
-      <!-- Personnalise le titre (prénoms du couple, lieu) -->
       <a class="film" role="listitem" href="https://www.youtube.com/watch?v=xwzX_rOvLbo" data-video="xwzX_rOvLbo" data-wide aria-label="Regarder le film de mariage 2">
         <img src="https://i.ytimg.com/vi/xwzX_rOvLbo/hqdefault.jpg" alt="Vidéo de mariage dans le Nord par CBEN PROD" width="480" height="360" loading="lazy" decoding="async">
         <span class="phone-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="film-cap"><strong>Film de mariage</strong><span>Regarder le film</span></div>
+        <div class="film-cap"><span>Regarder le film</span></div>
       </a>
-      <!-- Personnalise le titre (prénoms du couple, lieu) -->
       <a class="film" role="listitem" href="https://www.youtube.com/watch?v=2kF8l-e_d-A" data-video="2kF8l-e_d-A" data-wide aria-label="Regarder le film de mariage 3">
         <img src="https://i.ytimg.com/vi/2kF8l-e_d-A/hqdefault.jpg" alt="Extrait d'un film de mariage dans les Hauts-de-France, CBEN PROD" width="480" height="360" loading="lazy" decoding="async">
         <span class="phone-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="film-cap"><strong>Film de mariage</strong><span>Regarder le film</span></div>
+        <div class="film-cap"><span>Regarder le film</span></div>
       </a>
-      <!-- Personnalise le titre (prénoms du couple, lieu) -->
       <a class="film" role="listitem" href="https://www.youtube.com/watch?v=GxQmNtOEn9k" data-video="GxQmNtOEn9k" data-wide aria-label="Regarder le film de mariage 4">
         <img src="https://i.ytimg.com/vi/GxQmNtOEn9k/hqdefault.jpg" alt="Film de mariage tourné par un vidéaste de Dunkerque, CBEN PROD" width="480" height="360" loading="lazy" decoding="async">
         <span class="phone-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="film-cap"><strong>Film de mariage</strong><span>Regarder le film</span></div>
+        <div class="film-cap"><span>Regarder le film</span></div>
       </a>
-      <!-- Personnalise le titre (prénoms du couple, lieu) -->
       <a class="film" role="listitem" href="https://www.youtube.com/watch?v=R6U_TNJ9TfA" data-video="R6U_TNJ9TfA" data-wide aria-label="Regarder le film de mariage 5">
         <img src="https://i.ytimg.com/vi/R6U_TNJ9TfA/hqdefault.jpg" alt="Vidéo de mariage cinématique, CBEN PROD vidéaste Nord-Pas-de-Calais" width="480" height="360" loading="lazy" decoding="async">
         <span class="phone-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="film-cap"><strong>Film de mariage</strong><span>Regarder le film</span></div>
+        <div class="film-cap"><span>Regarder le film</span></div>
       </a>
     </div>
     <div class="wed-foot rv">
       <p>Film Essentiel <strong>750 €</strong> · Film Signature <strong>950 €</strong>. Je ne filme qu'un à deux mariages par mois : vérifiez vite si votre date est libre.</p>
-      <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary" target="_blank" rel="noopener">Vérifier ma date de mariage</a>
+      <a href="#contact" class="btn btn-primary" data-sujet="Mariage" data-goatcounter-click="cta-date-section-mariage">Vérifier ma date de mariage</a>
     </div>
   </div>
 </section>
 
 <!-- ═══════════ PROBLÈME ═══════════ -->
-<section class="sec" id="probleme">
+<section class="sec sec--paper" id="probleme">
   <div class="wrap problem">
     <div class="rv">
       <span class="kicker">Pour les entreprises</span>
@@ -1223,53 +1211,19 @@
       </ul>
       <a href="#offres-entreprises" class="btn btn-dark" style="margin-top:28px">Voir les offres entreprises</a>
     </div>
-    <div class="feed rv" aria-hidden="true">
-      <div class="feed-head"><strong>Ce qui retient l'attention</strong><span>sur vos réseaux</span></div>
-      <div class="bars">
-        <div class="bar-row"><span>Texte seul</span><div class="bar"><i style="width:18%"></i></div></div>
-        <div class="bar-row"><span>Photo</span><div class="bar"><i style="width:38%"></i></div></div>
-        <div class="bar-row"><span>Vidéo amateur</span><div class="bar"><i style="width:55%"></i></div></div>
-        <div class="bar-row bar-row--pro"><span>Vidéo pro</span><div class="bar"><i style="width:94%"></i></div></div>
+    <div class="cmp cmp--us rv">
+      <div class="cmp-title">
+        <img src="assets/logo sans traits de cam.png" alt="" width="110" height="26" loading="lazy" decoding="async">
+        <h3>Avec CBEN PROD</h3>
       </div>
-      <p class="feed-note">Je m'occupe du reste. Vous gardez la main sur votre activité.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ COMPARATIF ═══════════ -->
-<section class="sec sec--paper" id="pourquoi">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="kicker">Pourquoi CBEN PROD</span>
-      <h2>Une vidéo pro, sans y passer vos soirées.</h2>
-      <p class="lead">Deux façons d'avoir une vidéo. Le résultat n'est pas le même.</p>
-    </div>
-    <div class="compare">
-      <div class="cmp cmp--us rv">
-        <div class="cmp-title">
-          <img src="assets/logo sans traits de cam.png" alt="" width="110" height="26" loading="lazy" decoding="async">
-          <h3 class="sr-only">Avec CBEN PROD</h3>
-        </div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Un seul interlocuteur, du premier appel à la livraison</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Matériel pro : Sony A7 III, stabilisation, son, drone</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Montage, étalonnage, sound design et sous-titres inclus</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Formats prêts à publier : Reels, TikTok, LinkedIn, YouTube</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Ajustements rapides après votre retour</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Déplacements inclus jusqu'à 50 km autour de Dunkerque</li>
-        </ul>
-      </div>
-      <div class="cmp cmp--them rv">
-        <div class="cmp-title"><h3>Faire soi-même</h3></div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Des heures de tournage et de montage prises sur votre activité</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Image et son au smartphone, qui desservent votre marque</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Un montage sans rythme ni narration</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Un seul format, recadré tant bien que mal pour chaque réseau</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Pas de regard extérieur sur ce qui donne envie de vous choisir</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Un rendu qui ressemble à celui de tout le monde</li>
-        </ul>
-      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Un seul interlocuteur, du premier appel à la livraison</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Matériel pro : Sony A7 III, stabilisation, son, drone</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Montage, étalonnage, sound design et sous-titres inclus</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Formats prêts à publier : Reels, TikTok, LinkedIn, YouTube</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Ajustements rapides après votre retour</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Déplacements inclus jusqu'à 50 km autour de Dunkerque</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -1286,17 +1240,17 @@
       <a href="https://www.youtube.com/@cbenprod" class="btn btn-ghost" target="_blank" rel="noopener">Toutes les vidéos sur YouTube</a>
     </div>
     <div class="work rv" role="list">
-      <a class="reel" role="listitem" href="https://www.youtube.com/shorts/-57rOwQL-n4" data-video="-57rOwQL-n4" aria-label="M5S Institut, plus de 2 500 vues">
+      <a class="reel" role="listitem" href="https://www.youtube.com/shorts/-57rOwQL-n4" data-video="-57rOwQL-n4" aria-label="M5S Institut, plus de 4 000 vues">
         <img src="https://i.ytimg.com/vi/-57rOwQL-n4/hqdefault.jpg" alt="Vidéo M5S Institut de beauté à Dunkerque par CBEN PROD" width="480" height="360" loading="lazy" decoding="async">
         <span class="reel-sector">Institut de beauté</span>
         <span class="phone-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="reel-info"><strong>M5S Institut</strong><span>+2 500 vues</span></div>
+        <div class="reel-info"><strong>M5S Institut</strong><span>+4 000 vues</span></div>
       </a>
-      <a class="reel" role="listitem" href="https://www.youtube.com/shorts/OS9jbYF8NcQ" data-video="OS9jbYF8NcQ" aria-label="Thibdog'Educ, plus de 8 000 vues">
+      <a class="reel" role="listitem" href="https://www.youtube.com/shorts/OS9jbYF8NcQ" data-video="OS9jbYF8NcQ" aria-label="Thibdog'Educ, plus de 9 000 vues">
         <img src="https://i.ytimg.com/vi/OS9jbYF8NcQ/hqdefault.jpg" alt="Vidéo Thibdog'Educ, éducateur canin, par CBEN PROD vidéaste Dunkerque" width="480" height="360" loading="lazy" decoding="async">
         <span class="reel-sector">Éducateur canin</span>
         <span class="phone-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="reel-info"><strong>Thibdog'Educ</strong><span>+8 000 vues · 120 partages</span></div>
+        <div class="reel-info"><strong>Thibdog'Educ</strong><span>+9 000 vues · 120 partages</span></div>
       </a>
       <a class="reel" role="listitem" href="https://www.youtube.com/shorts/E36itvozcFs" data-video="E36itvozcFs" aria-label="La Latina, plus de 8 000 vues">
         <img src="https://i.ytimg.com/vi/E36itvozcFs/hqdefault.jpg" alt="Vidéo du restaurant La Latina à Dunkerque par CBEN PROD" width="480" height="360" loading="lazy" decoding="async">
@@ -1332,7 +1286,7 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Plans drone</strong> de l'extérieur et de l'environnement, selon météo et autorisations de vol</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Formats prêts à diffuser</strong> sur vos annonces, votre site et vos réseaux sociaux</span></li>
       </ul>
-      <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-dark" target="_blank" rel="noopener">Demander un devis immobilier</a>
+      <a href="#contact" class="btn btn-dark" data-sujet="Immobilier" data-goatcounter-click="cta-devis-immobilier">Demander un devis immobilier</a>
     </div>
     <div class="immo-films rv" role="list">
         <!-- Personnalise le titre (type de bien, ville) -->
@@ -1355,9 +1309,9 @@
 <section class="sec" id="tarifs">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="kicker">Tarifs</span>
-      <h2>Des tarifs clairs, sans surprise.</h2>
-      <p class="lead">Choisissez votre projet. Un appel découverte gratuit suffit ensuite pour valider les détails et votre date.</p>
+      <span class="kicker">Offres</span>
+      <h2>Une offre pour chaque projet.</h2>
+      <p class="lead">Pour votre mariage, deux formules aux prix clairs. Pour votre entreprise, une offre construite autour de votre projet, sur devis. Dans les deux cas, votre demande est gratuite et vous recevez une réponse sous 24h.</p>
     </div>
     <div class="ptabs rv" role="tablist" aria-label="Type de projet">
       <button class="ptab" type="button" role="tab" id="tab-mariage" aria-controls="offres-mariage" aria-selected="true">Mariage</button>
@@ -1366,20 +1320,6 @@
 
     <div class="ppanel" id="offres-mariage" role="tabpanel" aria-labelledby="tab-mariage">
       <div class="plans">
-        <article class="plan rv">
-          <h3>Film Essentiel</h3>
-          <p class="plan-for">L'essentiel de votre journée, en un film court</p>
-          <div class="plan-price"><strong>750€</strong></div>
-          <span class="plan-unit">Film de mariage de 2 à 4 min</span>
-          <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Jour J complet, des préparatifs à la soirée</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Captation de la cérémonie</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Film de 2 à 4 minutes</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Plans drone selon la météo</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Livraison en 4K</li>
-          </ul>
-          <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-ghost" target="_blank" rel="noopener">Vérifier ma date</a>
-        </article>
         <article class="plan plan--wed rv">
           <span class="plan-badge">Recommandé</span>
           <h3>Film Signature</h3>
@@ -1393,45 +1333,72 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Teaser d'1 min au format vertical ou horizontal pour vos réseaux</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Plans drone et livraison en 4K</li>
           </ul>
-          <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary" target="_blank" rel="noopener">Vérifier ma date</a>
+          <a href="#contact" class="btn btn-primary" data-sujet="Mariage" data-goatcounter-click="cta-date-signature">Vérifier ma date</a>
         </article>
+        <article class="plan rv">
+          <h3>Film Essentiel</h3>
+          <p class="plan-for">L'essentiel de votre journée, en un film court</p>
+          <div class="plan-price"><strong>750€</strong></div>
+          <span class="plan-unit">Film de mariage de 2 à 4 min</span>
+          <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Jour J complet, des préparatifs à la soirée</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Captation de la cérémonie</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Film de 2 à 4 minutes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Plans drone selon la météo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Livraison en 4K</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost" data-sujet="Mariage" data-goatcounter-click="cta-date-essentiel">Vérifier ma date</a>
+        </article>
+      </div>
+      <div class="pproof">
+        <p class="pproof-rating"><span aria-hidden="true">★★★★★</span> <a href="https://share.google/v76xIdr0MpWdiBi3a" target="_blank" rel="noopener" data-goatcounter-click="google-avis-offres">5/5 sur 13 avis Google</a></p>
+        <div class="pquotes">
+          <figure><blockquote>« Un travail fantastique de Benjamin, tout était parfait, je vous le recommande les yeux fermés. »</blockquote><figcaption>Jérôme, mariage</figcaption></figure>
+          <figure><blockquote>« Tu as capturé chaque moment avec beaucoup de naturel et de discrétion. »</blockquote><figcaption>Charlotte, mariage</figcaption></figure>
+        </div>
       </div>
     </div>
 
     <div class="ppanel" id="offres-entreprises" role="tabpanel" aria-labelledby="tab-entreprises">
       <div class="plans">
         <article class="plan rv">
-          <h3>Sur mesure</h3>
+          <h3>Tournage simple</h3>
           <p class="plan-for">Une vidéo courte, tournée rapidement</p>
-          <div class="plan-price"><small>dès</small><strong>220€</strong></div>
-          <span class="plan-unit">Prix selon votre projet</span>
+          <div class="plan-price"><strong style="font-size:2rem">Sur devis</strong></div>
+          <span class="plan-unit">Prix adapté à votre projet</span>
           <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Tournage rapide sur site</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Montage dynamique et sous-titres</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Format adapté à votre réseau</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Livraison sous 4 à 7 jours ouvrés</li>
           </ul>
-          <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-ghost" target="_blank" rel="noopener">Demander un devis</a>
+          <a href="#contact" class="btn btn-ghost" data-sujet="Vidéo d'entreprise" data-goatcounter-click="cta-devis-tournage">Demander un devis</a>
         </article>
         <article class="plan plan--feat rv">
           <span class="plan-badge">Recommandé</span>
           <h3>Pack Visibilité</h3>
           <p class="plan-for">Être vu, compris et choisi en ligne</p>
-          <div class="plan-price"><strong>790€</strong></div>
-          <span class="plan-unit">3 vidéos + audit + stratégie</span>
+          <div class="plan-price"><strong style="font-size:2rem">Sur devis</strong></div>
+          <span class="plan-unit">Vidéos + audit + stratégie</span>
           <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>3 vidéos tournées sur site</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Plusieurs vidéos tournées sur site</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Audit de votre visibilité : Google, avis, site, réseaux</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Stratégie de communication sur mesure</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Montage, sous-titres et color grading</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Formats prêts à publier</li>
           </ul>
-          <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary" target="_blank" rel="noopener">Réserver un appel</a>
+          <a href="https://calendly.com/cbenprod/new-meeting" data-goatcounter-click="calendly" class="btn btn-primary" target="_blank" rel="noopener">Réserver un appel</a>
         </article>
+      </div>
+      <div class="pproof">
+        <p class="pproof-rating"><span aria-hidden="true">★★★★★</span> <a href="https://share.google/v76xIdr0MpWdiBi3a" target="_blank" rel="noopener" data-goatcounter-click="google-avis-offres">5/5 sur 13 avis Google</a></p>
+        <div class="pquotes pquotes--one">
+          <figure><blockquote>« Elle nous a permis de faire connaître notre établissement. Un rendu très professionnel que je recommande sans hésiter. »</blockquote><figcaption>La Latina, restaurant à Dunkerque</figcaption></figure>
+        </div>
       </div>
     </div>
 
-    <p class="plans-note">Prix nets : TVA non applicable, art. 293 B du CGI. Le prix affiché est le prix payé.<br>Déplacements inclus dans un rayon de 50 km autour de Dunkerque ; au-delà, supplément kilométrique au tarif légal.</p>
+    <p class="plans-note">Mariage : prix nets, TVA non applicable (art. 293 B du CGI), le prix affiché est le prix payé.<br>Entreprises : chaque projet est différent, le prix est fixé dans votre devis personnalisé, envoyé sous 24h.<br>Déplacements inclus dans un rayon de 50 km autour de Dunkerque ; au-delà, supplément kilométrique au tarif légal.</p>
   </div>
 </section>
 
@@ -1495,7 +1462,7 @@
       <p>J'interviens dans tout le Nord-Pas-de-Calais et les Hauts-de-France : Calais, Boulogne-sur-Mer, Lille, Valenciennes, Arras et alentours.</p>
       <!-- Si tu as ton certificat de télépilote drone, remplace « Vidéaste certifié » par « Télépilote drone certifié » -->
       <div class="gear"><span>Vidéaste certifié</span><span>Sony A7 III</span><span>DaVinci Resolve</span><span>Drone</span></div>
-      <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-dark" target="_blank" rel="noopener">Réserver un appel avec moi</a>
+      <a href="https://calendly.com/cbenprod/new-meeting" data-goatcounter-click="calendly" class="btn btn-dark" target="_blank" rel="noopener">Réserver un appel avec moi</a>
     </div>
   </div>
 </section>
@@ -1506,14 +1473,13 @@
     <div class="sec-head rv">
       <span class="kicker">Avis clients</span>
       <h2>Ils me font confiance.</h2>
-      <div class="g-badge"><b>5,0</b><span><span class="rating-stars" aria-hidden="true">★★★★★</span> <strong>13 avis Google</strong></span></div>
+      <a class="g-badge" href="https://share.google/v76xIdr0MpWdiBi3a" target="_blank" rel="noopener" data-goatcounter-click="google-avis-badge"><b>5,0</b><span><span class="rating-stars" aria-hidden="true">★★★★★</span> <strong>13 avis Google</strong></span></a>
     </div>
-    <!-- Avis mariage : remplace « Avis Google » par le prénom du couple tel qu'il apparaît sur Google -->
     <div class="reviews" id="reviews">
       <figure class="review rv">
         <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
-        <blockquote>« Le résultat est tout simplement exceptionnel. Il nous a suivis tout au long de cette journée si spéciale et a réussi à capturer chaque émotion, chaque détail et chaque instant important avec beaucoup de talent. La qualité de l'image est incroyable, les couleurs sont magnifiques, le montage est parfaitement réalisé. Grâce à lui, nous avons un souvenir inestimable que nous regarderons encore et encore avec la même émotion. Je recommande à 100 % les yeux fermés. »</blockquote>
-        <figcaption><span class="av" aria-hidden="true">♥</span><div><strong>Avis Google</strong><span>Mariage, Hauts-de-France</span></div></figcaption>
+        <blockquote>« Nous avons eu la chance de choisir Benjamin pour immortaliser notre mariage en août, et aujourd'hui, en découvrant le rendu, nous réalisons à quel point nous avons fait le bon choix. Il a su capturer des instants précieux, parfois même ceux que nous n'avions pas vus le jour J. Sa présence était discrète, naturelle, et nous nous sommes sentis totalement en confiance. La vidéo ne se contente pas de montrer notre mariage : elle nous fait revivre les émotions, les regards, les sourires, les éclats de rire et tous ces petits moments que nous voulons garder précieusement pour toujours. Nous te recommandons les yeux fermés ! »</blockquote>
+        <figcaption><span class="av" aria-hidden="true">M</span><div><strong>Margaux</strong><span>Mariage</span></div></figcaption>
       </figure>
       <figure class="review rv">
         <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
@@ -1522,8 +1488,8 @@
       </figure>
       <figure class="review rv">
         <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
-        <blockquote>« Pour la vidéo de mon mariage, je ne pouvais espérer mieux, un travail fantastique de Benjamin, tout était parfait, je vous le recommande les yeux fermés. »</blockquote>
-        <figcaption><span class="av" aria-hidden="true">♥</span><div><strong>Avis Google</strong><span>Mariage, Nord</span></div></figcaption>
+        <blockquote>« Nous recommandons Benjamin les yeux fermés ! Il a été notre vidéaste de mariage en juillet et nous sommes absolument ravis du résultat. Dès le début, il a été très à l'écoute de nos envies, tout en proposant de nombreuses idées qui ont vraiment apporté un plus à notre vidéo. Il a su nous mettre à l'aise et capturer tous les moments importants avec beaucoup de discrétion et de professionnalisme. Le rendu final est tout simplement superbe, rempli d'émotions et de très beaux souvenirs que nous prendrons plaisir à revoir pendant des années. »</blockquote>
+        <figcaption><span class="av" aria-hidden="true">L</span><div><strong>Léo</strong><span>Mariage</span></div></figcaption>
       </figure>
       <figure class="review rv">
         <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
@@ -1533,9 +1499,24 @@
       <figure class="review rv">
         <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
         <blockquote>« Un immense merci pour ce travail exceptionnel ! Dès le jour J, tu as su nous mettre en confiance grâce à ta bonne humeur, ton professionnalisme et ton côté très rassurant. Tu as capturé chaque moment avec beaucoup de naturel et de discrétion. Le résultat final est au-delà de nos attentes : un montage magnifique, plein d'émotions et de souvenirs précieux. Nous sommes ravis d'avoir fait appel à toi et te recommandons sans hésiter ! »</blockquote>
-        <figcaption><span class="av" aria-hidden="true">♥</span><div><strong>Avis Google</strong><span>Mariage, Dunkerque</span></div></figcaption>
+        <figcaption><span class="av" aria-hidden="true">C</span><div><strong>Charlotte</strong><span>Mariage</span></div></figcaption>
       </figure>
       <figure class="review rv">
+        <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote>« Pour la vidéo de mon mariage, je ne pouvais espérer mieux, un travail fantastique de Benjamin, tout était parfait, je vous le recommande les yeux fermés. »</blockquote>
+        <figcaption><span class="av" aria-hidden="true">J</span><div><strong>Jérôme</strong><span>Mariage</span></div></figcaption>
+      </figure>
+      <figure class="review review--more rv">
+        <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote>« Le résultat est tout simplement exceptionnel. Il nous a suivis tout au long de cette journée si spéciale et a réussi à capturer chaque émotion, chaque détail et chaque instant important avec beaucoup de talent. La qualité de l'image est incroyable, les couleurs sont magnifiques, le montage est parfaitement réalisé. Grâce à lui, nous avons un souvenir inestimable que nous regarderons encore et encore avec la même émotion. Je recommande à 100 % les yeux fermés. »</blockquote>
+        <figcaption><span class="av" aria-hidden="true">M</span><div><strong>Marion</strong><span>Mariage</span></div></figcaption>
+      </figure>
+      <figure class="review review--more rv">
+        <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote>« Nous avons eu la chance d'avoir Benjamin comme vidéaste pour notre mariage. Nous avons pris le forfait une vidéo courte et une vidéo longue. Benjamin nous a suivi des préparatifs jusqu'au gâteau. Il a su se coordonner parfaitement avec notre photographe. Les vidéos reflètent parfaitement notre journée et resteront un super souvenir de cette belle journée. Encore un grand merci pour tes conseils et ton travail. »</blockquote>
+        <figcaption><span class="av" aria-hidden="true">E</span><div><strong>Elodie</strong><span>Mariage</span></div></figcaption>
+      </figure>
+      <figure class="review review--more rv">
         <div class="review-stars" role="img" aria-label="5 étoiles sur 5">★★★★★</div>
         <blockquote>« Notre association a bénéficié d'une prestation par Benjamin de CBEN Prod pour filmer notre gala de danse. Nous pouvons souligner le professionnalisme et le travail de qualité réalisé en très peu de temps. Benjamin a su s'adapter à nos demandes et a réussi à répondre totalement aux attentes. Le rendu est magnifique. Nous vous recommandons vivement CBEN Prod. »</blockquote>
         <figcaption><span class="av" aria-hidden="true">Y</span><div><strong>Association Yakabouger</strong><span>Gala de danse, Dunkerque</span></div></figcaption>
@@ -1561,7 +1542,8 @@
         <figcaption><span class="av" aria-hidden="true">G</span><div><strong>Avis Google</strong><span>Client, Dunkerque</span></div></figcaption>
       </figure>
     </div>
-    <div class="reviews-more"><button class="btn btn-ghost" type="button" id="moreReviews" aria-controls="reviews" aria-expanded="false">Voir 4 avis de plus</button></div>
+    <div class="reviews-more"><button class="btn btn-ghost" type="button" id="moreReviews" aria-controls="reviews" aria-expanded="false">Voir 7 avis de plus</button></div>
+    <div class="reviews-google"><a class="btn btn-dark" href="https://share.google/v76xIdr0MpWdiBi3a" target="_blank" rel="noopener" data-goatcounter-click="google-avis-bouton">Voir tous les avis sur Google</a></div>
   </div>
 </section>
 
@@ -1602,7 +1584,7 @@
       <div class="help">
         <strong>Une question qui manque ?</strong>
         <p>Je réponds sous 24h, par téléphone ou par email.</p>
-        <a href="tel:+33652889685" class="btn btn-dark">Appeler le 06 52 88 96 85</a>
+        <a href="tel:+33652889685" data-goatcounter-click="telephone" class="btn btn-dark">Appeler le 06 52 88 96 85</a>
         <a href="mailto:cbenprod@gmail.com" class="btn btn-ghost">Écrire un email</a>
       </div>
     </div>
@@ -1625,7 +1607,7 @@
       </details>
       <details name="faq">
         <summary>Quel est le tarif d'un vidéaste à Dunkerque pour une entreprise ?<i aria-hidden="true"></i></summary>
-        <p>Les vidéos sur mesure démarrent à 220 € pour une vidéo courte, tournée rapidement. Le Pack Visibilité à 790 € comprend 3 vidéos, un audit de votre visibilité en ligne (Google, avis, site, réseaux sociaux) et une stratégie de communication. Devis personnalisé gratuit sous 24h. TVA non applicable, art. 293 B du CGI.</p>
+        <p>Chaque projet est différent, le prix est donc fixé sur devis. CBEN PROD propose deux formules : un tournage simple, pour une vidéo courte tournée rapidement, et le Pack Visibilité, plus complet, avec plusieurs vidéos, un audit de votre visibilité en ligne (Google, avis, site, réseaux sociaux) et une stratégie de communication. Devis personnalisé gratuit sous 24h.</p>
       </details>
       <details name="faq">
         <summary>Intervenez-vous dans tout le Nord et les Hauts-de-France ?<i aria-hidden="true"></i></summary>
@@ -1657,19 +1639,21 @@
     <div class="final rv">
       <div>
         <h2>Prêt à donner une image pro à votre projet ?</h2>
-        <p class="lead">Devis gratuit, réponse sous 24h, sans engagement.</p>
+        <p class="lead">Remplissez le formulaire, écrivez-moi sur WhatsApp ou réservez un appel : réponse sous 24h, sans engagement.</p>
         <div class="final-cta">
-          <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary" target="_blank" rel="noopener">Réserver un appel découverte</a>
-          <a href="tel:+33652889685" class="btn btn-ghost">06 52 88 96 85</a>
+          <a href="https://wa.me/33652889685?text=Bonjour%20Benjamin%2C%20je%20vous%20contacte%20depuis%20votre%20site%20cbenprod.fr%20%3A%20" class="btn btn-primary btn-wa" target="_blank" rel="noopener" data-goatcounter-click="whatsapp-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3.5 20l1.2-4.2A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>Écrire sur WhatsApp</a>
+          <a href="https://calendly.com/cbenprod/new-meeting" data-goatcounter-click="calendly" class="btn btn-ghost" target="_blank" rel="noopener">Réserver un appel</a>
+          <a href="tel:+33652889685" data-goatcounter-click="telephone" class="btn btn-ghost">06 52 88 96 85</a>
         </div>
         <ul class="channels">
           <li><a href="mailto:cbenprod@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>cbenprod@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61572382226421" target="_blank" rel="noopener" data-goatcounter-click="facebook-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"/></svg>CBEN PROD sur Facebook</a></li>
           <li><a href="https://www.instagram.com/cben_prod" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@cben_prod sur Instagram</a></li>
           <li><a href="#zone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-7.75-7-12a7 7 0 0 1 14 0c0 4.25-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Dunkerque, Nord, Hauts-de-France</a></li>
         </ul>
       </div>
       <form id="contactForm" class="form" method="POST" action="https://formspree.io/f/xdajgpwg" novalidate>
-        <h3>Ou décrivez votre projet</h3>
+        <h3>Décrivez votre projet</h3>
         <div class="f-row">
           <div class="f-g"><label for="f-name">Votre nom</label><input type="text" id="f-name" name="name" placeholder="Jean Dupont" required autocomplete="name"></div>
           <div class="f-g"><label for="f-email">Votre email</label><input type="email" id="f-email" name="email" placeholder="jean@exemple.fr" required autocomplete="email"></div>
@@ -1730,7 +1714,7 @@
         <h3>Navigation</h3>
         <ul>
           <li><a href="#realisations">Réalisations</a></li>
-          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#tarifs">Offres</a></li>
           <li><a href="#avis">Avis clients</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
@@ -1751,9 +1735,11 @@
 </footer>
 
 <!-- Barre CTA mobile -->
+<a class="wa-float" href="https://wa.me/33652889685?text=Bonjour%20Benjamin%2C%20je%20vous%20contacte%20depuis%20votre%20site%20cbenprod.fr%20%3A%20" target="_blank" rel="noopener" aria-label="Écrire à CBEN PROD sur WhatsApp" data-goatcounter-click="whatsapp-bulle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3.5 20l1.2-4.2A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg><span>WhatsApp</span></a>
 <div class="mbar" id="mbar" inert>
-  <a href="https://calendly.com/cbenprod/new-meeting" class="btn btn-primary" target="_blank" rel="noopener">Devis gratuit</a>
-  <a href="tel:+33652889685" class="btn btn-ghost" aria-label="Appeler CBEN PROD"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <a href="#contact" class="btn btn-primary" data-goatcounter-click="cta-devis-mobile">Devis gratuit</a>
+  <a href="https://wa.me/33652889685?text=Bonjour%20Benjamin%2C%20je%20vous%20contacte%20depuis%20votre%20site%20cbenprod.fr%20%3A%20" class="btn btn-ghost" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp" data-goatcounter-click="whatsapp-mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3.5 20l1.2-4.2A8.5 8.5 0 1 1 20.5 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg></a>
+  <a href="tel:+33652889685" data-goatcounter-click="telephone" class="btn btn-ghost" aria-label="Appeler CBEN PROD"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
 </div>
 
 <!-- Modale vidéo -->
@@ -1788,7 +1774,7 @@
       <div><dt>Activité</dt><dd>Arts créatifs audiovisuels, vidéaste freelance</dd></div>
       <div><dt>Adresse</dt><dd>Dunkerque, Hauts-de-France, France</dd></div>
       <div><dt>Email</dt><dd><a href="mailto:cbenprod@gmail.com">cbenprod@gmail.com</a></dd></div>
-      <div><dt>Téléphone</dt><dd><a href="tel:+33652889685">+33 6 52 88 96 85</a></dd></div>
+      <div><dt>Téléphone</dt><dd><a href="tel:+33652889685" data-goatcounter-click="telephone">+33 6 52 88 96 85</a></dd></div>
       <div><dt>TVA</dt><dd>Non applicable, art. 293 B du CGI</dd></div>
     </dl>
 
@@ -1880,7 +1866,7 @@
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var header=document.getElementById('header'), mbar=document.getElementById('mbar'), main=document.getElementById('contenu'), footer=document.querySelector('.footer');
   var burger=document.getElementById('burger'), mnav=document.getElementById('mnav');
-  var activeDialog=null, lastFocus=null, contactVisible=false;
+  var activeDialog=null, lastFocus=null, contactVisible=false; var waF=document.querySelector('.wa-float');
 
   /* Header au scroll + barre mobile (masquée sur la zone contact pour ne pas couvrir le formulaire) */
   function onScroll(){
@@ -1951,7 +1937,7 @@
     lastFocus=document.activeElement; activeDialog=el;
     setMenu(false);
     el.classList.add('open');
-    [header,main,footer].forEach(function(p){ p.setAttribute('inert',''); });
+    [header,main,footer,waF].filter(Boolean).forEach(function(p){ p.setAttribute('inert',''); });
     onScroll();
     document.body.style.overflow='hidden';
     setTimeout(function(){ (focusEl||el).focus(); },60);
@@ -1961,7 +1947,7 @@
     var el=activeDialog; activeDialog=null;
     el.classList.remove('open');
     if(el===vm){ vf.src='about:blank'; verr.classList.remove('show'); }
-    [header,main,footer].forEach(function(p){ p.removeAttribute('inert'); });
+    [header,main,footer,waF].filter(Boolean).forEach(function(p){ p.removeAttribute('inert'); });
     document.body.style.overflow='';
     onScroll();
     if(!silent && lastFocus && lastFocus.focus) lastFocus.focus();
@@ -2055,7 +2041,7 @@
       F._subject.value='Nouvelle demande '+F.sujet.value+' – '+name;
       btn.disabled=true; st.textContent='Envoi en cours…'; st.className='f-status';
       fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
-        .then(function(r){ if(!r.ok) throw 0; st.textContent='Merci '+name.split(' ')[0]+', votre demande est bien envoyée. Réponse sous 24h.'; st.className='f-status ok'; form.reset(); syncDate(); })
+        .then(function(r){ if(!r.ok) throw 0; st.textContent='Merci '+name.split(' ')[0]+', votre demande est bien envoyée. Réponse sous 24h.'; st.className='f-status ok'; form.reset(); syncDate(); if(window.goatcounter && window.goatcounter.count) window.goatcounter.count({path:'formulaire-envoye',title:'Formulaire envoyé',event:true}); })
         .catch(function(){ st.textContent='L\'envoi n\'a pas abouti. Écrivez à cbenprod@gmail.com ou appelez le 06 52 88 96 85.'; st.className='f-status err'; })
         .finally(function(){ btn.disabled=false; });
     });
@@ -2103,6 +2089,19 @@
       } else if(bg.getAttribute('src')) bg.pause();
     },{rootMargin:'200px 0px'}).observe(document.getElementById('mariage'));
   }
+
+  /* Boutons « Vérifier ma date » / « Devis » : pré-remplissent le formulaire */
+  document.querySelectorAll('a[href="#contact"][data-sujet]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var f=document.getElementById('contactForm'); if(!f) return;
+      f.elements.sujet.value=a.dataset.sujet;
+      f.elements.sujet.dispatchEvent(new Event('change'));
+      setTimeout(function(){
+        var target=a.dataset.sujet==='Mariage'?f.elements.date:f.elements.name;
+        if(target) target.focus({preventScroll:true});
+      },700);
+    });
+  });
 
   /* Année automatique */
   var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
